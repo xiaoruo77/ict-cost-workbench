@@ -1,10 +1,20 @@
-# 通用成本分析工作台 V1.0.0 · GitHub 版
+# 通用成本分析工作台
 
-此私有仓库保存冻结 V1 的去敏副本。原冻结提交为 `8cd781a175875f6853788493c3d06d7dfeb14f85`，这里只记录其身份，不继承原 Git 历史。保留工作台、统一核算和合成样例；不附旧赛题原件、内部报告模板、真实资料、账户数据、本机验收日志或旧交付 ZIP。
+把业务明细变成**算得出、查得回的成本报告**。同一个核算引擎，通过行业配置确定成本对象、字段和计量口径。导入数据后，按成本对象归集、分摊和计算，结果可以追溯到原始行，报告可以保存为独立修订。
 
-## 运行
+**从 [V1.0.0](https://github.com/xiaoruo77/ict-cost-workbench/tree/v1.0.0-github) 开始：** 仓库自带制药、餐饮、医疗器械、物流四套合成样例。核算和报告导出无需模型 API Key。
 
-使用独立 Python 环境安装依赖。原 `requirements.lock` 为 Linux x86_64 / CPython 3.13 的部署版本记录，不代表各系统均已测试。Word 导出由 python-docx 生成；PDF 还需 Pandoc、XeLaTeX 与可用的 CJK 字体。核算、合成样例和报告导出不需要配置模型 API Key。
+## 在工作台里做什么
+
+1. **选行业和数据。** 从「数据接入」载入样例，或按字段映射导入 CSV，确定要分析的成本对象和计量单位。
+2. **跑核算并读结果。** 查看成本构成、分摊结果和单位成本；有预算数据时可做预算差异分析。
+3. **查依据、存报告。** 从结果回查参与计算的明细行，保存报告后可重开同一修订。支持 Word、JSON 和 Markdown；PDF 导出需安装 Pandoc、XeLaTeX 及 CJK 字体。
+
+**行业目录用来选分类，行业配置用来算账。** 目录覆盖 20 个门类、97 个大类、473 个中类、1,382 个小类。本版附四套可运行样例；新增行业时，按业务定义成本对象、必填数据、计量单位和分摊规则。
+
+## 本机运行
+
+建议新建 Python 环境。依赖锁定以 Linux x86_64 / CPython 3.13 为基准。
 
 ```bash
 python -m pip install -r requirements.txt
@@ -12,8 +22,10 @@ python scripts/setup_industry_catalog.py
 python -m uvicorn --app-dir server app:app --host 127.0.0.1 --port 18778
 ```
 
-浏览器打开 `http://127.0.0.1:18778/#home`。用独立账号在“数据接入”载入制药、餐饮、医疗器械或物流合成样例；运行核算、核对源行、保存报告后可重新打开同一修订。可用 `LLM_WIKI_DATA` 指定新的独立运行目录；不要复用正式数据目录。
+打开 [本机工作台](http://127.0.0.1:18778/#home)，用测试账号进入「数据接入」，任选一套合成样例，走一遍核算、追溯和导出。需要指定数据位置时，让 `LLM_WIKI_DATA` 指向独立运行目录。
 
-行业分类从[国家统计局发布页](https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html)附件 2 下载，不随仓库再分发。可自行下载并运行 `python scripts/setup_industry_catalog.py --from-file <已下载的附件>` 安装校验；分类共 20 个门类、97 个大类、473 个中类、1,382 个小类，并不代表每个行业已有完整核算模板。
+行业分类脚本从[国家统计局发布页](https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html)对应的附件 2 安装数据。已有附件时，可用 `python scripts/setup_industry_catalog.py --from-file <附件路径>` 在本地安装。
 
-旧药企资料、固定图表和旧专题生成需要在独立环境取得合法授权的本地原资料及模板，不属于本仓库的演示或验收范围。旧工作区部署脚本和整机环境不随仓库发布。来源与依赖见 [DATA_NOTICE.md](DATA_NOTICE.md) 和 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+## 源码与样例
+
+GitHub 版包含核算代码、合成样例和运行说明。样例用于复现计算流程；旧资料、内部报告模板和本机运行数据留在原工作区。代码来源和依赖见 [DATA_NOTICE.md](DATA_NOTICE.md) 与 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；其中部分段落描述历史本地环境，以本页列出的 GitHub 版内容为准。
