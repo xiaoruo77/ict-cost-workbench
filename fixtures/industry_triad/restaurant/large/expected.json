@@ -1,0 +1,2626 @@
+{
+  "oracle": "independent integer cents + Fraction largest remainder; no costing-engine import",
+  "seed": 20261114073,
+  "variant": "large",
+  "industry": "restaurant",
+  "scope": {
+    "book": "SYNTH_RESTAURANT",
+    "period": "2026-11",
+    "currency": "CNY"
+  },
+  "source_rows": {
+    "finance": 4205,
+    "shared": 121,
+    "events": 155,
+    "settlements": 210,
+    "stock": 45,
+    "raw_materials": 1680
+  },
+  "total_cost": "34983.00",
+  "cost_groups": {
+    "ingredients_consumed": "12420.00",
+    "kitchen_labor": "4140.00",
+    "packaging": "4140.00",
+    "utilities": "1656.00",
+    "depreciation": "828.00",
+    "shared_kitchen_labor": "1656.00",
+    "head_office": "2070.00",
+    "payment_fee": "138.00",
+    "commission": "3519.00",
+    "rent": "2760.00",
+    "resale_cogs": "1472.00",
+    "inventory_shrink": "184.00"
+  },
+  "objects": {
+    "store-1-dine-food-rice-g01": {
+      "total_cost": "66.00",
+      "cost_structure": {
+        "ingredients_consumed": "35.20",
+        "kitchen_labor": "8.80",
+        "packaging": "11.00",
+        "utilities": "4.40",
+        "depreciation": "2.20",
+        "shared_kitchen_labor": "4.40"
+      },
+      "classification": "production",
+      "budget": "71.50",
+      "variance": "-5.50"
+    },
+    "store-1-dine-food-noodles-g01": {
+      "total_cost": "54.00",
+      "cost_structure": {
+        "ingredients_consumed": "24.80",
+        "kitchen_labor": "11.20",
+        "packaging": "9.00",
+        "utilities": "3.60",
+        "depreciation": "1.80",
+        "shared_kitchen_labor": "3.60"
+      },
+      "classification": "production",
+      "budget": "58.50",
+      "variance": "-4.50"
+    },
+    "store-1-dine-period-g01": {
+      "total_cost": "25.56",
+      "cost_structure": {
+        "head_office": "25.56"
+      },
+      "classification": "period",
+      "budget": "10.00",
+      "variance": "15.56"
+    },
+    "store-1-dine-settlement-g01": {
+      "total_cost": "2.00",
+      "cost_structure": {
+        "payment_fee": "2.00"
+      },
+      "classification": "service",
+      "budget": "2.00",
+      "variance": "0.00"
+    },
+    "store-1-delivery-food-rice-g01": {
+      "total_cost": "102.00",
+      "cost_structure": {
+        "ingredients_consumed": "54.40",
+        "kitchen_labor": "13.60",
+        "packaging": "17.00",
+        "utilities": "6.80",
+        "depreciation": "3.40",
+        "shared_kitchen_labor": "6.80"
+      },
+      "classification": "production",
+      "budget": "110.50",
+      "variance": "-8.50"
+    },
+    "store-1-delivery-food-noodles-g01": {
+      "total_cost": "78.00",
+      "cost_structure": {
+        "ingredients_consumed": "35.60",
+        "kitchen_labor": "16.40",
+        "packaging": "13.00",
+        "utilities": "5.20",
+        "depreciation": "2.60",
+        "shared_kitchen_labor": "5.20"
+      },
+      "classification": "production",
+      "budget": "84.50",
+      "variance": "-6.50"
+    },
+    "store-1-delivery-period-g01": {
+      "total_cost": "38.33",
+      "cost_structure": {
+        "head_office": "38.33"
+      },
+      "classification": "period",
+      "budget": "15.00",
+      "variance": "23.33"
+    },
+    "store-1-delivery-settlement-g01": {
+      "total_cost": "51.00",
+      "cost_structure": {
+        "commission": "51.00"
+      },
+      "classification": "service",
+      "budget": "51.00",
+      "variance": "0.00"
+    },
+    "store-2-dine-food-rice-g01": {
+      "total_cost": "84.00",
+      "cost_structure": {
+        "ingredients_consumed": "44.80",
+        "kitchen_labor": "11.20",
+        "packaging": "14.00",
+        "utilities": "5.60",
+        "depreciation": "2.80",
+        "shared_kitchen_labor": "5.60"
+      },
+      "classification": "production",
+      "budget": "91.00",
+      "variance": "-7.00"
+    },
+    "store-2-dine-food-noodles-g01": {
+      "total_cost": "66.00",
+      "cost_structure": {
+        "ingredients_consumed": "30.20",
+        "kitchen_labor": "13.80",
+        "packaging": "11.00",
+        "utilities": "4.40",
+        "depreciation": "2.20",
+        "shared_kitchen_labor": "4.40"
+      },
+      "classification": "production",
+      "budget": "71.50",
+      "variance": "-5.50"
+    },
+    "store-2-dine-period-g01": {
+      "total_cost": "31.94",
+      "cost_structure": {
+        "head_office": "31.94"
+      },
+      "classification": "period",
+      "budget": "12.50",
+      "variance": "19.44"
+    },
+    "store-2-dine-settlement-g01": {
+      "total_cost": "1.00",
+      "cost_structure": {
+        "payment_fee": "1.00"
+      },
+      "classification": "service",
+      "budget": "1.00",
+      "variance": "0.00"
+    },
+    "store-2-delivery-food-rice-g01": {
+      "total_cost": "48.00",
+      "cost_structure": {
+        "ingredients_consumed": "25.60",
+        "kitchen_labor": "6.40",
+        "packaging": "8.00",
+        "utilities": "3.20",
+        "depreciation": "1.60",
+        "shared_kitchen_labor": "3.20"
+      },
+      "classification": "production",
+      "budget": "52.00",
+      "variance": "-4.00"
+    },
+    "store-2-delivery-food-noodles-g01": {
+      "total_cost": "42.00",
+      "cost_structure": {
+        "ingredients_consumed": "19.40",
+        "kitchen_labor": "8.60",
+        "packaging": "7.00",
+        "utilities": "2.80",
+        "depreciation": "1.40",
+        "shared_kitchen_labor": "2.80"
+      },
+      "classification": "production",
+      "budget": "45.50",
+      "variance": "-3.50"
+    },
+    "store-2-delivery-period-g01": {
+      "total_cost": "19.17",
+      "cost_structure": {
+        "head_office": "19.17"
+      },
+      "classification": "period",
+      "budget": "7.50",
+      "variance": "11.67"
+    },
+    "store-2-delivery-settlement-g01": {
+      "total_cost": "25.50",
+      "cost_structure": {
+        "commission": "25.50"
+      },
+      "classification": "service",
+      "budget": "25.50",
+      "variance": "0.00"
+    },
+    "period-rent-g01": {
+      "total_cost": "60.00",
+      "cost_structure": {
+        "rent": "60.00"
+      },
+      "classification": "period",
+      "budget": "60.00",
+      "variance": "0.00"
+    },
+    "store-1-resale-g01": {
+      "total_cost": "18.00",
+      "cost_structure": {
+        "resale_cogs": "16.00",
+        "inventory_shrink": "2.00"
+      },
+      "classification": "service",
+      "budget": "20.00",
+      "variance": "-2.00"
+    },
+    "store-2-resale-g01": {
+      "total_cost": "18.00",
+      "cost_structure": {
+        "resale_cogs": "16.00",
+        "inventory_shrink": "2.00"
+      },
+      "classification": "service",
+      "budget": "20.00",
+      "variance": "-2.00"
+    },
+    "store-1-dine-food-rice-g02": {
+      "total_cost": "396.00",
+      "cost_structure": {
+        "ingredients_consumed": "211.20",
+        "kitchen_labor": "52.80",
+        "packaging": "66.00",
+        "utilities": "26.40",
+        "depreciation": "13.20",
+        "shared_kitchen_labor": "26.40"
+      },
+      "classification": "production",
+      "budget": "429.00",
+      "variance": "-33.00"
+    },
+    "store-1-dine-food-noodles-g02": {
+      "total_cost": "324.00",
+      "cost_structure": {
+        "ingredients_consumed": "148.80",
+        "kitchen_labor": "67.20",
+        "packaging": "54.00",
+        "utilities": "21.60",
+        "depreciation": "10.80",
+        "shared_kitchen_labor": "21.60"
+      },
+      "classification": "production",
+      "budget": "351.00",
+      "variance": "-27.00"
+    },
+    "store-1-dine-period-g02": {
+      "total_cost": "76.67",
+      "cost_structure": {
+        "head_office": "76.67"
+      },
+      "classification": "period",
+      "budget": "60.00",
+      "variance": "16.67"
+    },
+    "store-1-dine-settlement-g02": {
+      "total_cost": "12.00",
+      "cost_structure": {
+        "payment_fee": "12.00"
+      },
+      "classification": "service",
+      "budget": "12.00",
+      "variance": "0.00"
+    },
+    "store-1-delivery-food-rice-g02": {
+      "total_cost": "612.00",
+      "cost_structure": {
+        "ingredients_consumed": "326.40",
+        "kitchen_labor": "81.60",
+        "packaging": "102.00",
+        "utilities": "40.80",
+        "depreciation": "20.40",
+        "shared_kitchen_labor": "40.80"
+      },
+      "classification": "production",
+      "budget": "663.00",
+      "variance": "-51.00"
+    },
+    "store-1-delivery-food-noodles-g02": {
+      "total_cost": "468.00",
+      "cost_structure": {
+        "ingredients_consumed": "213.60",
+        "kitchen_labor": "98.40",
+        "packaging": "78.00",
+        "utilities": "31.20",
+        "depreciation": "15.60",
+        "shared_kitchen_labor": "31.20"
+      },
+      "classification": "production",
+      "budget": "507.00",
+      "variance": "-39.00"
+    },
+    "store-1-delivery-period-g02": {
+      "total_cost": "115.00",
+      "cost_structure": {
+        "head_office": "115.00"
+      },
+      "classification": "period",
+      "budget": "90.00",
+      "variance": "25.00"
+    },
+    "store-1-delivery-settlement-g02": {
+      "total_cost": "306.00",
+      "cost_structure": {
+        "commission": "306.00"
+      },
+      "classification": "service",
+      "budget": "306.00",
+      "variance": "0.00"
+    },
+    "store-2-dine-food-rice-g02": {
+      "total_cost": "504.00",
+      "cost_structure": {
+        "ingredients_consumed": "268.80",
+        "kitchen_labor": "67.20",
+        "packaging": "84.00",
+        "utilities": "33.60",
+        "depreciation": "16.80",
+        "shared_kitchen_labor": "33.60"
+      },
+      "classification": "production",
+      "budget": "546.00",
+      "variance": "-42.00"
+    },
+    "store-2-dine-food-noodles-g02": {
+      "total_cost": "396.00",
+      "cost_structure": {
+        "ingredients_consumed": "181.20",
+        "kitchen_labor": "82.80",
+        "packaging": "66.00",
+        "utilities": "26.40",
+        "depreciation": "13.20",
+        "shared_kitchen_labor": "26.40"
+      },
+      "classification": "production",
+      "budget": "429.00",
+      "variance": "-33.00"
+    },
+    "store-2-dine-period-g02": {
+      "total_cost": "95.83",
+      "cost_structure": {
+        "head_office": "95.83"
+      },
+      "classification": "period",
+      "budget": "75.00",
+      "variance": "20.83"
+    },
+    "store-2-dine-settlement-g02": {
+      "total_cost": "6.00",
+      "cost_structure": {
+        "payment_fee": "6.00"
+      },
+      "classification": "service",
+      "budget": "6.00",
+      "variance": "0.00"
+    },
+    "store-2-delivery-food-rice-g02": {
+      "total_cost": "288.00",
+      "cost_structure": {
+        "ingredients_consumed": "153.60",
+        "kitchen_labor": "38.40",
+        "packaging": "48.00",
+        "utilities": "19.20",
+        "depreciation": "9.60",
+        "shared_kitchen_labor": "19.20"
+      },
+      "classification": "production",
+      "budget": "312.00",
+      "variance": "-24.00"
+    },
+    "store-2-delivery-food-noodles-g02": {
+      "total_cost": "252.00",
+      "cost_structure": {
+        "ingredients_consumed": "116.40",
+        "kitchen_labor": "51.60",
+        "packaging": "42.00",
+        "utilities": "16.80",
+        "depreciation": "8.40",
+        "shared_kitchen_labor": "16.80"
+      },
+      "classification": "production",
+      "budget": "273.00",
+      "variance": "-21.00"
+    },
+    "store-2-delivery-period-g02": {
+      "total_cost": "57.50",
+      "cost_structure": {
+        "head_office": "57.50"
+      },
+      "classification": "period",
+      "budget": "45.00",
+      "variance": "12.50"
+    },
+    "store-2-delivery-settlement-g02": {
+      "total_cost": "153.00",
+      "cost_structure": {
+        "commission": "153.00"
+      },
+      "classification": "service",
+      "budget": "153.00",
+      "variance": "0.00"
+    },
+    "period-rent-g02": {
+      "total_cost": "360.00",
+      "cost_structure": {
+        "rent": "360.00"
+      },
+      "classification": "period",
+      "budget": "360.00",
+      "variance": "0.00"
+    },
+    "store-1-resale-g02": {
+      "total_cost": "108.00",
+      "cost_structure": {
+        "resale_cogs": "96.00",
+        "inventory_shrink": "12.00"
+      },
+      "classification": "service",
+      "budget": "120.00",
+      "variance": "-12.00"
+    },
+    "store-2-resale-g02": {
+      "total_cost": "108.00",
+      "cost_structure": {
+        "resale_cogs": "96.00",
+        "inventory_shrink": "12.00"
+      },
+      "classification": "service",
+      "budget": "120.00",
+      "variance": "-12.00"
+    },
+    "store-1-dine-food-rice-g03": {
+      "total_cost": "396.00",
+      "cost_structure": {
+        "ingredients_consumed": "211.20",
+        "kitchen_labor": "52.80",
+        "packaging": "66.00",
+        "utilities": "26.40",
+        "depreciation": "13.20",
+        "shared_kitchen_labor": "26.40"
+      },
+      "classification": "production",
+      "budget": "429.00",
+      "variance": "-33.00"
+    },
+    "store-1-dine-food-noodles-g03": {
+      "total_cost": "324.00",
+      "cost_structure": {
+        "ingredients_consumed": "148.80",
+        "kitchen_labor": "67.20",
+        "packaging": "54.00",
+        "utilities": "21.60",
+        "depreciation": "10.80",
+        "shared_kitchen_labor": "21.60"
+      },
+      "classification": "production",
+      "budget": "351.00",
+      "variance": "-27.00"
+    },
+    "store-1-dine-period-g03": {
+      "total_cost": "51.11",
+      "cost_structure": {
+        "head_office": "51.11"
+      },
+      "classification": "period",
+      "budget": "60.00",
+      "variance": "-8.89"
+    },
+    "store-1-dine-settlement-g03": {
+      "total_cost": "12.00",
+      "cost_structure": {
+        "payment_fee": "12.00"
+      },
+      "classification": "service",
+      "budget": "12.00",
+      "variance": "0.00"
+    },
+    "store-1-delivery-food-rice-g03": {
+      "total_cost": "612.00",
+      "cost_structure": {
+        "ingredients_consumed": "326.40",
+        "kitchen_labor": "81.60",
+        "packaging": "102.00",
+        "utilities": "40.80",
+        "depreciation": "20.40",
+        "shared_kitchen_labor": "40.80"
+      },
+      "classification": "production",
+      "budget": "663.00",
+      "variance": "-51.00"
+    },
+    "store-1-delivery-food-noodles-g03": {
+      "total_cost": "468.00",
+      "cost_structure": {
+        "ingredients_consumed": "213.60",
+        "kitchen_labor": "98.40",
+        "packaging": "78.00",
+        "utilities": "31.20",
+        "depreciation": "15.60",
+        "shared_kitchen_labor": "31.20"
+      },
+      "classification": "production",
+      "budget": "507.00",
+      "variance": "-39.00"
+    },
+    "store-1-delivery-period-g03": {
+      "total_cost": "76.67",
+      "cost_structure": {
+        "head_office": "76.67"
+      },
+      "classification": "period",
+      "budget": "90.00",
+      "variance": "-13.33"
+    },
+    "store-1-delivery-settlement-g03": {
+      "total_cost": "306.00",
+      "cost_structure": {
+        "commission": "306.00"
+      },
+      "classification": "service",
+      "budget": "306.00",
+      "variance": "0.00"
+    },
+    "store-2-dine-food-rice-g03": {
+      "total_cost": "504.00",
+      "cost_structure": {
+        "ingredients_consumed": "268.80",
+        "kitchen_labor": "67.20",
+        "packaging": "84.00",
+        "utilities": "33.60",
+        "depreciation": "16.80",
+        "shared_kitchen_labor": "33.60"
+      },
+      "classification": "production",
+      "budget": "546.00",
+      "variance": "-42.00"
+    },
+    "store-2-dine-food-noodles-g03": {
+      "total_cost": "396.00",
+      "cost_structure": {
+        "ingredients_consumed": "181.20",
+        "kitchen_labor": "82.80",
+        "packaging": "66.00",
+        "utilities": "26.40",
+        "depreciation": "13.20",
+        "shared_kitchen_labor": "26.40"
+      },
+      "classification": "production",
+      "budget": "429.00",
+      "variance": "-33.00"
+    },
+    "store-2-dine-period-g03": {
+      "total_cost": "63.89",
+      "cost_structure": {
+        "head_office": "63.89"
+      },
+      "classification": "period",
+      "budget": "75.00",
+      "variance": "-11.11"
+    },
+    "store-2-dine-settlement-g03": {
+      "total_cost": "6.00",
+      "cost_structure": {
+        "payment_fee": "6.00"
+      },
+      "classification": "service",
+      "budget": "6.00",
+      "variance": "0.00"
+    },
+    "store-2-delivery-food-rice-g03": {
+      "total_cost": "288.00",
+      "cost_structure": {
+        "ingredients_consumed": "153.60",
+        "kitchen_labor": "38.40",
+        "packaging": "48.00",
+        "utilities": "19.20",
+        "depreciation": "9.60",
+        "shared_kitchen_labor": "19.20"
+      },
+      "classification": "production",
+      "budget": "312.00",
+      "variance": "-24.00"
+    },
+    "store-2-delivery-food-noodles-g03": {
+      "total_cost": "252.00",
+      "cost_structure": {
+        "ingredients_consumed": "116.40",
+        "kitchen_labor": "51.60",
+        "packaging": "42.00",
+        "utilities": "16.80",
+        "depreciation": "8.40",
+        "shared_kitchen_labor": "16.80"
+      },
+      "classification": "production",
+      "budget": "273.00",
+      "variance": "-21.00"
+    },
+    "store-2-delivery-period-g03": {
+      "total_cost": "38.33",
+      "cost_structure": {
+        "head_office": "38.33"
+      },
+      "classification": "period",
+      "budget": "45.00",
+      "variance": "-6.67"
+    },
+    "store-2-delivery-settlement-g03": {
+      "total_cost": "153.00",
+      "cost_structure": {
+        "commission": "153.00"
+      },
+      "classification": "service",
+      "budget": "153.00",
+      "variance": "0.00"
+    },
+    "period-rent-g03": {
+      "total_cost": "360.00",
+      "cost_structure": {
+        "rent": "360.00"
+      },
+      "classification": "period",
+      "budget": "360.00",
+      "variance": "0.00"
+    },
+    "store-1-resale-g03": {
+      "total_cost": "108.00",
+      "cost_structure": {
+        "resale_cogs": "96.00",
+        "inventory_shrink": "12.00"
+      },
+      "classification": "service",
+      "budget": "120.00",
+      "variance": "-12.00"
+    },
+    "store-2-resale-g03": {
+      "total_cost": "108.00",
+      "cost_structure": {
+        "resale_cogs": "96.00",
+        "inventory_shrink": "12.00"
+      },
+      "classification": "service",
+      "budget": "120.00",
+      "variance": "-12.00"
+    },
+    "store-1-dine-food-rice-g04": {
+      "total_cost": "330.00",
+      "cost_structure": {
+        "ingredients_consumed": "176.00",
+        "kitchen_labor": "44.00",
+        "packaging": "55.00",
+        "utilities": "22.00",
+        "depreciation": "11.00",
+        "shared_kitchen_labor": "22.00"
+      },
+      "classification": "production",
+      "budget": "357.50",
+      "variance": "-27.50"
+    },
+    "store-1-dine-food-noodles-g04": {
+      "total_cost": "270.00",
+      "cost_structure": {
+        "ingredients_consumed": "124.00",
+        "kitchen_labor": "56.00",
+        "packaging": "45.00",
+        "utilities": "18.00",
+        "depreciation": "9.00",
+        "shared_kitchen_labor": "18.00"
+      },
+      "classification": "production",
+      "budget": "292.50",
+      "variance": "-22.50"
+    },
+    "store-1-dine-period-g04": {
+      "total_cost": "127.78",
+      "cost_structure": {
+        "head_office": "127.78"
+      },
+      "classification": "period",
+      "budget": "50.00",
+      "variance": "77.78"
+    },
+    "store-1-dine-settlement-g04": {
+      "total_cost": "10.00",
+      "cost_structure": {
+        "payment_fee": "10.00"
+      },
+      "classification": "service",
+      "budget": "10.00",
+      "variance": "0.00"
+    },
+    "store-1-delivery-food-rice-g04": {
+      "total_cost": "510.00",
+      "cost_structure": {
+        "ingredients_consumed": "272.00",
+        "kitchen_labor": "68.00",
+        "packaging": "85.00",
+        "utilities": "34.00",
+        "depreciation": "17.00",
+        "shared_kitchen_labor": "34.00"
+      },
+      "classification": "production",
+      "budget": "552.50",
+      "variance": "-42.50"
+    },
+    "store-1-delivery-food-noodles-g04": {
+      "total_cost": "390.00",
+      "cost_structure": {
+        "ingredients_consumed": "178.00",
+        "kitchen_labor": "82.00",
+        "packaging": "65.00",
+        "utilities": "26.00",
+        "depreciation": "13.00",
+        "shared_kitchen_labor": "26.00"
+      },
+      "classification": "production",
+      "budget": "422.50",
+      "variance": "-32.50"
+    },
+    "store-1-delivery-period-g04": {
+      "total_cost": "191.67",
+      "cost_structure": {
+        "head_office": "191.67"
+      },
+      "classification": "period",
+      "budget": "75.00",
+      "variance": "116.67"
+    },
+    "store-1-delivery-settlement-g04": {
+      "total_cost": "255.00",
+      "cost_structure": {
+        "commission": "255.00"
+      },
+      "classification": "service",
+      "budget": "255.00",
+      "variance": "0.00"
+    },
+    "store-2-dine-food-rice-g04": {
+      "total_cost": "420.00",
+      "cost_structure": {
+        "ingredients_consumed": "224.00",
+        "kitchen_labor": "56.00",
+        "packaging": "70.00",
+        "utilities": "28.00",
+        "depreciation": "14.00",
+        "shared_kitchen_labor": "28.00"
+      },
+      "classification": "production",
+      "budget": "455.00",
+      "variance": "-35.00"
+    },
+    "store-2-dine-food-noodles-g04": {
+      "total_cost": "330.00",
+      "cost_structure": {
+        "ingredients_consumed": "151.00",
+        "kitchen_labor": "69.00",
+        "packaging": "55.00",
+        "utilities": "22.00",
+        "depreciation": "11.00",
+        "shared_kitchen_labor": "22.00"
+      },
+      "classification": "production",
+      "budget": "357.50",
+      "variance": "-27.50"
+    },
+    "store-2-dine-period-g04": {
+      "total_cost": "159.72",
+      "cost_structure": {
+        "head_office": "159.72"
+      },
+      "classification": "period",
+      "budget": "62.50",
+      "variance": "97.22"
+    },
+    "store-2-dine-settlement-g04": {
+      "total_cost": "5.00",
+      "cost_structure": {
+        "payment_fee": "5.00"
+      },
+      "classification": "service",
+      "budget": "5.00",
+      "variance": "0.00"
+    },
+    "store-2-delivery-food-rice-g04": {
+      "total_cost": "240.00",
+      "cost_structure": {
+        "ingredients_consumed": "128.00",
+        "kitchen_labor": "32.00",
+        "packaging": "40.00",
+        "utilities": "16.00",
+        "depreciation": "8.00",
+        "shared_kitchen_labor": "16.00"
+      },
+      "classification": "production",
+      "budget": "260.00",
+      "variance": "-20.00"
+    },
+    "store-2-delivery-food-noodles-g04": {
+      "total_cost": "210.00",
+      "cost_structure": {
+        "ingredients_consumed": "97.00",
+        "kitchen_labor": "43.00",
+        "packaging": "35.00",
+        "utilities": "14.00",
+        "depreciation": "7.00",
+        "shared_kitchen_labor": "14.00"
+      },
+      "classification": "production",
+      "budget": "227.50",
+      "variance": "-17.50"
+    },
+    "store-2-delivery-period-g04": {
+      "total_cost": "95.83",
+      "cost_structure": {
+        "head_office": "95.83"
+      },
+      "classification": "period",
+      "budget": "37.50",
+      "variance": "58.33"
+    },
+    "store-2-delivery-settlement-g04": {
+      "total_cost": "127.50",
+      "cost_structure": {
+        "commission": "127.50"
+      },
+      "classification": "service",
+      "budget": "127.50",
+      "variance": "0.00"
+    },
+    "period-rent-g04": {
+      "total_cost": "300.00",
+      "cost_structure": {
+        "rent": "300.00"
+      },
+      "classification": "period",
+      "budget": "300.00",
+      "variance": "0.00"
+    },
+    "store-1-resale-g04": {
+      "total_cost": "90.00",
+      "cost_structure": {
+        "resale_cogs": "80.00",
+        "inventory_shrink": "10.00"
+      },
+      "classification": "service",
+      "budget": "100.00",
+      "variance": "-10.00"
+    },
+    "store-2-resale-g04": {
+      "total_cost": "90.00",
+      "cost_structure": {
+        "resale_cogs": "80.00",
+        "inventory_shrink": "10.00"
+      },
+      "classification": "service",
+      "budget": "100.00",
+      "variance": "-10.00"
+    },
+    "store-1-dine-food-rice-g05": {
+      "total_cost": "1848.00",
+      "cost_structure": {
+        "ingredients_consumed": "985.60",
+        "kitchen_labor": "246.40",
+        "packaging": "308.00",
+        "utilities": "123.20",
+        "depreciation": "61.60",
+        "shared_kitchen_labor": "123.20"
+      },
+      "classification": "production",
+      "budget": "2002.00",
+      "variance": "-154.00"
+    },
+    "store-1-dine-food-noodles-g05": {
+      "total_cost": "1512.00",
+      "cost_structure": {
+        "ingredients_consumed": "694.40",
+        "kitchen_labor": "313.60",
+        "packaging": "252.00",
+        "utilities": "100.80",
+        "depreciation": "50.40",
+        "shared_kitchen_labor": "100.80"
+      },
+      "classification": "production",
+      "budget": "1638.00",
+      "variance": "-126.00"
+    },
+    "store-1-dine-period-g05": {
+      "total_cost": "178.89",
+      "cost_structure": {
+        "head_office": "178.89"
+      },
+      "classification": "period",
+      "budget": "280.00",
+      "variance": "-101.11"
+    },
+    "store-1-dine-settlement-g05": {
+      "total_cost": "56.00",
+      "cost_structure": {
+        "payment_fee": "56.00"
+      },
+      "classification": "service",
+      "budget": "56.00",
+      "variance": "0.00"
+    },
+    "store-1-delivery-food-rice-g05": {
+      "total_cost": "2856.00",
+      "cost_structure": {
+        "ingredients_consumed": "1523.20",
+        "kitchen_labor": "380.80",
+        "packaging": "476.00",
+        "utilities": "190.40",
+        "depreciation": "95.20",
+        "shared_kitchen_labor": "190.40"
+      },
+      "classification": "production",
+      "budget": "3094.00",
+      "variance": "-238.00"
+    },
+    "store-1-delivery-food-noodles-g05": {
+      "total_cost": "2184.00",
+      "cost_structure": {
+        "ingredients_consumed": "996.80",
+        "kitchen_labor": "459.20",
+        "packaging": "364.00",
+        "utilities": "145.60",
+        "depreciation": "72.80",
+        "shared_kitchen_labor": "145.60"
+      },
+      "classification": "production",
+      "budget": "2366.00",
+      "variance": "-182.00"
+    },
+    "store-1-delivery-period-g05": {
+      "total_cost": "268.33",
+      "cost_structure": {
+        "head_office": "268.33"
+      },
+      "classification": "period",
+      "budget": "420.00",
+      "variance": "-151.67"
+    },
+    "store-1-delivery-settlement-g05": {
+      "total_cost": "1428.00",
+      "cost_structure": {
+        "commission": "1428.00"
+      },
+      "classification": "service",
+      "budget": "1428.00",
+      "variance": "0.00"
+    },
+    "store-2-dine-food-rice-g05": {
+      "total_cost": "2352.00",
+      "cost_structure": {
+        "ingredients_consumed": "1254.40",
+        "kitchen_labor": "313.60",
+        "packaging": "392.00",
+        "utilities": "156.80",
+        "depreciation": "78.40",
+        "shared_kitchen_labor": "156.80"
+      },
+      "classification": "production",
+      "budget": "2548.00",
+      "variance": "-196.00"
+    },
+    "store-2-dine-food-noodles-g05": {
+      "total_cost": "1848.00",
+      "cost_structure": {
+        "ingredients_consumed": "845.60",
+        "kitchen_labor": "386.40",
+        "packaging": "308.00",
+        "utilities": "123.20",
+        "depreciation": "61.60",
+        "shared_kitchen_labor": "123.20"
+      },
+      "classification": "production",
+      "budget": "2002.00",
+      "variance": "-154.00"
+    },
+    "store-2-dine-period-g05": {
+      "total_cost": "223.61",
+      "cost_structure": {
+        "head_office": "223.61"
+      },
+      "classification": "period",
+      "budget": "350.00",
+      "variance": "-126.39"
+    },
+    "store-2-dine-settlement-g05": {
+      "total_cost": "28.00",
+      "cost_structure": {
+        "payment_fee": "28.00"
+      },
+      "classification": "service",
+      "budget": "28.00",
+      "variance": "0.00"
+    },
+    "store-2-delivery-food-rice-g05": {
+      "total_cost": "1344.00",
+      "cost_structure": {
+        "ingredients_consumed": "716.80",
+        "kitchen_labor": "179.20",
+        "packaging": "224.00",
+        "utilities": "89.60",
+        "depreciation": "44.80",
+        "shared_kitchen_labor": "89.60"
+      },
+      "classification": "production",
+      "budget": "1456.00",
+      "variance": "-112.00"
+    },
+    "store-2-delivery-food-noodles-g05": {
+      "total_cost": "1176.00",
+      "cost_structure": {
+        "ingredients_consumed": "543.20",
+        "kitchen_labor": "240.80",
+        "packaging": "196.00",
+        "utilities": "78.40",
+        "depreciation": "39.20",
+        "shared_kitchen_labor": "78.40"
+      },
+      "classification": "production",
+      "budget": "1274.00",
+      "variance": "-98.00"
+    },
+    "store-2-delivery-period-g05": {
+      "total_cost": "134.17",
+      "cost_structure": {
+        "head_office": "134.17"
+      },
+      "classification": "period",
+      "budget": "210.00",
+      "variance": "-75.83"
+    },
+    "store-2-delivery-settlement-g05": {
+      "total_cost": "714.00",
+      "cost_structure": {
+        "commission": "714.00"
+      },
+      "classification": "service",
+      "budget": "714.00",
+      "variance": "0.00"
+    },
+    "period-rent-g05": {
+      "total_cost": "1680.00",
+      "cost_structure": {
+        "rent": "1680.00"
+      },
+      "classification": "period",
+      "budget": "1680.00",
+      "variance": "0.00"
+    },
+    "store-1-resale-g05": {
+      "total_cost": "504.00",
+      "cost_structure": {
+        "resale_cogs": "448.00",
+        "inventory_shrink": "56.00"
+      },
+      "classification": "service",
+      "budget": "560.00",
+      "variance": "-56.00"
+    },
+    "store-2-resale-g05": {
+      "total_cost": "504.00",
+      "cost_structure": {
+        "resale_cogs": "448.00",
+        "inventory_shrink": "56.00"
+      },
+      "classification": "service",
+      "budget": "560.00",
+      "variance": "-56.00"
+    }
+  },
+  "lifecycle": {
+    "store-1-dine-food-rice-g01": {
+      "started_quantity": "11",
+      "completed_quantity": "10",
+      "sales_quantity": "9",
+      "returned_quantity": "1",
+      "wip_quantity": "0",
+      "finished_quantity": "2",
+      "scrap_quantity": "1",
+      "wip": "0.00",
+      "finished_inventory": "12.00",
+      "cost_of_sales": "48.00",
+      "scrap_loss": "6.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-dine-food-noodles-g01": {
+      "started_quantity": "9",
+      "completed_quantity": "8",
+      "sales_quantity": "8",
+      "returned_quantity": "0",
+      "wip_quantity": "1",
+      "finished_quantity": "0",
+      "scrap_quantity": "0",
+      "wip": "6.00",
+      "finished_inventory": "0.00",
+      "cost_of_sales": "48.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-delivery-food-rice-g01": {
+      "started_quantity": "17",
+      "completed_quantity": "16",
+      "sales_quantity": "14",
+      "returned_quantity": "1",
+      "wip_quantity": "1",
+      "finished_quantity": "3",
+      "scrap_quantity": "0",
+      "wip": "6.00",
+      "finished_inventory": "18.00",
+      "cost_of_sales": "78.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-delivery-food-noodles-g01": {
+      "started_quantity": "13",
+      "completed_quantity": "12",
+      "sales_quantity": "11",
+      "returned_quantity": "1",
+      "wip_quantity": "0",
+      "finished_quantity": "2",
+      "scrap_quantity": "1",
+      "wip": "0.00",
+      "finished_inventory": "12.00",
+      "cost_of_sales": "60.00",
+      "scrap_loss": "6.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-dine-food-rice-g01": {
+      "started_quantity": "14",
+      "completed_quantity": "13",
+      "sales_quantity": "12",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "1",
+      "scrap_quantity": "1",
+      "wip": "0.00",
+      "finished_inventory": "6.00",
+      "cost_of_sales": "72.00",
+      "scrap_loss": "6.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-dine-food-noodles-g01": {
+      "started_quantity": "11",
+      "completed_quantity": "11",
+      "sales_quantity": "10",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "1",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "6.00",
+      "cost_of_sales": "60.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-delivery-food-rice-g01": {
+      "started_quantity": "8",
+      "completed_quantity": "8",
+      "sales_quantity": "7",
+      "returned_quantity": "1",
+      "wip_quantity": "0",
+      "finished_quantity": "2",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "12.00",
+      "cost_of_sales": "36.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-delivery-food-noodles-g01": {
+      "started_quantity": "7",
+      "completed_quantity": "6",
+      "sales_quantity": "5",
+      "returned_quantity": "0",
+      "wip_quantity": "1",
+      "finished_quantity": "1",
+      "scrap_quantity": "0",
+      "wip": "6.00",
+      "finished_inventory": "6.00",
+      "cost_of_sales": "30.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-dine-food-rice-g02": {
+      "started_quantity": "33",
+      "completed_quantity": "30",
+      "sales_quantity": "27",
+      "returned_quantity": "3",
+      "wip_quantity": "0",
+      "finished_quantity": "6",
+      "scrap_quantity": "3",
+      "wip": "0.00",
+      "finished_inventory": "72.00",
+      "cost_of_sales": "288.00",
+      "scrap_loss": "36.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-1-dine-food-noodles-g02": {
+      "started_quantity": "27",
+      "completed_quantity": "24",
+      "sales_quantity": "24",
+      "returned_quantity": "0",
+      "wip_quantity": "3",
+      "finished_quantity": "0",
+      "scrap_quantity": "0",
+      "wip": "36.00",
+      "finished_inventory": "0.00",
+      "cost_of_sales": "288.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-1-delivery-food-rice-g02": {
+      "started_quantity": "51",
+      "completed_quantity": "48",
+      "sales_quantity": "42",
+      "returned_quantity": "3",
+      "wip_quantity": "3",
+      "finished_quantity": "9",
+      "scrap_quantity": "0",
+      "wip": "36.00",
+      "finished_inventory": "108.00",
+      "cost_of_sales": "468.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-1-delivery-food-noodles-g02": {
+      "started_quantity": "39",
+      "completed_quantity": "36",
+      "sales_quantity": "33",
+      "returned_quantity": "3",
+      "wip_quantity": "0",
+      "finished_quantity": "6",
+      "scrap_quantity": "3",
+      "wip": "0.00",
+      "finished_inventory": "72.00",
+      "cost_of_sales": "360.00",
+      "scrap_loss": "36.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-2-dine-food-rice-g02": {
+      "started_quantity": "42",
+      "completed_quantity": "39",
+      "sales_quantity": "36",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "3",
+      "scrap_quantity": "3",
+      "wip": "0.00",
+      "finished_inventory": "36.00",
+      "cost_of_sales": "432.00",
+      "scrap_loss": "36.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-2-dine-food-noodles-g02": {
+      "started_quantity": "33",
+      "completed_quantity": "33",
+      "sales_quantity": "30",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "3",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "36.00",
+      "cost_of_sales": "360.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-2-delivery-food-rice-g02": {
+      "started_quantity": "24",
+      "completed_quantity": "24",
+      "sales_quantity": "21",
+      "returned_quantity": "3",
+      "wip_quantity": "0",
+      "finished_quantity": "6",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "72.00",
+      "cost_of_sales": "216.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-2-delivery-food-noodles-g02": {
+      "started_quantity": "21",
+      "completed_quantity": "18",
+      "sales_quantity": "15",
+      "returned_quantity": "0",
+      "wip_quantity": "3",
+      "finished_quantity": "3",
+      "scrap_quantity": "0",
+      "wip": "36.00",
+      "finished_inventory": "36.00",
+      "cost_of_sales": "180.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "12"
+    },
+    "store-1-dine-food-rice-g03": {
+      "started_quantity": "22",
+      "completed_quantity": "20",
+      "sales_quantity": "18",
+      "returned_quantity": "2",
+      "wip_quantity": "0",
+      "finished_quantity": "4",
+      "scrap_quantity": "2",
+      "wip": "0.00",
+      "finished_inventory": "72.00",
+      "cost_of_sales": "288.00",
+      "scrap_loss": "36.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-1-dine-food-noodles-g03": {
+      "started_quantity": "18",
+      "completed_quantity": "16",
+      "sales_quantity": "16",
+      "returned_quantity": "0",
+      "wip_quantity": "2",
+      "finished_quantity": "0",
+      "scrap_quantity": "0",
+      "wip": "36.00",
+      "finished_inventory": "0.00",
+      "cost_of_sales": "288.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-1-delivery-food-rice-g03": {
+      "started_quantity": "34",
+      "completed_quantity": "32",
+      "sales_quantity": "28",
+      "returned_quantity": "2",
+      "wip_quantity": "2",
+      "finished_quantity": "6",
+      "scrap_quantity": "0",
+      "wip": "36.00",
+      "finished_inventory": "108.00",
+      "cost_of_sales": "468.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-1-delivery-food-noodles-g03": {
+      "started_quantity": "26",
+      "completed_quantity": "24",
+      "sales_quantity": "22",
+      "returned_quantity": "2",
+      "wip_quantity": "0",
+      "finished_quantity": "4",
+      "scrap_quantity": "2",
+      "wip": "0.00",
+      "finished_inventory": "72.00",
+      "cost_of_sales": "360.00",
+      "scrap_loss": "36.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-2-dine-food-rice-g03": {
+      "started_quantity": "28",
+      "completed_quantity": "26",
+      "sales_quantity": "24",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "2",
+      "scrap_quantity": "2",
+      "wip": "0.00",
+      "finished_inventory": "36.00",
+      "cost_of_sales": "432.00",
+      "scrap_loss": "36.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-2-dine-food-noodles-g03": {
+      "started_quantity": "22",
+      "completed_quantity": "22",
+      "sales_quantity": "20",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "2",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "36.00",
+      "cost_of_sales": "360.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-2-delivery-food-rice-g03": {
+      "started_quantity": "16",
+      "completed_quantity": "16",
+      "sales_quantity": "14",
+      "returned_quantity": "2",
+      "wip_quantity": "0",
+      "finished_quantity": "4",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "72.00",
+      "cost_of_sales": "216.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-2-delivery-food-noodles-g03": {
+      "started_quantity": "14",
+      "completed_quantity": "12",
+      "sales_quantity": "10",
+      "returned_quantity": "0",
+      "wip_quantity": "2",
+      "finished_quantity": "2",
+      "scrap_quantity": "0",
+      "wip": "36.00",
+      "finished_inventory": "36.00",
+      "cost_of_sales": "180.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "18"
+    },
+    "store-1-dine-food-rice-g04": {
+      "started_quantity": "55",
+      "completed_quantity": "50",
+      "sales_quantity": "45",
+      "returned_quantity": "5",
+      "wip_quantity": "0",
+      "finished_quantity": "10",
+      "scrap_quantity": "5",
+      "wip": "0.00",
+      "finished_inventory": "60.00",
+      "cost_of_sales": "240.00",
+      "scrap_loss": "30.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-dine-food-noodles-g04": {
+      "started_quantity": "45",
+      "completed_quantity": "40",
+      "sales_quantity": "40",
+      "returned_quantity": "0",
+      "wip_quantity": "5",
+      "finished_quantity": "0",
+      "scrap_quantity": "0",
+      "wip": "30.00",
+      "finished_inventory": "0.00",
+      "cost_of_sales": "240.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-delivery-food-rice-g04": {
+      "started_quantity": "85",
+      "completed_quantity": "80",
+      "sales_quantity": "70",
+      "returned_quantity": "5",
+      "wip_quantity": "5",
+      "finished_quantity": "15",
+      "scrap_quantity": "0",
+      "wip": "30.00",
+      "finished_inventory": "90.00",
+      "cost_of_sales": "390.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-delivery-food-noodles-g04": {
+      "started_quantity": "65",
+      "completed_quantity": "60",
+      "sales_quantity": "55",
+      "returned_quantity": "5",
+      "wip_quantity": "0",
+      "finished_quantity": "10",
+      "scrap_quantity": "5",
+      "wip": "0.00",
+      "finished_inventory": "60.00",
+      "cost_of_sales": "300.00",
+      "scrap_loss": "30.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-dine-food-rice-g04": {
+      "started_quantity": "70",
+      "completed_quantity": "65",
+      "sales_quantity": "60",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "5",
+      "scrap_quantity": "5",
+      "wip": "0.00",
+      "finished_inventory": "30.00",
+      "cost_of_sales": "360.00",
+      "scrap_loss": "30.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-dine-food-noodles-g04": {
+      "started_quantity": "55",
+      "completed_quantity": "55",
+      "sales_quantity": "50",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "5",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "30.00",
+      "cost_of_sales": "300.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-delivery-food-rice-g04": {
+      "started_quantity": "40",
+      "completed_quantity": "40",
+      "sales_quantity": "35",
+      "returned_quantity": "5",
+      "wip_quantity": "0",
+      "finished_quantity": "10",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "60.00",
+      "cost_of_sales": "180.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-2-delivery-food-noodles-g04": {
+      "started_quantity": "35",
+      "completed_quantity": "30",
+      "sales_quantity": "25",
+      "returned_quantity": "0",
+      "wip_quantity": "5",
+      "finished_quantity": "5",
+      "scrap_quantity": "0",
+      "wip": "30.00",
+      "finished_inventory": "30.00",
+      "cost_of_sales": "150.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "6"
+    },
+    "store-1-dine-food-rice-g05": {
+      "started_quantity": "77",
+      "completed_quantity": "70",
+      "sales_quantity": "63",
+      "returned_quantity": "7",
+      "wip_quantity": "0",
+      "finished_quantity": "14",
+      "scrap_quantity": "7",
+      "wip": "0.00",
+      "finished_inventory": "336.00",
+      "cost_of_sales": "1344.00",
+      "scrap_loss": "168.00",
+      "qualified_unit_cost": "24"
+    },
+    "store-1-dine-food-noodles-g05": {
+      "started_quantity": "63",
+      "completed_quantity": "56",
+      "sales_quantity": "56",
+      "returned_quantity": "0",
+      "wip_quantity": "7",
+      "finished_quantity": "0",
+      "scrap_quantity": "0",
+      "wip": "168.00",
+      "finished_inventory": "0.00",
+      "cost_of_sales": "1344.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "24"
+    },
+    "store-1-delivery-food-rice-g05": {
+      "started_quantity": "119",
+      "completed_quantity": "112",
+      "sales_quantity": "98",
+      "returned_quantity": "7",
+      "wip_quantity": "7",
+      "finished_quantity": "21",
+      "scrap_quantity": "0",
+      "wip": "168.00",
+      "finished_inventory": "504.00",
+      "cost_of_sales": "2184.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "24"
+    },
+    "store-1-delivery-food-noodles-g05": {
+      "started_quantity": "91",
+      "completed_quantity": "84",
+      "sales_quantity": "77",
+      "returned_quantity": "7",
+      "wip_quantity": "0",
+      "finished_quantity": "14",
+      "scrap_quantity": "7",
+      "wip": "0.00",
+      "finished_inventory": "336.00",
+      "cost_of_sales": "1680.00",
+      "scrap_loss": "168.00",
+      "qualified_unit_cost": "24"
+    },
+    "store-2-dine-food-rice-g05": {
+      "started_quantity": "98",
+      "completed_quantity": "91",
+      "sales_quantity": "84",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "7",
+      "scrap_quantity": "7",
+      "wip": "0.00",
+      "finished_inventory": "168.00",
+      "cost_of_sales": "2016.00",
+      "scrap_loss": "168.00",
+      "qualified_unit_cost": "24"
+    },
+    "store-2-dine-food-noodles-g05": {
+      "started_quantity": "77",
+      "completed_quantity": "77",
+      "sales_quantity": "70",
+      "returned_quantity": "0",
+      "wip_quantity": "0",
+      "finished_quantity": "7",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "168.00",
+      "cost_of_sales": "1680.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "24"
+    },
+    "store-2-delivery-food-rice-g05": {
+      "started_quantity": "56",
+      "completed_quantity": "56",
+      "sales_quantity": "49",
+      "returned_quantity": "7",
+      "wip_quantity": "0",
+      "finished_quantity": "14",
+      "scrap_quantity": "0",
+      "wip": "0.00",
+      "finished_inventory": "336.00",
+      "cost_of_sales": "1008.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "24"
+    },
+    "store-2-delivery-food-noodles-g05": {
+      "started_quantity": "49",
+      "completed_quantity": "42",
+      "sales_quantity": "35",
+      "returned_quantity": "0",
+      "wip_quantity": "7",
+      "finished_quantity": "7",
+      "scrap_quantity": "0",
+      "wip": "168.00",
+      "finished_inventory": "168.00",
+      "cost_of_sales": "840.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "24"
+    }
+  },
+  "asset_total": "4140.00",
+  "pnl_cost": "30843.00",
+  "period_expense": "4830.00",
+  "service_cost": "5313.00",
+  "budget_total": "37237.00",
+  "budget_variance": "-2254.00",
+  "excluded_cash": "5678.70",
+  "can_claim_entire_industry": false,
+  "settlement": {
+    "rows": {
+      "store-1-dine-settlement-g01": {
+        "gross": "400.00",
+        "merchant_discount": "20.00",
+        "platform_discount": "0.00",
+        "refund": "20.00",
+        "commission": "0.00",
+        "payment_fee": "2.00",
+        "receipt": "358.00",
+        "net_revenue": "360.00",
+        "expected_receipt": "358.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-delivery-settlement-g01": {
+        "gross": "600.00",
+        "merchant_discount": "30.00",
+        "platform_discount": "40.00",
+        "refund": "60.00",
+        "commission": "51.00",
+        "payment_fee": "0.00",
+        "receipt": "459.00",
+        "net_revenue": "510.00",
+        "expected_receipt": "459.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-dine-settlement-g01": {
+        "gross": "500.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "1.00",
+        "receipt": "499.00",
+        "net_revenue": "500.00",
+        "expected_receipt": "499.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-delivery-settlement-g01": {
+        "gross": "300.00",
+        "merchant_discount": "15.00",
+        "platform_discount": "20.00",
+        "refund": "30.00",
+        "commission": "25.50",
+        "payment_fee": "0.00",
+        "receipt": "229.50",
+        "net_revenue": "255.00",
+        "expected_receipt": "229.50",
+        "receipt_difference": "0.00"
+      },
+      "store-1-resale-g01": {
+        "gross": "40.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "8.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "32.00",
+        "net_revenue": "32.00",
+        "expected_receipt": "32.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-resale-g01": {
+        "gross": "32.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "32.00",
+        "net_revenue": "32.00",
+        "expected_receipt": "32.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-dine-settlement-g02": {
+        "gross": "2400.00",
+        "merchant_discount": "120.00",
+        "platform_discount": "0.00",
+        "refund": "120.00",
+        "commission": "0.00",
+        "payment_fee": "12.00",
+        "receipt": "2148.00",
+        "net_revenue": "2160.00",
+        "expected_receipt": "2148.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-delivery-settlement-g02": {
+        "gross": "3600.00",
+        "merchant_discount": "180.00",
+        "platform_discount": "240.00",
+        "refund": "360.00",
+        "commission": "306.00",
+        "payment_fee": "0.00",
+        "receipt": "2754.00",
+        "net_revenue": "3060.00",
+        "expected_receipt": "2754.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-dine-settlement-g02": {
+        "gross": "3000.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "6.00",
+        "receipt": "2994.00",
+        "net_revenue": "3000.00",
+        "expected_receipt": "2994.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-delivery-settlement-g02": {
+        "gross": "1800.00",
+        "merchant_discount": "90.00",
+        "platform_discount": "120.00",
+        "refund": "180.00",
+        "commission": "153.00",
+        "payment_fee": "0.00",
+        "receipt": "1377.00",
+        "net_revenue": "1530.00",
+        "expected_receipt": "1377.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-resale-g02": {
+        "gross": "240.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "48.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "192.00",
+        "net_revenue": "192.00",
+        "expected_receipt": "192.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-resale-g02": {
+        "gross": "192.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "192.00",
+        "net_revenue": "192.00",
+        "expected_receipt": "192.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-dine-settlement-g03": {
+        "gross": "2400.00",
+        "merchant_discount": "120.00",
+        "platform_discount": "0.00",
+        "refund": "120.00",
+        "commission": "0.00",
+        "payment_fee": "12.00",
+        "receipt": "2148.00",
+        "net_revenue": "2160.00",
+        "expected_receipt": "2148.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-delivery-settlement-g03": {
+        "gross": "3600.00",
+        "merchant_discount": "180.00",
+        "platform_discount": "240.00",
+        "refund": "360.00",
+        "commission": "306.00",
+        "payment_fee": "0.00",
+        "receipt": "2754.00",
+        "net_revenue": "3060.00",
+        "expected_receipt": "2754.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-dine-settlement-g03": {
+        "gross": "3000.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "6.00",
+        "receipt": "2994.00",
+        "net_revenue": "3000.00",
+        "expected_receipt": "2994.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-delivery-settlement-g03": {
+        "gross": "1800.00",
+        "merchant_discount": "90.00",
+        "platform_discount": "120.00",
+        "refund": "180.00",
+        "commission": "153.00",
+        "payment_fee": "0.00",
+        "receipt": "1377.00",
+        "net_revenue": "1530.00",
+        "expected_receipt": "1377.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-resale-g03": {
+        "gross": "240.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "48.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "192.00",
+        "net_revenue": "192.00",
+        "expected_receipt": "192.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-resale-g03": {
+        "gross": "192.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "192.00",
+        "net_revenue": "192.00",
+        "expected_receipt": "192.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-dine-settlement-g04": {
+        "gross": "2000.00",
+        "merchant_discount": "100.00",
+        "platform_discount": "0.00",
+        "refund": "100.00",
+        "commission": "0.00",
+        "payment_fee": "10.00",
+        "receipt": "1790.00",
+        "net_revenue": "1800.00",
+        "expected_receipt": "1790.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-delivery-settlement-g04": {
+        "gross": "3000.00",
+        "merchant_discount": "150.00",
+        "platform_discount": "200.00",
+        "refund": "300.00",
+        "commission": "255.00",
+        "payment_fee": "0.00",
+        "receipt": "2295.00",
+        "net_revenue": "2550.00",
+        "expected_receipt": "2295.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-dine-settlement-g04": {
+        "gross": "2500.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "5.00",
+        "receipt": "2495.00",
+        "net_revenue": "2500.00",
+        "expected_receipt": "2495.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-delivery-settlement-g04": {
+        "gross": "1500.00",
+        "merchant_discount": "75.00",
+        "platform_discount": "100.00",
+        "refund": "150.00",
+        "commission": "127.50",
+        "payment_fee": "0.00",
+        "receipt": "1147.50",
+        "net_revenue": "1275.00",
+        "expected_receipt": "1147.50",
+        "receipt_difference": "0.00"
+      },
+      "store-1-resale-g04": {
+        "gross": "200.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "40.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "160.00",
+        "net_revenue": "160.00",
+        "expected_receipt": "160.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-resale-g04": {
+        "gross": "160.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "160.00",
+        "net_revenue": "160.00",
+        "expected_receipt": "160.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-dine-settlement-g05": {
+        "gross": "11200.00",
+        "merchant_discount": "560.00",
+        "platform_discount": "0.00",
+        "refund": "560.00",
+        "commission": "0.00",
+        "payment_fee": "56.00",
+        "receipt": "10024.00",
+        "net_revenue": "10080.00",
+        "expected_receipt": "10024.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-delivery-settlement-g05": {
+        "gross": "16800.00",
+        "merchant_discount": "840.00",
+        "platform_discount": "1120.00",
+        "refund": "1680.00",
+        "commission": "1428.00",
+        "payment_fee": "0.00",
+        "receipt": "12852.00",
+        "net_revenue": "14280.00",
+        "expected_receipt": "12852.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-dine-settlement-g05": {
+        "gross": "14000.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "28.00",
+        "receipt": "13972.00",
+        "net_revenue": "14000.00",
+        "expected_receipt": "13972.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-delivery-settlement-g05": {
+        "gross": "8400.00",
+        "merchant_discount": "420.00",
+        "platform_discount": "560.00",
+        "refund": "840.00",
+        "commission": "714.00",
+        "payment_fee": "0.00",
+        "receipt": "6426.00",
+        "net_revenue": "7140.00",
+        "expected_receipt": "6426.00",
+        "receipt_difference": "0.00"
+      },
+      "store-1-resale-g05": {
+        "gross": "1120.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "224.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "896.00",
+        "net_revenue": "896.00",
+        "expected_receipt": "896.00",
+        "receipt_difference": "0.00"
+      },
+      "store-2-resale-g05": {
+        "gross": "896.00",
+        "merchant_discount": "0.00",
+        "platform_discount": "0.00",
+        "refund": "0.00",
+        "commission": "0.00",
+        "payment_fee": "0.00",
+        "receipt": "896.00",
+        "net_revenue": "896.00",
+        "expected_receipt": "896.00",
+        "receipt_difference": "0.00"
+      }
+    },
+    "totals": {
+      "gross": "86112.00",
+      "merchant_discount": "2990.00",
+      "platform_discount": "2760.00",
+      "refund": "5428.00",
+      "commission": "3519.00",
+      "payment_fee": "138.00",
+      "receipt": "74037.00",
+      "net_revenue": "77694.00",
+      "expected_receipt": "74037.00",
+      "receipt_difference": "0.00"
+    }
+  },
+  "inventory": {
+    "available_value": "2760.00",
+    "net_cogs": "1472.00",
+    "shrink": "184.00",
+    "closing_value": "1104.00",
+    "closed_transfer_value": "460.00",
+    "reconciliation_difference": "0.00"
+  },
+  "menu_dimensions": {
+    "store-1-dine-food-rice-g01": {
+      "store": "store-1-g01",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-1-dine-food-noodles-g01": {
+      "store": "store-1-g01",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-1-delivery-food-rice-g01": {
+      "store": "store-1-g01",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-1-delivery-food-noodles-g01": {
+      "store": "store-1-g01",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-2-dine-food-rice-g01": {
+      "store": "store-2-g01",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-2-dine-food-noodles-g01": {
+      "store": "store-2-g01",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-2-delivery-food-rice-g01": {
+      "store": "store-2-g01",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-2-delivery-food-noodles-g01": {
+      "store": "store-2-g01",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-1-dine-food-rice-g02": {
+      "store": "store-1-g02",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-1-dine-food-noodles-g02": {
+      "store": "store-1-g02",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-1-delivery-food-rice-g02": {
+      "store": "store-1-g02",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-1-delivery-food-noodles-g02": {
+      "store": "store-1-g02",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-2-dine-food-rice-g02": {
+      "store": "store-2-g02",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-2-dine-food-noodles-g02": {
+      "store": "store-2-g02",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-2-delivery-food-rice-g02": {
+      "store": "store-2-g02",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-2-delivery-food-noodles-g02": {
+      "store": "store-2-g02",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-1-dine-food-rice-g03": {
+      "store": "store-1-g03",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-1-dine-food-noodles-g03": {
+      "store": "store-1-g03",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-1-delivery-food-rice-g03": {
+      "store": "store-1-g03",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-1-delivery-food-noodles-g03": {
+      "store": "store-1-g03",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-2-dine-food-rice-g03": {
+      "store": "store-2-g03",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-2-dine-food-noodles-g03": {
+      "store": "store-2-g03",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-2-delivery-food-rice-g03": {
+      "store": "store-2-g03",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-2-delivery-food-noodles-g03": {
+      "store": "store-2-g03",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-1-dine-food-rice-g04": {
+      "store": "store-1-g04",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-1-dine-food-noodles-g04": {
+      "store": "store-1-g04",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-1-delivery-food-rice-g04": {
+      "store": "store-1-g04",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-1-delivery-food-noodles-g04": {
+      "store": "store-1-g04",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-2-dine-food-rice-g04": {
+      "store": "store-2-g04",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-2-dine-food-noodles-g04": {
+      "store": "store-2-g04",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-2-delivery-food-rice-g04": {
+      "store": "store-2-g04",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-2-delivery-food-noodles-g04": {
+      "store": "store-2-g04",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-1-dine-food-rice-g05": {
+      "store": "store-1-g05",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-1-dine-food-noodles-g05": {
+      "store": "store-1-g05",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-1-delivery-food-rice-g05": {
+      "store": "store-1-g05",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-1-delivery-food-noodles-g05": {
+      "store": "store-1-g05",
+      "channel": "delivery",
+      "dish": "noodles"
+    },
+    "store-2-dine-food-rice-g05": {
+      "store": "store-2-g05",
+      "channel": "dine",
+      "dish": "rice"
+    },
+    "store-2-dine-food-noodles-g05": {
+      "store": "store-2-g05",
+      "channel": "dine",
+      "dish": "noodles"
+    },
+    "store-2-delivery-food-rice-g05": {
+      "store": "store-2-g05",
+      "channel": "delivery",
+      "dish": "rice"
+    },
+    "store-2-delivery-food-noodles-g05": {
+      "store": "store-2-g05",
+      "channel": "delivery",
+      "dish": "noodles"
+    }
+  },
+  "head_office_allocation": {
+    "store-1-dine-period-g01": {
+      "approved_portions": 20,
+      "amount": "25.56"
+    },
+    "store-1-delivery-period-g01": {
+      "approved_portions": 30,
+      "amount": "38.33"
+    },
+    "store-2-dine-period-g01": {
+      "approved_portions": 25,
+      "amount": "31.94"
+    },
+    "store-2-delivery-period-g01": {
+      "approved_portions": 15,
+      "amount": "19.17"
+    },
+    "store-1-dine-period-g02": {
+      "approved_portions": 60,
+      "amount": "76.67"
+    },
+    "store-1-delivery-period-g02": {
+      "approved_portions": 90,
+      "amount": "115.00"
+    },
+    "store-2-dine-period-g02": {
+      "approved_portions": 75,
+      "amount": "95.83"
+    },
+    "store-2-delivery-period-g02": {
+      "approved_portions": 45,
+      "amount": "57.50"
+    },
+    "store-1-dine-period-g03": {
+      "approved_portions": 40,
+      "amount": "51.11"
+    },
+    "store-1-delivery-period-g03": {
+      "approved_portions": 60,
+      "amount": "76.67"
+    },
+    "store-2-dine-period-g03": {
+      "approved_portions": 50,
+      "amount": "63.89"
+    },
+    "store-2-delivery-period-g03": {
+      "approved_portions": 30,
+      "amount": "38.33"
+    },
+    "store-1-dine-period-g04": {
+      "approved_portions": 100,
+      "amount": "127.78"
+    },
+    "store-1-delivery-period-g04": {
+      "approved_portions": 150,
+      "amount": "191.67"
+    },
+    "store-2-dine-period-g04": {
+      "approved_portions": 125,
+      "amount": "159.72"
+    },
+    "store-2-delivery-period-g04": {
+      "approved_portions": 75,
+      "amount": "95.83"
+    },
+    "store-1-dine-period-g05": {
+      "approved_portions": 140,
+      "amount": "178.89"
+    },
+    "store-1-delivery-period-g05": {
+      "approved_portions": 210,
+      "amount": "268.33"
+    },
+    "store-2-dine-period-g05": {
+      "approved_portions": 175,
+      "amount": "223.61"
+    },
+    "store-2-delivery-period-g05": {
+      "approved_portions": 105,
+      "amount": "134.17"
+    }
+  },
+  "raw_materials": {
+    "streams": {
+      "store-1-dine-food-rice-g01": {
+        "net_quantity": "176",
+        "closing_quantity": "15",
+        "available_value": "38.20",
+        "net_production_consumption": "35.20",
+        "closing_value": "3.00"
+      },
+      "store-1-dine-food-noodles-g01": {
+        "net_quantity": "124",
+        "closing_quantity": "14",
+        "available_value": "27.60",
+        "net_production_consumption": "24.80",
+        "closing_value": "2.80"
+      },
+      "store-1-delivery-food-rice-g01": {
+        "net_quantity": "272",
+        "closing_quantity": "15",
+        "available_value": "57.40",
+        "net_production_consumption": "54.40",
+        "closing_value": "3.00"
+      },
+      "store-1-delivery-food-noodles-g01": {
+        "net_quantity": "178",
+        "closing_quantity": "14",
+        "available_value": "38.40",
+        "net_production_consumption": "35.60",
+        "closing_value": "2.80"
+      },
+      "store-2-dine-food-rice-g01": {
+        "net_quantity": "224",
+        "closing_quantity": "15",
+        "available_value": "47.80",
+        "net_production_consumption": "44.80",
+        "closing_value": "3.00"
+      },
+      "store-2-dine-food-noodles-g01": {
+        "net_quantity": "151",
+        "closing_quantity": "14",
+        "available_value": "33.00",
+        "net_production_consumption": "30.20",
+        "closing_value": "2.80"
+      },
+      "store-2-delivery-food-rice-g01": {
+        "net_quantity": "128",
+        "closing_quantity": "15",
+        "available_value": "28.60",
+        "net_production_consumption": "25.60",
+        "closing_value": "3.00"
+      },
+      "store-2-delivery-food-noodles-g01": {
+        "net_quantity": "97",
+        "closing_quantity": "14",
+        "available_value": "22.20",
+        "net_production_consumption": "19.40",
+        "closing_value": "2.80"
+      },
+      "store-1-dine-food-rice-g02": {
+        "net_quantity": "528",
+        "closing_quantity": "45",
+        "available_value": "229.20",
+        "net_production_consumption": "211.20",
+        "closing_value": "18.00"
+      },
+      "store-1-dine-food-noodles-g02": {
+        "net_quantity": "372",
+        "closing_quantity": "42",
+        "available_value": "165.60",
+        "net_production_consumption": "148.80",
+        "closing_value": "16.80"
+      },
+      "store-1-delivery-food-rice-g02": {
+        "net_quantity": "816",
+        "closing_quantity": "45",
+        "available_value": "344.40",
+        "net_production_consumption": "326.40",
+        "closing_value": "18.00"
+      },
+      "store-1-delivery-food-noodles-g02": {
+        "net_quantity": "534",
+        "closing_quantity": "42",
+        "available_value": "230.40",
+        "net_production_consumption": "213.60",
+        "closing_value": "16.80"
+      },
+      "store-2-dine-food-rice-g02": {
+        "net_quantity": "672",
+        "closing_quantity": "45",
+        "available_value": "286.80",
+        "net_production_consumption": "268.80",
+        "closing_value": "18.00"
+      },
+      "store-2-dine-food-noodles-g02": {
+        "net_quantity": "453",
+        "closing_quantity": "42",
+        "available_value": "198.00",
+        "net_production_consumption": "181.20",
+        "closing_value": "16.80"
+      },
+      "store-2-delivery-food-rice-g02": {
+        "net_quantity": "384",
+        "closing_quantity": "45",
+        "available_value": "171.60",
+        "net_production_consumption": "153.60",
+        "closing_value": "18.00"
+      },
+      "store-2-delivery-food-noodles-g02": {
+        "net_quantity": "291",
+        "closing_quantity": "42",
+        "available_value": "133.20",
+        "net_production_consumption": "116.40",
+        "closing_value": "16.80"
+      },
+      "store-1-dine-food-rice-g03": {
+        "net_quantity": "352",
+        "closing_quantity": "30",
+        "available_value": "229.20",
+        "net_production_consumption": "211.20",
+        "closing_value": "18.00"
+      },
+      "store-1-dine-food-noodles-g03": {
+        "net_quantity": "248",
+        "closing_quantity": "28",
+        "available_value": "165.60",
+        "net_production_consumption": "148.80",
+        "closing_value": "16.80"
+      },
+      "store-1-delivery-food-rice-g03": {
+        "net_quantity": "544",
+        "closing_quantity": "30",
+        "available_value": "344.40",
+        "net_production_consumption": "326.40",
+        "closing_value": "18.00"
+      },
+      "store-1-delivery-food-noodles-g03": {
+        "net_quantity": "356",
+        "closing_quantity": "28",
+        "available_value": "230.40",
+        "net_production_consumption": "213.60",
+        "closing_value": "16.80"
+      },
+      "store-2-dine-food-rice-g03": {
+        "net_quantity": "448",
+        "closing_quantity": "30",
+        "available_value": "286.80",
+        "net_production_consumption": "268.80",
+        "closing_value": "18.00"
+      },
+      "store-2-dine-food-noodles-g03": {
+        "net_quantity": "302",
+        "closing_quantity": "28",
+        "available_value": "198.00",
+        "net_production_consumption": "181.20",
+        "closing_value": "16.80"
+      },
+      "store-2-delivery-food-rice-g03": {
+        "net_quantity": "256",
+        "closing_quantity": "30",
+        "available_value": "171.60",
+        "net_production_consumption": "153.60",
+        "closing_value": "18.00"
+      },
+      "store-2-delivery-food-noodles-g03": {
+        "net_quantity": "194",
+        "closing_quantity": "28",
+        "available_value": "133.20",
+        "net_production_consumption": "116.40",
+        "closing_value": "16.80"
+      },
+      "store-1-dine-food-rice-g04": {
+        "net_quantity": "880",
+        "closing_quantity": "75",
+        "available_value": "191.00",
+        "net_production_consumption": "176.00",
+        "closing_value": "15.00"
+      },
+      "store-1-dine-food-noodles-g04": {
+        "net_quantity": "620",
+        "closing_quantity": "70",
+        "available_value": "138.00",
+        "net_production_consumption": "124.00",
+        "closing_value": "14.00"
+      },
+      "store-1-delivery-food-rice-g04": {
+        "net_quantity": "1360",
+        "closing_quantity": "75",
+        "available_value": "287.00",
+        "net_production_consumption": "272.00",
+        "closing_value": "15.00"
+      },
+      "store-1-delivery-food-noodles-g04": {
+        "net_quantity": "890",
+        "closing_quantity": "70",
+        "available_value": "192.00",
+        "net_production_consumption": "178.00",
+        "closing_value": "14.00"
+      },
+      "store-2-dine-food-rice-g04": {
+        "net_quantity": "1120",
+        "closing_quantity": "75",
+        "available_value": "239.00",
+        "net_production_consumption": "224.00",
+        "closing_value": "15.00"
+      },
+      "store-2-dine-food-noodles-g04": {
+        "net_quantity": "755",
+        "closing_quantity": "70",
+        "available_value": "165.00",
+        "net_production_consumption": "151.00",
+        "closing_value": "14.00"
+      },
+      "store-2-delivery-food-rice-g04": {
+        "net_quantity": "640",
+        "closing_quantity": "75",
+        "available_value": "143.00",
+        "net_production_consumption": "128.00",
+        "closing_value": "15.00"
+      },
+      "store-2-delivery-food-noodles-g04": {
+        "net_quantity": "485",
+        "closing_quantity": "70",
+        "available_value": "111.00",
+        "net_production_consumption": "97.00",
+        "closing_value": "14.00"
+      },
+      "store-1-dine-food-rice-g05": {
+        "net_quantity": "1232",
+        "closing_quantity": "105",
+        "available_value": "1069.60",
+        "net_production_consumption": "985.60",
+        "closing_value": "84.00"
+      },
+      "store-1-dine-food-noodles-g05": {
+        "net_quantity": "868",
+        "closing_quantity": "98",
+        "available_value": "772.80",
+        "net_production_consumption": "694.40",
+        "closing_value": "78.40"
+      },
+      "store-1-delivery-food-rice-g05": {
+        "net_quantity": "1904",
+        "closing_quantity": "105",
+        "available_value": "1607.20",
+        "net_production_consumption": "1523.20",
+        "closing_value": "84.00"
+      },
+      "store-1-delivery-food-noodles-g05": {
+        "net_quantity": "1246",
+        "closing_quantity": "98",
+        "available_value": "1075.20",
+        "net_production_consumption": "996.80",
+        "closing_value": "78.40"
+      },
+      "store-2-dine-food-rice-g05": {
+        "net_quantity": "1568",
+        "closing_quantity": "105",
+        "available_value": "1338.40",
+        "net_production_consumption": "1254.40",
+        "closing_value": "84.00"
+      },
+      "store-2-dine-food-noodles-g05": {
+        "net_quantity": "1057",
+        "closing_quantity": "98",
+        "available_value": "924.00",
+        "net_production_consumption": "845.60",
+        "closing_value": "78.40"
+      },
+      "store-2-delivery-food-rice-g05": {
+        "net_quantity": "896",
+        "closing_quantity": "105",
+        "available_value": "800.80",
+        "net_production_consumption": "716.80",
+        "closing_value": "84.00"
+      },
+      "store-2-delivery-food-noodles-g05": {
+        "net_quantity": "679",
+        "closing_quantity": "98",
+        "available_value": "621.60",
+        "net_production_consumption": "543.20",
+        "closing_value": "78.40"
+      }
+    },
+    "available_value": "13487.20",
+    "net_production_consumption": "12420.00",
+    "closing_value": "1067.20"
+  }
+}

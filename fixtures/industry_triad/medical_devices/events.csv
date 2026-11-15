@@ -1,0 +1,11 @@
+id,book,period,currency,object_id,op,quantity,unit,ref
+EV-device-batch-a-start,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-a,start,110,approved_unit,
+EV-device-batch-a-complete,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-a,complete,90,approved_unit,
+EV-device-batch-a-sale,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-a,sale,60,approved_unit,
+EV-device-batch-a-return,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-a,return,5,approved_unit,EV-device-batch-a-sale
+EV-device-batch-a-scrap,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-a,scrap,10,approved_unit,
+EV-device-batch-b-start,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-b,start,90,approved_unit,
+EV-device-batch-b-complete,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-b,complete,80,approved_unit,
+EV-device-batch-b-sale,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-b,sale,40,approved_unit,
+EV-device-batch-b-return,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-b,return,2,approved_unit,EV-device-batch-b-sale
+EV-device-batch-b-scrap,SYNTH_MEDICAL_DEVICES,2026-11,CNY,device-batch-b,scrap,5,approved_unit,

@@ -1,0 +1,2 @@
+gps_id,book,period,currency,leg_id,odometer_start,odometer_end,distance_unit
+GPS-1,SYNTH-FINANCIAL,2026-11,CNY,LEG-1,1000,2000,km

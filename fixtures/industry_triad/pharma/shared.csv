@@ -1,0 +1,4 @@
+id,book,period,currency,kind,status,amount,economic_key,evidence,tag,target_object_id,origin_period
+SHARED-utilities-001,SYNTH_PHARMA,2026-11,CNY,expense,data,180.00,SHARED-utilities-001,synthetic approved allocation/schedule SHARED-utilities-001,utilities,,
+SHARED-depreciation-001,SYNTH_PHARMA,2026-11,CNY,asset_basis,data,1080.00,SHARED-depreciation-001,synthetic approved allocation/schedule SHARED-depreciation-001,depreciation,,2026-01
+SHARED-licence_amortization-001,SYNTH_PHARMA,2026-11,CNY,prepay_basis,data,360.00,SHARED-licence_amortization-001,synthetic approved allocation/schedule SHARED-licence_amortization-001,licence_amortization,,2026-01

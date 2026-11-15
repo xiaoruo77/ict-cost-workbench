@@ -1,0 +1,3 @@
+# Deployment runtime: Linux x86_64 / CPython 3.13.16.
+# Exact direct and transitive versions are in requirements.lock.
+-r requirements.lock

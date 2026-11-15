@@ -1,0 +1,87 @@
+{
+  "operation": "moving_weighted_average",
+  "policy": "line_half_up_minor_units_with_cumulative_original_issue_returns",
+  "context": {
+    "book": "RETAIL_DEMO",
+    "warehouse": "WH_A",
+    "item": "SKU_1",
+    "uom": "EA",
+    "currency": "CNY",
+    "period": "2026-12",
+    "cutoff_at": "2026-12-31T23:59:59Z"
+  },
+  "opening": {
+    "book": "RETAIL_DEMO",
+    "currency": "CNY",
+    "item": "SKU_1",
+    "uom": "EA",
+    "warehouse": "WH_A",
+    "as_of": "2026-11-30T23:59:59Z",
+    "quantity": "21",
+    "value": "277.20",
+    "status": "data",
+    "evidence": "Derived reference closing snapshot",
+    "issues": [
+      {
+        "book": "RETAIL_DEMO",
+        "currency": "CNY",
+        "item": "SKU_1",
+        "uom": "EA",
+        "warehouse": "WH_A",
+        "id": "SALE_1",
+        "source_id": "DOC_SALE_1:LINE_1",
+        "at": "2026-11-02T12:00:00Z",
+        "quantity": "30",
+        "issued_value": "396.00",
+        "returned_quantity": "2",
+        "unit_cost_before_round_exact": "66/5",
+        "evidence": "Synthetic acceptance source"
+      }
+    ],
+    "seen_event_ids": [
+      "RECEIPT_1",
+      "SALE_1",
+      "RETURN_1",
+      "SHRINK_1"
+    ],
+    "seen_source_ids": [
+      "DOC_RECEIPT_1:LINE_1",
+      "DOC_SALE_1:LINE_1",
+      "DOC_RETURN_1:LINE_1",
+      "DOC_SHRINK_1:LINE_1"
+    ]
+  },
+  "transactions": [
+    {
+      "book": "RETAIL_DEMO",
+      "warehouse": "WH_A",
+      "item": "SKU_1",
+      "uom": "EA",
+      "currency": "CNY",
+      "id": "DEC_RECEIPT",
+      "source_id": "DOC_DEC_RECEIPT:LINE_1",
+      "at": "2026-12-01T12:00:00Z",
+      "sequence": 1,
+      "kind": "receipt",
+      "quantity": "9",
+      "evidence": "Synthetic acceptance source",
+      "receipt_value": "180.00"
+    },
+    {
+      "book": "RETAIL_DEMO",
+      "warehouse": "WH_A",
+      "item": "SKU_1",
+      "uom": "EA",
+      "currency": "CNY",
+      "id": "DEC_RETURN",
+      "source_id": "DOC_DEC_RETURN:LINE_1",
+      "at": "2026-12-02T12:00:00Z",
+      "sequence": 1,
+      "kind": "sale_return",
+      "quantity": "3",
+      "evidence": "Synthetic acceptance source",
+      "original_issue_id": "SALE_1",
+      "restock_status": "restockable"
+    }
+  ]
+}

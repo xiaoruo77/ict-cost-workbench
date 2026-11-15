@@ -1,0 +1,1385 @@
+{
+  "dataset_id": "csv-cf60ac4e06a0753a",
+  "plugin_id": "csv-generic",
+  "plugin_version": "industry-triad-1.0.0",
+  "industry": "餐饮",
+  "label": "餐饮合成范围 v1 small",
+  "period": "2026-11",
+  "currency": "CNY",
+  "scenario": "actual",
+  "raw_composite": {
+    "version": 4,
+    "scope": {
+      "book": "SYNTH_RESTAURANT",
+      "period": "2026-11",
+      "currency": "CNY"
+    },
+    "inputs": {
+      "finance": {
+        "file": "finance",
+        "raw_recognition": {
+          "version": 2,
+          "name": "餐饮抽象财务原始来源",
+          "context": {
+            "book": "SYNTH_RESTAURANT",
+            "period": "2026-11",
+            "currency": "CNY"
+          },
+          "rules": [
+            {
+              "id": "kitchen_labor",
+              "op": "recognize",
+              "source_tag": "kitchen_labor",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "packaging",
+              "op": "recognize",
+              "source_tag": "packaging",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "payment_fee",
+              "op": "recognize",
+              "source_tag": "payment_fee",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "commission",
+              "op": "recognize",
+              "source_tag": "commission",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "rent",
+              "op": "recognize",
+              "source_tag": "rent",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            }
+          ],
+          "outputs": [
+            "kitchen_labor",
+            "packaging",
+            "payment_fee",
+            "commission",
+            "rent"
+          ],
+          "excluded_tags": {
+            "cash_only": "结算/支付备查，不作为第二笔成本"
+          },
+          "posting_map": {
+            "kitchen_labor": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "kitchen_labor",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "packaging": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "packaging",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "payment_fee": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "payment_fee",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "commission": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "commission",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "rent": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "rent",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            }
+          },
+          "ledger_basis": "recognized_expenses_incurred",
+          "target_objects": [
+            {
+              "object_id": "store-1-dine-food-rice",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-1-dine-food-noodles",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-1-dine-period",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-1-dine-settlement",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-1-delivery-food-rice",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-1-delivery-food-noodles",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-1-delivery-period",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-1-delivery-settlement",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-dine-food-rice",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-dine-food-noodles",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-dine-period",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-dine-settlement",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-delivery-food-rice",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-delivery-food-noodles",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-delivery-period",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "store-2-delivery-settlement",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-rent",
+              "object_kind": "product"
+            }
+          ]
+        }
+      },
+      "shared": {
+        "file": "shared",
+        "raw_recognition": {
+          "version": 2,
+          "name": "餐饮抽象财务原始来源",
+          "context": {
+            "book": "SYNTH_RESTAURANT",
+            "period": "2026-11",
+            "currency": "CNY"
+          },
+          "rules": [
+            {
+              "id": "utilities",
+              "op": "recognize",
+              "source_tag": "utilities",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "depreciation",
+              "op": "monthly_straight_line",
+              "source_tag": "depreciation",
+              "source_kind": "asset_basis",
+              "posting_pool": "approved-incurred-scope",
+              "start": "source_origin",
+              "months": 12
+            },
+            {
+              "id": "shared_kitchen_labor",
+              "op": "recognize",
+              "source_tag": "shared_kitchen_labor",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "head_office",
+              "op": "recognize",
+              "source_tag": "head_office",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            }
+          ],
+          "outputs": [
+            "utilities",
+            "depreciation",
+            "shared_kitchen_labor",
+            "head_office"
+          ],
+          "excluded_tags": {
+            "cash_only": "结算/支付备查，不作为第二笔成本"
+          },
+          "posting_map": {
+            "utilities": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "utilities",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-utilities",
+              "pool_id": "utilities"
+            },
+            "depreciation": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "depreciation",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-depreciation",
+              "pool_id": "depreciation"
+            },
+            "shared_kitchen_labor": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "shared_kitchen_labor",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-shared_kitchen_labor",
+              "pool_id": "shared_kitchen_labor"
+            },
+            "head_office": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "head_office",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-head_office",
+              "pool_id": "head_office"
+            }
+          },
+          "ledger_basis": "recognized_expenses_incurred"
+        }
+      },
+      "stock": {
+        "file": "stock",
+        "raw_inventory": {
+          "operation": "moving_weighted_average",
+          "policy": "line_half_up_minor_units_with_cumulative_original_issue_returns",
+          "context": {
+            "book": "SYNTH_RESTAURANT",
+            "period": "2026-11",
+            "currency": "CNY",
+            "cutoff_at": "2026-11-30T23:59:59Z"
+          },
+          "chronology": "sort_by_utc_timestamp_then_sequence",
+          "transfer_policy": "closed_same_period_pairs_v1",
+          "transfer_history": [],
+          "streams": [
+            {
+              "scope": {
+                "warehouse": "store-1-resale",
+                "item": "ABSTRACT_PACKAGED_GOODS",
+                "uom": "pack"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "uom": "pack",
+                "item": "ABSTRACT_PACKAGED_GOODS",
+                "warehouse": "store-1-resale",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "synthetic approved opening count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-1-resale",
+                  "object_kind": "product",
+                  "behavior": "variable",
+                  "cost_type": "direct",
+                  "cost_element": "resale_cogs"
+                },
+                "shrink": {
+                  "object_id": "store-1-resale",
+                  "object_kind": "product",
+                  "behavior": "variable",
+                  "cost_type": "direct",
+                  "cost_element": "inventory_shrink"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "store-2-resale",
+                "item": "ABSTRACT_PACKAGED_GOODS",
+                "uom": "pack"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "uom": "pack",
+                "item": "ABSTRACT_PACKAGED_GOODS",
+                "warehouse": "store-2-resale",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "synthetic approved opening count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-2-resale",
+                  "object_kind": "product",
+                  "behavior": "variable",
+                  "cost_type": "direct",
+                  "cost_element": "resale_cogs"
+                },
+                "shrink": {
+                  "object_id": "store-2-resale",
+                  "object_kind": "product",
+                  "behavior": "variable",
+                  "cost_type": "direct",
+                  "cost_element": "inventory_shrink"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "raw_materials": {
+        "file": "raw_materials",
+        "raw_inventory": {
+          "operation": "moving_weighted_average",
+          "policy": "line_half_up_minor_units_with_cumulative_original_issue_returns",
+          "context": {
+            "book": "SYNTH_RESTAURANT",
+            "period": "2026-11",
+            "currency": "CNY",
+            "cutoff_at": "2026-11-30T23:59:59Z"
+          },
+          "chronology": "sort_by_utc_timestamp_then_sequence",
+          "production_policy": "same_period_approved_batch_consumption_v1",
+          "streams": [
+            {
+              "scope": {
+                "warehouse": "RM-store-1-dine-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-1-dine-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-1-dine-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-1-dine-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-1-dine-food-rice": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-store-1-dine-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-1-dine-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-1-dine-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-1-dine-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-1-dine-food-noodles": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-store-1-delivery-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-1-delivery-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-1-delivery-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-1-delivery-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-1-delivery-food-rice": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-store-1-delivery-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-1-delivery-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-1-delivery-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-1-delivery-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-1-delivery-food-noodles": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-store-2-dine-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-2-dine-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-2-dine-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-2-dine-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-2-dine-food-rice": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-store-2-dine-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-2-dine-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-2-dine-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-2-dine-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-2-dine-food-noodles": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-store-2-delivery-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-2-delivery-food-rice",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-2-delivery-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-2-delivery-food-rice",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-2-delivery-food-rice": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-store-2-delivery-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_RESTAURANT",
+                "currency": "CNY",
+                "warehouse": "RM-store-2-delivery-food-noodles",
+                "item": "ABSTRACT-INGREDIENTS_CONSUMED",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "store-2-delivery-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "store-2-delivery-food-noodles",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "store-2-delivery-food-noodles": {
+                  "object_kind": "product",
+                  "cost_element": "ingredients_consumed",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "objects": [
+      {
+        "object_id": "bridge",
+        "name": "共享制造费用归集中心",
+        "kind": "cost_center",
+        "currency": "CNY"
+      }
+    ],
+    "incoming_pools": [
+      {
+        "pool_id": "global:bridge",
+        "owner_id": "bridge",
+        "element_id": "overhead"
+      }
+    ],
+    "allocation_rules": [
+      {
+        "rule_id": "to-bridge-utilities",
+        "pool_id": "shared:utilities",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "to-bridge-depreciation",
+        "pool_id": "shared:depreciation",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "to-bridge-shared_kitchen_labor",
+        "pool_id": "shared:shared_kitchen_labor",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "bridge-to-cost-objects",
+        "pool_id": "global:bridge",
+        "target_ids": [
+          "store-1-dine-food-rice",
+          "store-1-dine-food-noodles",
+          "store-1-delivery-food-rice",
+          "store-1-delivery-food-noodles",
+          "store-2-dine-food-rice",
+          "store-2-dine-food-noodles",
+          "store-2-delivery-food-rice",
+          "store-2-delivery-food-noodles"
+        ],
+        "weights": {
+          "store-1-dine-food-rice": 11,
+          "store-1-dine-food-noodles": 9,
+          "store-1-delivery-food-rice": 17,
+          "store-1-delivery-food-noodles": 13,
+          "store-2-dine-food-rice": 14,
+          "store-2-dine-food-noodles": 11,
+          "store-2-delivery-food-rice": 8,
+          "store-2-delivery-food-noodles": 7
+        },
+        "method": "driver",
+        "stage": 2
+      },
+      {
+        "rule_id": "head-office-by-approved-input-portions",
+        "pool_id": "shared:head_office",
+        "method": "quantity",
+        "stage": 1,
+        "driver_name": "门店渠道批准投入份数（events.csv start 合计）",
+        "driver_unit": "approved_unit",
+        "target_ids": [
+          "store-1-dine-period",
+          "store-1-delivery-period",
+          "store-2-dine-period",
+          "store-2-delivery-period"
+        ],
+        "weights": {
+          "store-1-dine-period": 20,
+          "store-1-delivery-period": 30,
+          "store-2-dine-period": 25,
+          "store-2-delivery-period": 15
+        }
+      }
+    ],
+    "object_rollups": [
+      {
+        "id": "object-001",
+        "label": "store-1-dine-food-rice",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-dine-food-rice"
+          }
+        ]
+      },
+      {
+        "id": "object-002",
+        "label": "store-1-dine-food-noodles",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-dine-food-noodles"
+          }
+        ]
+      },
+      {
+        "id": "object-003",
+        "label": "store-1-dine-period",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-dine-period"
+          }
+        ]
+      },
+      {
+        "id": "object-004",
+        "label": "store-1-dine-settlement",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-dine-settlement"
+          }
+        ]
+      },
+      {
+        "id": "object-005",
+        "label": "store-1-delivery-food-rice",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-delivery-food-rice"
+          }
+        ]
+      },
+      {
+        "id": "object-006",
+        "label": "store-1-delivery-food-noodles",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-delivery-food-noodles"
+          }
+        ]
+      },
+      {
+        "id": "object-007",
+        "label": "store-1-delivery-period",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-delivery-period"
+          }
+        ]
+      },
+      {
+        "id": "object-008",
+        "label": "store-1-delivery-settlement",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-1-delivery-settlement"
+          }
+        ]
+      },
+      {
+        "id": "object-009",
+        "label": "store-2-dine-food-rice",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-dine-food-rice"
+          }
+        ]
+      },
+      {
+        "id": "object-010",
+        "label": "store-2-dine-food-noodles",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-dine-food-noodles"
+          }
+        ]
+      },
+      {
+        "id": "object-011",
+        "label": "store-2-dine-period",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-dine-period"
+          }
+        ]
+      },
+      {
+        "id": "object-012",
+        "label": "store-2-dine-settlement",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-dine-settlement"
+          }
+        ]
+      },
+      {
+        "id": "object-013",
+        "label": "store-2-delivery-food-rice",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-delivery-food-rice"
+          }
+        ]
+      },
+      {
+        "id": "object-014",
+        "label": "store-2-delivery-food-noodles",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-delivery-food-noodles"
+          }
+        ]
+      },
+      {
+        "id": "object-015",
+        "label": "store-2-delivery-period",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-delivery-period"
+          }
+        ]
+      },
+      {
+        "id": "object-016",
+        "label": "store-2-delivery-settlement",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "store-2-delivery-settlement"
+          }
+        ]
+      },
+      {
+        "id": "object-017",
+        "label": "period-rent",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-rent"
+          }
+        ]
+      },
+      {
+        "id": "object-018",
+        "label": "store-1-resale",
+        "members": [
+          {
+            "input_name": "stock",
+            "object_id": "store-1-resale"
+          }
+        ]
+      },
+      {
+        "id": "object-019",
+        "label": "store-2-resale",
+        "members": [
+          {
+            "input_name": "stock",
+            "object_id": "store-2-resale"
+          }
+        ]
+      }
+    ],
+    "object_budgets": {
+      "version": 1,
+      "book": "SYNTH_RESTAURANT",
+      "period": "2026-11",
+      "currency": "CNY",
+      "rows": [
+        {
+          "group_id": "object-001",
+          "amount": "71.50",
+          "status": "budgeted",
+          "membership_sha256": "d3802fdceb4b4b6657e22e14af09cebf6f463d12b0752e66423a1407d437ec76",
+          "source_id": "synthetic-approved-budget-v1:store-1-dine-food-rice"
+        },
+        {
+          "group_id": "object-002",
+          "amount": "58.50",
+          "status": "budgeted",
+          "membership_sha256": "bcafe15c2e3d6d016fe1b94744cadbc87dbc3f89c89fb95b40c15606505923bb",
+          "source_id": "synthetic-approved-budget-v1:store-1-dine-food-noodles"
+        },
+        {
+          "group_id": "object-003",
+          "amount": "10.00",
+          "status": "budgeted",
+          "membership_sha256": "5ed25ebc9e5ef626c00d63dcd48094e8bb2b92fd586d93831ed793e8ebdc30f2",
+          "source_id": "synthetic-approved-budget-v1:store-1-dine-period"
+        },
+        {
+          "group_id": "object-004",
+          "amount": "2.00",
+          "status": "budgeted",
+          "membership_sha256": "ce0feb6717a4d494fff21127337106b4b0dc0700477ffd44ead439ea219df196",
+          "source_id": "synthetic-approved-budget-v1:store-1-dine-settlement"
+        },
+        {
+          "group_id": "object-005",
+          "amount": "110.50",
+          "status": "budgeted",
+          "membership_sha256": "4f718637eb104820debb404fcaad5a3995559ad53a89009b6df69dc64fe70f14",
+          "source_id": "synthetic-approved-budget-v1:store-1-delivery-food-rice"
+        },
+        {
+          "group_id": "object-006",
+          "amount": "84.50",
+          "status": "budgeted",
+          "membership_sha256": "1c9d74617927c95358be8084bcf818fb33f52a953def976ad440275716ffef6d",
+          "source_id": "synthetic-approved-budget-v1:store-1-delivery-food-noodles"
+        },
+        {
+          "group_id": "object-007",
+          "amount": "15.00",
+          "status": "budgeted",
+          "membership_sha256": "24f80e4901f7e3a1f1f809352fd52d13a3e930a4abf883b1cc278b165806e218",
+          "source_id": "synthetic-approved-budget-v1:store-1-delivery-period"
+        },
+        {
+          "group_id": "object-008",
+          "amount": "51.00",
+          "status": "budgeted",
+          "membership_sha256": "a1e32ea5445d0fecce5072f2ff94703d119bd203d159ab9053e1a4c3ac042c6f",
+          "source_id": "synthetic-approved-budget-v1:store-1-delivery-settlement"
+        },
+        {
+          "group_id": "object-009",
+          "amount": "91.00",
+          "status": "budgeted",
+          "membership_sha256": "8ef087315718075c8c3972093affac206256d0c79b8ed575d3b95334e6b8d5ba",
+          "source_id": "synthetic-approved-budget-v1:store-2-dine-food-rice"
+        },
+        {
+          "group_id": "object-010",
+          "amount": "71.50",
+          "status": "budgeted",
+          "membership_sha256": "ee1d1461ac9b70175cb17651556a6a28863d1be9f8c4c6da523df4ca565d710b",
+          "source_id": "synthetic-approved-budget-v1:store-2-dine-food-noodles"
+        },
+        {
+          "group_id": "object-011",
+          "amount": "12.50",
+          "status": "budgeted",
+          "membership_sha256": "432dd5ec956e28ccd2b10b8a0bb7f205217281f7d19237fe2241711de99e3bc8",
+          "source_id": "synthetic-approved-budget-v1:store-2-dine-period"
+        },
+        {
+          "group_id": "object-012",
+          "amount": "1.00",
+          "status": "budgeted",
+          "membership_sha256": "138b68386a890025ffd6ab4fd2fad3915bc65921d67f48d870ffac14db424117",
+          "source_id": "synthetic-approved-budget-v1:store-2-dine-settlement"
+        },
+        {
+          "group_id": "object-013",
+          "amount": "52.00",
+          "status": "budgeted",
+          "membership_sha256": "4e45f159710c313e184b1faf50a67bc522baf3d0b35514318ce64f268261f481",
+          "source_id": "synthetic-approved-budget-v1:store-2-delivery-food-rice"
+        },
+        {
+          "group_id": "object-014",
+          "amount": "45.50",
+          "status": "budgeted",
+          "membership_sha256": "515ce0e9b198e8545b2612539e59f9d79bfb6fe0e89cb274b460c4683459d005",
+          "source_id": "synthetic-approved-budget-v1:store-2-delivery-food-noodles"
+        },
+        {
+          "group_id": "object-015",
+          "amount": "7.50",
+          "status": "budgeted",
+          "membership_sha256": "d0c18939cd7af5c9edae4ce82a98d5ddebbb0982fac5e57a6e96b6a8feb5f9dc",
+          "source_id": "synthetic-approved-budget-v1:store-2-delivery-period"
+        },
+        {
+          "group_id": "object-016",
+          "amount": "25.50",
+          "status": "budgeted",
+          "membership_sha256": "cfcd7622f7b9161f650b467cfc9ecef68fbe84869dff608cced6bdbb54226bb2",
+          "source_id": "synthetic-approved-budget-v1:store-2-delivery-settlement"
+        },
+        {
+          "group_id": "object-017",
+          "amount": "60.00",
+          "status": "budgeted",
+          "membership_sha256": "ad182bcdc0f1bb0c8e74ade6511482c34ae81d363e9f67e89170a99d8642495e",
+          "source_id": "synthetic-approved-budget-v1:period-rent"
+        },
+        {
+          "group_id": "object-018",
+          "amount": "20.00",
+          "status": "budgeted",
+          "membership_sha256": "816e0c98f34ea8a1544a98607f9c5e50e42a4489d02e733b621dbcd6f3a7ca1f",
+          "source_id": "synthetic-approved-budget-v1:store-1-resale"
+        },
+        {
+          "group_id": "object-019",
+          "amount": "20.00",
+          "status": "budgeted",
+          "membership_sha256": "2bc4d2d6fe4355f1ca81b01180558796735ec42ecd196b2880988c9758d6cf2a",
+          "source_id": "synthetic-approved-budget-v1:store-2-resale"
+        }
+      ]
+    },
+    "source_hashes": {
+      "finance": "8fd49de6b93373ffc52cc74e93c1b337cafe5f4da9d9aefb84adbd3df086b957",
+      "shared": "aa80cd0f575e8be1f7afb514b2894ee3f7b3bf53df8a4cbc7cc277368750a69b",
+      "events": "ebdcabb00c7dcadf1fec3a70fea727e39fd2d0e6fea354da88602820ff233a8c",
+      "settlements": "59b0b3aa3dd56bd8f9d0ecf7b7eb44bd1d72adc66a1a21113e35a2ab7dfbb24f",
+      "stock": "0a3c9c8651beea87abd1063159fb711b0f0f4d9b494b8b6fd1c8ff7e52ff0b7a",
+      "raw_materials": "3e27a70e435a5cfa0ad0038cd07198fcc8514354baed6b2549d80e3cb8d00e03"
+    }
+  },
+  "business_views": {
+    "version": 1,
+    "policy_source": "synthetic approved homogeneous equivalent-unit financial policy v1; 2026-11",
+    "classifications": {
+      "store-1-dine-food-rice": "production",
+      "store-1-dine-food-noodles": "production",
+      "store-1-dine-period": "period",
+      "store-1-dine-settlement": "service",
+      "store-1-delivery-food-rice": "production",
+      "store-1-delivery-food-noodles": "production",
+      "store-1-delivery-period": "period",
+      "store-1-delivery-settlement": "service",
+      "store-2-dine-food-rice": "production",
+      "store-2-dine-food-noodles": "production",
+      "store-2-dine-period": "period",
+      "store-2-dine-settlement": "service",
+      "store-2-delivery-food-rice": "production",
+      "store-2-delivery-food-noodles": "production",
+      "store-2-delivery-period": "period",
+      "store-2-delivery-settlement": "service",
+      "period-rent": "period",
+      "store-1-resale": "service",
+      "store-2-resale": "service"
+    },
+    "required_costs": {
+      "store-1-dine-food-rice": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-1-dine-food-noodles": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-1-dine-period": [
+        "head_office"
+      ],
+      "store-1-dine-settlement": [
+        "payment_fee"
+      ],
+      "store-1-delivery-food-rice": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-1-delivery-food-noodles": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-1-delivery-period": [
+        "head_office"
+      ],
+      "store-1-delivery-settlement": [
+        "commission"
+      ],
+      "store-2-dine-food-rice": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-2-dine-food-noodles": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-2-dine-period": [
+        "head_office"
+      ],
+      "store-2-dine-settlement": [
+        "payment_fee"
+      ],
+      "store-2-delivery-food-rice": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-2-delivery-food-noodles": [
+        "ingredients_consumed",
+        "kitchen_labor",
+        "packaging",
+        "utilities",
+        "depreciation",
+        "shared_kitchen_labor"
+      ],
+      "store-2-delivery-period": [
+        "head_office"
+      ],
+      "store-2-delivery-settlement": [
+        "commission"
+      ],
+      "period-rent": [
+        "rent"
+      ],
+      "store-1-resale": [
+        "resale_cogs",
+        "inventory_shrink"
+      ],
+      "store-2-resale": [
+        "resale_cogs",
+        "inventory_shrink"
+      ]
+    },
+    "lifecycle": {
+      "file": "events",
+      "columns": {
+        "id": "id",
+        "object_id": "object_id",
+        "op": "op",
+        "quantity": "quantity",
+        "unit": "unit",
+        "ref": "ref"
+      },
+      "units": {
+        "store-1-dine-food-rice": "approved_unit",
+        "store-1-dine-food-noodles": "approved_unit",
+        "store-1-delivery-food-rice": "approved_unit",
+        "store-1-delivery-food-noodles": "approved_unit",
+        "store-2-dine-food-rice": "approved_unit",
+        "store-2-dine-food-noodles": "approved_unit",
+        "store-2-delivery-food-rice": "approved_unit",
+        "store-2-delivery-food-noodles": "approved_unit"
+      }
+    },
+    "notices": [
+      {
+        "code": "declared_scope_only",
+        "message": "合成验收范围内的已确认发生成本；不代表整个行业会计或企业全部交易已完整采集。"
+      },
+      {
+        "code": "native_pos_unimplemented",
+        "message": "菜品成本接收批准的厨房领料与退料凭证及抽象同质份数。原生POS与配方净料率自动转换未实现。"
+      },
+      {
+        "code": "procurement_inventory_boundary",
+        "message": "raw_materials核对厨房原料采购、菜品领料和退料。stock核对独立即售商品采购、跨店调拨、盘点损耗和销售退回。厨房原料跨店调拨及实际盘点尚未纳入样例。"
+      },
+      {
+        "code": "channel_fee_not_inventory",
+        "message": "门店×渠道×菜品对象归集已耗用食材及厨房成本。settlement对象单列必需的渠道费用。总部费用按批准投入份数分至各门店渠道的期间中心。"
+      },
+      {
+        "code": "order_grain_unverified",
+        "message": "结算按门店/渠道汇总凭证；未验证逐订单POS追溯。"
+      }
+    ],
+    "settlement": {
+      "file": "settlements",
+      "columns": {
+        "id": "id",
+        "object_id": "object_id",
+        "op": "op",
+        "amount": "amount",
+        "ref": "ref"
+      },
+      "commission_element": "commission",
+      "payment_fee_element": "payment_fee",
+      "merchant_discount_treatment": "revenue_reduction",
+      "platform_discount_treatment": "platform_compensated",
+      "expected_objects": [
+        "store-1-dine-settlement",
+        "store-1-delivery-settlement",
+        "store-2-dine-settlement",
+        "store-2-delivery-settlement",
+        "store-1-resale",
+        "store-2-resale"
+      ]
+    }
+  }
+}

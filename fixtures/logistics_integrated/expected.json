@@ -1,0 +1,61 @@
+{
+  "oracle": "independent declared cents and quantity formulas; no engine import; operational quantity independent formula:12000kg*(2000-1000)km/1000kg_per_tonne=12000tonne_km",
+  "scope": {
+    "book": "SYNTH-FINANCIAL",
+    "period": "2026-11",
+    "currency": "CNY"
+  },
+  "cost_groups": {
+    "fuel": "312.00",
+    "depreciation": "200.00",
+    "amortization": "100.00",
+    "service_release": "300.00",
+    "labor": "500.00",
+    "carrier_subcontract": "350.00"
+  },
+  "total_cost": "1762.00",
+  "industry": "logistics_integrated",
+  "source_rows": {
+    "settlements": 21,
+    "assets": 9,
+    "asset_openings": 4,
+    "custody": 6,
+    "finance": 6,
+    "tms": 1,
+    "gps": 1
+  },
+  "asset_total": "0.00",
+  "pnl_cost": "1762.00",
+  "period_expense": "0.00",
+  "service_cost": "1762.00",
+  "objects": {
+    "service-1": {
+      "total_cost": "1762.00"
+    }
+  },
+  "asset_opening": "14000.00",
+  "asset_additions": "240.00",
+  "asset_recognition": "912.00",
+  "asset_closing": "13328.00",
+  "receivable_closing": "500.00",
+  "payable_closing": "450.00",
+  "agency_closing": "300.00",
+  "custody_quantity": "27",
+  "metrics": {
+    "service-1": {
+      "quantity": "12000",
+      "quantity_unit": "tonne_km",
+      "source_formula": "12000 kg * (2000-1000) km / 1000 kg_per_tonne",
+      "unit_cost_formula": "1762.00 CNY / 12000 tonne_km"
+    }
+  },
+  "financial_controls": {
+    "declared_net_revenue": "500.00",
+    "net_cash_from_declared_accounts": "300.00",
+    "receivable_closing": "500.00",
+    "payable_closing": "450.00",
+    "agency_liability_closing": "300.00",
+    "asset_closing": "13328.00",
+    "customer_custody_quantity": "27"
+  }
+}

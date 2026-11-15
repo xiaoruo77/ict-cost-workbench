@@ -1,0 +1,22 @@
+book,currency,id,account_id,kind,op,amount,ref,status,evidence,period
+SYNTH-FINANCIAL,CNY,AR-OPEN,AR,receivable,opening,0.00,APP-AR,explicit_zero,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,AR-OCT-INVOICE,AR,receivable,invoice,1000.00,,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,AR-OCT-CASH,AR,receivable,receipt,200.00,AR-OCT-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,AP-OPEN,AP,payable,opening,0.00,APP-AP,explicit_zero,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,AP-OCT-INVOICE,AP,payable,invoice,700.00,,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,AP-OCT-CASH,AP,payable,payment,200.00,AP-OCT-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,COD-OPEN,COD,agency,opening,0.00,APP-COD,explicit_zero,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,COD-OCT-COLLECT,COD,agency,collect,1000.00,,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,COD-OCT-REMIT,COD,agency,remit,600.00,COD-OCT-COLLECT,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,AR-NOV-INVOICE,AR,receivable,invoice,600.00,,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,AR-NOV-CREDIT,AR,receivable,credit,100.00,AR-OCT-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,AR-NOV-CASH1,AR,receivable,receipt,500.00,AR-OCT-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,AR-NOV-CASH2,AR,receivable,receipt,300.00,AR-NOV-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,AP-NOV-INVOICE,AP,payable,invoice,400.00,,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,AP-NOV-CREDIT,AP,payable,credit,50.00,AP-OCT-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,AP-NOV-CASH1,AP,payable,payment,300.00,AP-OCT-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,AP-NOV-CASH2,AP,payable,payment,100.00,AP-NOV-INVOICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,COD-NOV-COLLECT,COD,agency,collect,500.00,,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,COD-NOV-REMIT1,COD,agency,remit,300.00,COD-OCT-COLLECT,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,COD-NOV-REMIT2,COD,agency,remit,200.00,COD-NOV-COLLECT,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,COD-NOV-REFUND,COD,agency,refund,100.00,COD-NOV-COLLECT,data,synthetic approved policy FIN-V1; not a real company approval,2026-11

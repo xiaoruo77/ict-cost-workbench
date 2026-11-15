@@ -1,0 +1,5 @@
+book,currency,id,asset_id,quantity,unit,amount,status,evidence,period
+SYNTH-FINANCIAL,CNY,OPEN-FUEL,FUEL,100,L,1000.00,data,approved prior closing FUEL: synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,OPEN-FLEET,FLEET,1,asset,12000.00,data,approved prior closing FLEET: synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,OPEN-PRE,PRE,12,month,1200.00,data,approved prepaid balance: synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,OPEN-SERVICE,SERVICE,0,job,0.00,explicit_zero,approved zero opening: synthetic approved policy FIN-V1; not a real company approval,2026-10

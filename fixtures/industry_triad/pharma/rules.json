@@ -1,0 +1,573 @@
+{
+  "dataset_id": "csv-14893de6d5bb588e",
+  "plugin_id": "csv-generic",
+  "plugin_version": "industry-triad-1.0.0",
+  "industry": "制药",
+  "label": "制药合成范围 v1 small",
+  "period": "2026-11",
+  "currency": "CNY",
+  "scenario": "actual",
+  "raw_composite": {
+    "version": 4,
+    "scope": {
+      "book": "SYNTH_PHARMA",
+      "period": "2026-11",
+      "currency": "CNY"
+    },
+    "inputs": {
+      "finance": {
+        "file": "finance",
+        "raw_recognition": {
+          "version": 2,
+          "name": "制药抽象财务原始来源",
+          "context": {
+            "book": "SYNTH_PHARMA",
+            "period": "2026-11",
+            "currency": "CNY"
+          },
+          "rules": [
+            {
+              "id": "labor",
+              "op": "recognize",
+              "source_tag": "labor",
+              "source_kind": "accrual",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "outsourcing",
+              "op": "recognize",
+              "source_tag": "outsourcing",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "quality",
+              "op": "recognize",
+              "source_tag": "quality",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "release",
+              "op": "recognize",
+              "source_tag": "release",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "packaging",
+              "op": "recognize",
+              "source_tag": "packaging",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "research_expense",
+              "op": "recognize",
+              "source_tag": "research_expense",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "warehouse_logistics",
+              "op": "recognize",
+              "source_tag": "warehouse_logistics",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            }
+          ],
+          "outputs": [
+            "labor",
+            "outsourcing",
+            "quality",
+            "release",
+            "packaging",
+            "research_expense",
+            "warehouse_logistics"
+          ],
+          "excluded_tags": {
+            "cash_only": "结算/支付备查，不作为第二笔成本"
+          },
+          "posting_map": {
+            "labor": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "labor",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "outsourcing": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "outsourcing",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "quality": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "quality",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "release": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "release",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "packaging": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "packaging",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "research_expense": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "research_expense",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "warehouse_logistics": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "warehouse_logistics",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            }
+          },
+          "ledger_basis": "recognized_expenses_incurred",
+          "target_objects": [
+            {
+              "object_id": "batch-a",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "batch-b",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-rd",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-logistics",
+              "object_kind": "product"
+            }
+          ]
+        }
+      },
+      "shared": {
+        "file": "shared",
+        "raw_recognition": {
+          "version": 2,
+          "name": "制药抽象财务原始来源",
+          "context": {
+            "book": "SYNTH_PHARMA",
+            "period": "2026-11",
+            "currency": "CNY"
+          },
+          "rules": [
+            {
+              "id": "utilities",
+              "op": "recognize",
+              "source_tag": "utilities",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "depreciation",
+              "op": "monthly_straight_line",
+              "source_tag": "depreciation",
+              "source_kind": "asset_basis",
+              "posting_pool": "approved-incurred-scope",
+              "start": "source_origin",
+              "months": 12
+            },
+            {
+              "id": "licence_amortization",
+              "op": "monthly_straight_line",
+              "source_tag": "licence_amortization",
+              "source_kind": "prepay_basis",
+              "posting_pool": "approved-incurred-scope",
+              "start": "source_origin",
+              "months": 12
+            }
+          ],
+          "outputs": [
+            "utilities",
+            "depreciation",
+            "licence_amortization"
+          ],
+          "excluded_tags": {
+            "cash_only": "结算/支付备查，不作为第二笔成本"
+          },
+          "posting_map": {
+            "utilities": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "utilities",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-utilities",
+              "pool_id": "utilities"
+            },
+            "depreciation": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "depreciation",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-depreciation",
+              "pool_id": "depreciation"
+            },
+            "licence_amortization": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "licence_amortization",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-licence_amortization",
+              "pool_id": "licence_amortization"
+            }
+          },
+          "ledger_basis": "recognized_expenses_incurred"
+        }
+      },
+      "raw_materials": {
+        "file": "raw_materials",
+        "raw_inventory": {
+          "operation": "moving_weighted_average",
+          "policy": "line_half_up_minor_units_with_cumulative_original_issue_returns",
+          "context": {
+            "book": "SYNTH_PHARMA",
+            "period": "2026-11",
+            "currency": "CNY",
+            "cutoff_at": "2026-11-30T23:59:59Z"
+          },
+          "chronology": "sort_by_utc_timestamp_then_sequence",
+          "production_policy": "same_period_approved_batch_consumption_v1",
+          "streams": [
+            {
+              "scope": {
+                "warehouse": "RM-batch-a",
+                "item": "ABSTRACT-MATERIALS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_PHARMA",
+                "currency": "CNY",
+                "warehouse": "RM-batch-a",
+                "item": "ABSTRACT-MATERIALS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "batch-a",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "batch-a",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "batch-a": {
+                  "object_kind": "product",
+                  "cost_element": "materials",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-batch-b",
+                "item": "ABSTRACT-MATERIALS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_PHARMA",
+                "currency": "CNY",
+                "warehouse": "RM-batch-b",
+                "item": "ABSTRACT-MATERIALS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "batch-b",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "batch-b",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "batch-b": {
+                  "object_kind": "product",
+                  "cost_element": "materials",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "objects": [
+      {
+        "object_id": "bridge",
+        "name": "共享制造费用归集中心",
+        "kind": "cost_center",
+        "currency": "CNY"
+      }
+    ],
+    "incoming_pools": [
+      {
+        "pool_id": "global:bridge",
+        "owner_id": "bridge",
+        "element_id": "overhead"
+      }
+    ],
+    "allocation_rules": [
+      {
+        "rule_id": "to-bridge-utilities",
+        "pool_id": "shared:utilities",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "to-bridge-depreciation",
+        "pool_id": "shared:depreciation",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "to-bridge-licence_amortization",
+        "pool_id": "shared:licence_amortization",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "bridge-to-cost-objects",
+        "pool_id": "global:bridge",
+        "target_ids": [
+          "batch-a",
+          "batch-b"
+        ],
+        "weights": {
+          "batch-a": 2,
+          "batch-b": 1
+        },
+        "method": "driver",
+        "stage": 2
+      }
+    ],
+    "object_rollups": [
+      {
+        "id": "object-001",
+        "label": "batch-a",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "batch-a"
+          }
+        ]
+      },
+      {
+        "id": "object-002",
+        "label": "batch-b",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "batch-b"
+          }
+        ]
+      },
+      {
+        "id": "object-003",
+        "label": "period-rd",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-rd"
+          }
+        ]
+      },
+      {
+        "id": "object-004",
+        "label": "period-logistics",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-logistics"
+          }
+        ]
+      }
+    ],
+    "object_budgets": {
+      "version": 1,
+      "book": "SYNTH_PHARMA",
+      "period": "2026-11",
+      "currency": "CNY",
+      "rows": [
+        {
+          "group_id": "object-001",
+          "amount": "1150.00",
+          "status": "budgeted",
+          "membership_sha256": "b11d424807d9eb2c7bb343e21d9ba3b5162a2ef4eed3e0ec3c6212f694935788",
+          "source_id": "synthetic-approved-budget-v1:batch-a"
+        },
+        {
+          "group_id": "object-002",
+          "amount": "1000.00",
+          "status": "budgeted",
+          "membership_sha256": "d7bae37b6a304316fd1e1785d20f6326288b65aac7f60f5085f6bd20acf19c7d",
+          "source_id": "synthetic-approved-budget-v1:batch-b"
+        },
+        {
+          "group_id": "object-003",
+          "amount": "250.00",
+          "status": "budgeted",
+          "membership_sha256": "24bd498518baf3485852ae3e0de362dc9fcb0e6288b084d847f35fb88122cbba",
+          "source_id": "synthetic-approved-budget-v1:period-rd"
+        },
+        {
+          "group_id": "object-004",
+          "amount": "50.00",
+          "status": "budgeted",
+          "membership_sha256": "0a1ddc03cb688dc6b91ec05ec7fabea8f40e75c31d4b4181a63176271505a73d",
+          "source_id": "synthetic-approved-budget-v1:period-logistics"
+        }
+      ]
+    },
+    "source_hashes": {
+      "finance": "2c98615198c880000a8b3dbb34292a14f71bc3852f303183fb3b0395fa0df677",
+      "shared": "43ed2ef960e0630a305a77e2eb67cad4a2871dc70bbc53098c2c4e24d3dccd35",
+      "events": "1f94f89deba51c4b181e15ad88c2fb6f7ac4bf23d611a0f996d55d1b44a485df",
+      "raw_materials": "f8de18065c0d3d417b20e5a3d4bc519da60a83bf011d1f63175438fa65bdc8ae"
+    }
+  },
+  "business_views": {
+    "version": 1,
+    "policy_source": "synthetic approved homogeneous equivalent-unit financial policy v1; 2026-11",
+    "classifications": {
+      "batch-a": "production",
+      "batch-b": "production",
+      "period-rd": "period",
+      "period-logistics": "period"
+    },
+    "required_costs": {
+      "batch-a": [
+        "materials",
+        "packaging",
+        "labor",
+        "outsourcing",
+        "quality",
+        "release",
+        "utilities",
+        "depreciation",
+        "licence_amortization"
+      ],
+      "batch-b": [
+        "materials",
+        "packaging",
+        "labor",
+        "outsourcing",
+        "quality",
+        "release",
+        "utilities",
+        "depreciation",
+        "licence_amortization"
+      ],
+      "period-rd": [
+        "research_expense"
+      ],
+      "period-logistics": [
+        "warehouse_logistics"
+      ]
+    },
+    "lifecycle": {
+      "file": "events",
+      "columns": {
+        "id": "id",
+        "object_id": "object_id",
+        "op": "op",
+        "quantity": "quantity",
+        "unit": "unit",
+        "ref": "ref"
+      },
+      "units": {
+        "batch-a": "approved_unit",
+        "batch-b": "approved_unit"
+      }
+    },
+    "notices": [
+      {
+        "code": "declared_scope_only",
+        "message": "合成验收范围内的已确认发生成本；不代表整个行业会计或企业全部交易已完整采集。"
+      },
+      {
+        "code": "approved_homogeneous_basis",
+        "message": "仅按合成企业批准的同质等价投入单位估值；不是配方、工艺或自动等价产量判断。"
+      },
+      {
+        "code": "capitalization_policy_external",
+        "message": "研发全部按本样例批准的期间费用处理；真实资本化、税务、药品监管判断需企业批准。"
+      },
+      {
+        "code": "production_material_return_scope",
+        "message": "原料采购入库、批次领料与关联原领料的退料均有凭证。批次在制基于批准同质投入份额，异质在制重估未覆盖。"
+      }
+    ]
+  }
+}

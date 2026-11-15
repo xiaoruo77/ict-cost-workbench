@@ -1,0 +1,7 @@
+book,currency,id,goods_id,op,quantity,unit,ref,status,evidence,period
+SYNTH-FINANCIAL,CNY,CUST-OPEN,CUSTOMER-GOODS,opening,10,pallet,APP-CUST,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,CUST-OCT-IN,CUSTOMER-GOODS,receive,20,pallet,,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,CUST-OCT-OUT,CUSTOMER-GOODS,dispatch,10,pallet,,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,CUST-NOV-IN,CUSTOMER-GOODS,receive,10,pallet,,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,CUST-NOV-OUT,CUSTOMER-GOODS,dispatch,5,pallet,,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,CUST-NOV-RETURN,CUSTOMER-GOODS,return,2,pallet,CUST-OCT-OUT,data,synthetic approved policy FIN-V1; not a real company approval,2026-11

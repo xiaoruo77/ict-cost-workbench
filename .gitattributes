@@ -1,0 +1,2 @@
+# CSV and rules digests depend on the bytes. Don't change original line endings.
+* -text

@@ -1,0 +1,171 @@
+{
+  "name": "subscription_service_monthly_operating_cost",
+  "context": {
+    "book": "DEMO",
+    "period": "2026-11",
+    "currency": "CNY"
+  },
+  "sources": [
+    {
+      "id": "cloud_usage_cost",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "expense",
+      "status": "data",
+      "amount": "900",
+      "economic_key": "cloud_usage_cost",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "support_paid_cost",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "expense",
+      "status": "data",
+      "amount": "300",
+      "economic_key": "support_paid_cost",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "support_accrual_cost",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "accrual",
+      "status": "data",
+      "amount": "100",
+      "economic_key": "support_accrual_cost",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "annual_license_basis",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "prepay_basis",
+      "status": "data",
+      "amount": "2400",
+      "economic_key": "license_2026",
+      "evidence": "synthetic acceptance fixture",
+      "origin_period": "2026-01"
+    },
+    {
+      "id": "server_basis",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "asset_basis",
+      "status": "data",
+      "amount": "3600",
+      "economic_key": "server_1",
+      "evidence": "synthetic acceptance fixture",
+      "origin_period": "2026-01"
+    },
+    {
+      "id": "vendor_credit_note",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "credit",
+      "status": "data",
+      "amount": "-60",
+      "economic_key": "vendor_credit_note",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "license_cash",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "cash_movement",
+      "status": "data",
+      "amount": "2400",
+      "economic_key": "license_2026",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "server_cash",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "cash_movement",
+      "status": "data",
+      "amount": "3600",
+      "economic_key": "server_1",
+      "evidence": "synthetic acceptance fixture"
+    }
+  ],
+  "rules": [
+    {
+      "id": "cloud_usage",
+      "op": "recognize",
+      "source": "cloud_usage_cost",
+      "posting_pool": "service_operation"
+    },
+    {
+      "id": "support_paid",
+      "op": "recognize",
+      "source": "support_paid_cost",
+      "posting_pool": "service_operation"
+    },
+    {
+      "id": "support_accrual",
+      "op": "recognize",
+      "source": "support_accrual_cost",
+      "posting_pool": "service_operation"
+    },
+    {
+      "id": "support_cost",
+      "op": "sum",
+      "inputs": [
+        "support_paid",
+        "support_accrual"
+      ]
+    },
+    {
+      "id": "license_expense",
+      "op": "monthly_straight_line",
+      "source": "annual_license_basis",
+      "start": "2026-01",
+      "months": 12,
+      "posting_pool": "service_operation"
+    },
+    {
+      "id": "server_depreciation",
+      "op": "monthly_straight_line",
+      "source": "server_basis",
+      "start": "2026-01",
+      "months": 36,
+      "posting_pool": "service_operation"
+    },
+    {
+      "id": "vendor_credit",
+      "op": "recognize",
+      "source": "vendor_credit_note",
+      "posting_pool": "service_operation"
+    },
+    {
+      "id": "service_cost",
+      "op": "sum",
+      "inputs": [
+        "cloud_usage",
+        "support_cost",
+        "license_expense",
+        "server_depreciation",
+        "vendor_credit"
+      ]
+    }
+  ],
+  "outputs": [
+    "support_cost",
+    "license_expense",
+    "server_depreciation",
+    "service_cost"
+  ],
+  "excluded_sources": {
+    "license_cash": "Prepayment memo; recognized through annual_license_basis.",
+    "server_cash": "Capital cash memo; recognized through server_basis depreciation."
+  }
+}

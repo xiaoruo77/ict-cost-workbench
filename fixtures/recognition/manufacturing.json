@@ -1,0 +1,281 @@
+{
+  "name": "manufacturing_monthly_recognition_and_inventory_bridge",
+  "context": {
+    "book": "DEMO",
+    "period": "2026-11",
+    "currency": "CNY"
+  },
+  "sources": [
+    {
+      "id": "materials_used",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "expense",
+      "status": "data",
+      "amount": "1000",
+      "economic_key": "materials_used",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "wages_paid_cost",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "expense",
+      "status": "data",
+      "amount": "500",
+      "economic_key": "wages_paid_component",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "wages_accrued_cost",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "accrual",
+      "status": "data",
+      "amount": "100",
+      "economic_key": "wages_unpaid_component",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "machine_basis",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "asset_basis",
+      "status": "data",
+      "amount": "2400",
+      "economic_key": "machine_1",
+      "evidence": "synthetic acceptance fixture",
+      "origin_period": "2026-01"
+    },
+    {
+      "id": "factory_rent_basis",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "prepay_basis",
+      "status": "data",
+      "amount": "1200",
+      "economic_key": "factory_rent_2026",
+      "evidence": "synthetic acceptance fixture",
+      "origin_period": "2026-01"
+    },
+    {
+      "id": "wip_open",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "opening_balance",
+      "status": "data",
+      "amount": "300",
+      "economic_key": "wip_open",
+      "evidence": "synthetic acceptance fixture",
+      "bridge_group": "work_in_progress"
+    },
+    {
+      "id": "wip_close",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "closing_balance",
+      "status": "data",
+      "amount": "500",
+      "economic_key": "wip_close",
+      "evidence": "synthetic acceptance fixture",
+      "bridge_group": "work_in_progress"
+    },
+    {
+      "id": "fg_open",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "opening_balance",
+      "status": "data",
+      "amount": "400",
+      "economic_key": "fg_open",
+      "evidence": "synthetic acceptance fixture",
+      "bridge_group": "finished_goods"
+    },
+    {
+      "id": "fg_close",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "closing_balance",
+      "status": "data",
+      "amount": "600",
+      "economic_key": "fg_close",
+      "evidence": "synthetic acceptance fixture",
+      "bridge_group": "finished_goods"
+    },
+    {
+      "id": "administration_cost",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "expense",
+      "status": "data",
+      "amount": "300",
+      "economic_key": "administration_cost",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "administration_credit",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "credit",
+      "status": "data",
+      "amount": "-50",
+      "economic_key": "administration_credit",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "machine_cash",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "cash_movement",
+      "status": "data",
+      "amount": "2400",
+      "economic_key": "machine_1",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "rent_cash",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "cash_movement",
+      "status": "data",
+      "amount": "1200",
+      "economic_key": "factory_rent_2026",
+      "evidence": "synthetic acceptance fixture"
+    },
+    {
+      "id": "wages_cash",
+      "book": "DEMO",
+      "period": "2026-11",
+      "currency": "CNY",
+      "kind": "cash_movement",
+      "status": "data",
+      "amount": "500",
+      "economic_key": "wages_paid_component",
+      "evidence": "synthetic acceptance fixture"
+    }
+  ],
+  "rules": [
+    {
+      "id": "materials",
+      "op": "recognize",
+      "source": "materials_used",
+      "posting_pool": "production"
+    },
+    {
+      "id": "paid_wages",
+      "op": "recognize",
+      "source": "wages_paid_cost",
+      "posting_pool": "production"
+    },
+    {
+      "id": "accrued_wages",
+      "op": "recognize",
+      "source": "wages_accrued_cost",
+      "posting_pool": "production"
+    },
+    {
+      "id": "wages",
+      "op": "sum",
+      "inputs": [
+        "paid_wages",
+        "accrued_wages"
+      ]
+    },
+    {
+      "id": "depreciation",
+      "op": "monthly_straight_line",
+      "source": "machine_basis",
+      "start": "2026-01",
+      "months": 12,
+      "posting_pool": "production"
+    },
+    {
+      "id": "rent_expense",
+      "op": "monthly_straight_line",
+      "source": "factory_rent_basis",
+      "start": "2026-01",
+      "months": 12,
+      "posting_pool": "production"
+    },
+    {
+      "id": "production_cost",
+      "op": "sum",
+      "inputs": [
+        "materials",
+        "wages",
+        "depreciation",
+        "rent_expense"
+      ]
+    },
+    {
+      "id": "completed_goods_cost",
+      "op": "inventory_bridge",
+      "flow": "production_cost",
+      "opening": "wip_open",
+      "closing": "wip_close"
+    },
+    {
+      "id": "cost_of_sales",
+      "op": "inventory_bridge",
+      "flow": "completed_goods_cost",
+      "opening": "fg_open",
+      "closing": "fg_close"
+    },
+    {
+      "id": "administration",
+      "op": "recognize",
+      "source": "administration_cost",
+      "posting_pool": "period"
+    },
+    {
+      "id": "admin_credit",
+      "op": "recognize",
+      "source": "administration_credit",
+      "posting_pool": "period"
+    },
+    {
+      "id": "period_cost",
+      "op": "sum",
+      "inputs": [
+        "administration",
+        "admin_credit"
+      ]
+    },
+    {
+      "id": "pnl_cost",
+      "op": "sum",
+      "inputs": [
+        "cost_of_sales",
+        "period_cost"
+      ]
+    }
+  ],
+  "outputs": [
+    "wages",
+    "depreciation",
+    "rent_expense",
+    "production_cost",
+    "completed_goods_cost",
+    "cost_of_sales",
+    "period_cost",
+    "pnl_cost"
+  ],
+  "excluded_sources": {
+    "machine_cash": "Capital acquisition cash, not a second expense; machine_basis supplies depreciation.",
+    "rent_cash": "Annual prepaid cash, not a second expense; factory_rent_basis supplies monthly expense.",
+    "wages_cash": "Payment memo; wages_paid_cost already recognizes this wage component."
+  }
+}

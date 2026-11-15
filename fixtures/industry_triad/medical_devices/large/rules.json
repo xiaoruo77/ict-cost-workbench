@@ -1,0 +1,1942 @@
+{
+  "dataset_id": "csv-281629c453ef6ba9",
+  "plugin_id": "csv-generic",
+  "plugin_version": "industry-triad-1.0.0",
+  "industry": "医疗器械",
+  "label": "医疗器械合成范围 v1 large",
+  "period": "2026-11",
+  "currency": "CNY",
+  "scenario": "actual",
+  "raw_composite": {
+    "version": 4,
+    "scope": {
+      "book": "SYNTH_MEDICAL_DEVICES",
+      "period": "2026-11",
+      "currency": "CNY"
+    },
+    "inputs": {
+      "finance": {
+        "file": "finance",
+        "raw_recognition": {
+          "version": 2,
+          "name": "医疗器械抽象财务原始来源",
+          "context": {
+            "book": "SYNTH_MEDICAL_DEVICES",
+            "period": "2026-11",
+            "currency": "CNY"
+          },
+          "rules": [
+            {
+              "id": "assembly_labor",
+              "op": "recognize",
+              "source_tag": "assembly_labor",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "outsourcing",
+              "op": "recognize",
+              "source_tag": "outsourcing",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "quality",
+              "op": "recognize",
+              "source_tag": "quality",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "rework",
+              "op": "recognize",
+              "source_tag": "rework",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "packaging",
+              "op": "recognize",
+              "source_tag": "packaging",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "registration_testing",
+              "op": "recognize",
+              "source_tag": "registration_testing",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "warehouse_logistics",
+              "op": "recognize",
+              "source_tag": "warehouse_logistics",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "actual_warranty",
+              "op": "recognize",
+              "source_tag": "actual_warranty",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            },
+            {
+              "id": "after_sales",
+              "op": "recognize",
+              "source_tag": "after_sales",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            }
+          ],
+          "outputs": [
+            "assembly_labor",
+            "outsourcing",
+            "quality",
+            "rework",
+            "packaging",
+            "registration_testing",
+            "warehouse_logistics",
+            "actual_warranty",
+            "after_sales"
+          ],
+          "excluded_tags": {
+            "cash_only": "结算/支付备查，不作为第二笔成本"
+          },
+          "posting_map": {
+            "assembly_labor": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "assembly_labor",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "outsourcing": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "outsourcing",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "quality": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "quality",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "rework": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "rework",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "packaging": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "packaging",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "registration_testing": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "registration_testing",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "warehouse_logistics": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "warehouse_logistics",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "actual_warranty": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "actual_warranty",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            },
+            "after_sales": {
+              "object_kind": "product",
+              "record_type": "entry",
+              "cost_element": "after_sales",
+              "behavior": "unknown",
+              "cost_type": "direct",
+              "object_id_from": "target_object_id"
+            }
+          },
+          "ledger_basis": "recognized_expenses_incurred",
+          "target_objects": [
+            {
+              "object_id": "device-batch-a-g01",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-b-g01",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-registration-g01",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-logistics-g01",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-warranty-g01",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-normal-g01",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-a-g02",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-b-g02",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-registration-g02",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-logistics-g02",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-warranty-g02",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-normal-g02",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-a-g03",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-b-g03",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-registration-g03",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-logistics-g03",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-warranty-g03",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-normal-g03",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-a-g04",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-b-g04",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-registration-g04",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-logistics-g04",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-warranty-g04",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-normal-g04",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-a-g05",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-b-g05",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-registration-g05",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-logistics-g05",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-warranty-g05",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-normal-g05",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-a-g06",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "device-batch-b-g06",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-registration-g06",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "period-logistics-g06",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-warranty-g06",
+              "object_kind": "product"
+            },
+            {
+              "object_id": "service-normal-g06",
+              "object_kind": "product"
+            }
+          ]
+        }
+      },
+      "shared": {
+        "file": "shared",
+        "raw_recognition": {
+          "version": 2,
+          "name": "医疗器械抽象财务原始来源",
+          "context": {
+            "book": "SYNTH_MEDICAL_DEVICES",
+            "period": "2026-11",
+            "currency": "CNY"
+          },
+          "rules": [
+            {
+              "id": "depreciation",
+              "op": "monthly_straight_line",
+              "source_tag": "depreciation",
+              "source_kind": "asset_basis",
+              "posting_pool": "approved-incurred-scope",
+              "start": "source_origin",
+              "months": 12
+            },
+            {
+              "id": "utilities",
+              "op": "recognize",
+              "source_tag": "utilities",
+              "source_kind": "expense",
+              "posting_pool": "approved-incurred-scope"
+            }
+          ],
+          "outputs": [
+            "depreciation",
+            "utilities"
+          ],
+          "excluded_tags": {
+            "cash_only": "结算/支付备查，不作为第二笔成本"
+          },
+          "posting_map": {
+            "depreciation": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "depreciation",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-depreciation",
+              "pool_id": "depreciation"
+            },
+            "utilities": {
+              "object_kind": "cost_center",
+              "record_type": "pool",
+              "cost_element": "utilities",
+              "behavior": "fixed",
+              "cost_type": "indirect",
+              "object_id": "shared-utilities",
+              "pool_id": "utilities"
+            }
+          },
+          "ledger_basis": "recognized_expenses_incurred"
+        }
+      },
+      "raw_materials": {
+        "file": "raw_materials",
+        "raw_inventory": {
+          "operation": "moving_weighted_average",
+          "policy": "line_half_up_minor_units_with_cumulative_original_issue_returns",
+          "context": {
+            "book": "SYNTH_MEDICAL_DEVICES",
+            "period": "2026-11",
+            "currency": "CNY",
+            "cutoff_at": "2026-11-30T23:59:59Z"
+          },
+          "chronology": "sort_by_utc_timestamp_then_sequence",
+          "production_policy": "same_period_approved_batch_consumption_v1",
+          "streams": [
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-a-g01",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-a-g01",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-a-g01",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-a-g01",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-a-g01": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-b-g01",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-b-g01",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-b-g01",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-b-g01",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-b-g01": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-a-g02",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-a-g02",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-a-g02",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-a-g02",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-a-g02": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-b-g02",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-b-g02",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-b-g02",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-b-g02",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-b-g02": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-a-g03",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-a-g03",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-a-g03",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-a-g03",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-a-g03": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-b-g03",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-b-g03",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-b-g03",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-b-g03",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-b-g03": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-a-g04",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-a-g04",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-a-g04",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-a-g04",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-a-g04": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-b-g04",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-b-g04",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-b-g04",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-b-g04",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-b-g04": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-a-g05",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-a-g05",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-a-g05",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-a-g05",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-a-g05": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-b-g05",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-b-g05",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-b-g05",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-b-g05",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-b-g05": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-a-g06",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-a-g06",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-a-g06",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-a-g06",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-a-g06": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            },
+            {
+              "scope": {
+                "warehouse": "RM-device-batch-b-g06",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit"
+              },
+              "opening": {
+                "book": "SYNTH_MEDICAL_DEVICES",
+                "currency": "CNY",
+                "warehouse": "RM-device-batch-b-g06",
+                "item": "ABSTRACT-PARTS",
+                "uom": "approved_input_unit",
+                "as_of": "2026-10-31T23:59:59Z",
+                "quantity": "0",
+                "value": "0.00",
+                "status": "evidenced_zero",
+                "evidence": "approved abstract opening materials count: zero",
+                "issues": [],
+                "seen_event_ids": [],
+                "seen_source_ids": []
+              },
+              "posting_map": {
+                "cogs": {
+                  "object_id": "device-batch-b-g06",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_resale"
+                },
+                "shrink": {
+                  "object_id": "device-batch-b-g06",
+                  "object_kind": "product",
+                  "cost_type": "direct",
+                  "behavior": "unknown",
+                  "cost_element": "raw_materials_shrink"
+                }
+              },
+              "production_posting_map": {
+                "device-batch-b-g06": {
+                  "object_kind": "product",
+                  "cost_element": "parts",
+                  "cost_type": "direct",
+                  "behavior": "unknown"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "objects": [
+      {
+        "object_id": "bridge",
+        "name": "共享制造费用归集中心",
+        "kind": "cost_center",
+        "currency": "CNY"
+      }
+    ],
+    "incoming_pools": [
+      {
+        "pool_id": "global:bridge",
+        "owner_id": "bridge",
+        "element_id": "overhead"
+      }
+    ],
+    "allocation_rules": [
+      {
+        "rule_id": "to-bridge-depreciation",
+        "pool_id": "shared:depreciation",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "to-bridge-utilities",
+        "pool_id": "shared:utilities",
+        "target_ids": [
+          "bridge"
+        ],
+        "method": "direct",
+        "stage": 1
+      },
+      {
+        "rule_id": "bridge-to-cost-objects",
+        "pool_id": "global:bridge",
+        "target_ids": [
+          "device-batch-a-g01",
+          "device-batch-b-g01",
+          "device-batch-a-g02",
+          "device-batch-b-g02",
+          "device-batch-a-g03",
+          "device-batch-b-g03",
+          "device-batch-a-g04",
+          "device-batch-b-g04",
+          "device-batch-a-g05",
+          "device-batch-b-g05",
+          "device-batch-a-g06",
+          "device-batch-b-g06"
+        ],
+        "weights": {
+          "device-batch-a-g01": 1,
+          "device-batch-b-g01": 1,
+          "device-batch-a-g02": 6,
+          "device-batch-b-g02": 6,
+          "device-batch-a-g03": 6,
+          "device-batch-b-g03": 6,
+          "device-batch-a-g04": 5,
+          "device-batch-b-g04": 5,
+          "device-batch-a-g05": 16,
+          "device-batch-b-g05": 16,
+          "device-batch-a-g06": 12,
+          "device-batch-b-g06": 12
+        },
+        "method": "driver",
+        "stage": 2
+      }
+    ],
+    "object_rollups": [
+      {
+        "id": "object-001",
+        "label": "device-batch-a-g01",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-a-g01"
+          }
+        ]
+      },
+      {
+        "id": "object-002",
+        "label": "device-batch-b-g01",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-b-g01"
+          }
+        ]
+      },
+      {
+        "id": "object-003",
+        "label": "period-registration-g01",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-registration-g01"
+          }
+        ]
+      },
+      {
+        "id": "object-004",
+        "label": "period-logistics-g01",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-logistics-g01"
+          }
+        ]
+      },
+      {
+        "id": "object-005",
+        "label": "service-warranty-g01",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-warranty-g01"
+          }
+        ]
+      },
+      {
+        "id": "object-006",
+        "label": "service-normal-g01",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-normal-g01"
+          }
+        ]
+      },
+      {
+        "id": "object-007",
+        "label": "device-batch-a-g02",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-a-g02"
+          }
+        ]
+      },
+      {
+        "id": "object-008",
+        "label": "device-batch-b-g02",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-b-g02"
+          }
+        ]
+      },
+      {
+        "id": "object-009",
+        "label": "period-registration-g02",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-registration-g02"
+          }
+        ]
+      },
+      {
+        "id": "object-010",
+        "label": "period-logistics-g02",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-logistics-g02"
+          }
+        ]
+      },
+      {
+        "id": "object-011",
+        "label": "service-warranty-g02",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-warranty-g02"
+          }
+        ]
+      },
+      {
+        "id": "object-012",
+        "label": "service-normal-g02",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-normal-g02"
+          }
+        ]
+      },
+      {
+        "id": "object-013",
+        "label": "device-batch-a-g03",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-a-g03"
+          }
+        ]
+      },
+      {
+        "id": "object-014",
+        "label": "device-batch-b-g03",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-b-g03"
+          }
+        ]
+      },
+      {
+        "id": "object-015",
+        "label": "period-registration-g03",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-registration-g03"
+          }
+        ]
+      },
+      {
+        "id": "object-016",
+        "label": "period-logistics-g03",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-logistics-g03"
+          }
+        ]
+      },
+      {
+        "id": "object-017",
+        "label": "service-warranty-g03",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-warranty-g03"
+          }
+        ]
+      },
+      {
+        "id": "object-018",
+        "label": "service-normal-g03",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-normal-g03"
+          }
+        ]
+      },
+      {
+        "id": "object-019",
+        "label": "device-batch-a-g04",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-a-g04"
+          }
+        ]
+      },
+      {
+        "id": "object-020",
+        "label": "device-batch-b-g04",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-b-g04"
+          }
+        ]
+      },
+      {
+        "id": "object-021",
+        "label": "period-registration-g04",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-registration-g04"
+          }
+        ]
+      },
+      {
+        "id": "object-022",
+        "label": "period-logistics-g04",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-logistics-g04"
+          }
+        ]
+      },
+      {
+        "id": "object-023",
+        "label": "service-warranty-g04",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-warranty-g04"
+          }
+        ]
+      },
+      {
+        "id": "object-024",
+        "label": "service-normal-g04",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-normal-g04"
+          }
+        ]
+      },
+      {
+        "id": "object-025",
+        "label": "device-batch-a-g05",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-a-g05"
+          }
+        ]
+      },
+      {
+        "id": "object-026",
+        "label": "device-batch-b-g05",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-b-g05"
+          }
+        ]
+      },
+      {
+        "id": "object-027",
+        "label": "period-registration-g05",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-registration-g05"
+          }
+        ]
+      },
+      {
+        "id": "object-028",
+        "label": "period-logistics-g05",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-logistics-g05"
+          }
+        ]
+      },
+      {
+        "id": "object-029",
+        "label": "service-warranty-g05",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-warranty-g05"
+          }
+        ]
+      },
+      {
+        "id": "object-030",
+        "label": "service-normal-g05",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-normal-g05"
+          }
+        ]
+      },
+      {
+        "id": "object-031",
+        "label": "device-batch-a-g06",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-a-g06"
+          }
+        ]
+      },
+      {
+        "id": "object-032",
+        "label": "device-batch-b-g06",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "device-batch-b-g06"
+          }
+        ]
+      },
+      {
+        "id": "object-033",
+        "label": "period-registration-g06",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-registration-g06"
+          }
+        ]
+      },
+      {
+        "id": "object-034",
+        "label": "period-logistics-g06",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "period-logistics-g06"
+          }
+        ]
+      },
+      {
+        "id": "object-035",
+        "label": "service-warranty-g06",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-warranty-g06"
+          }
+        ]
+      },
+      {
+        "id": "object-036",
+        "label": "service-normal-g06",
+        "members": [
+          {
+            "input_name": "finance",
+            "object_id": "service-normal-g06"
+          }
+        ]
+      }
+    ],
+    "object_budgets": {
+      "version": 1,
+      "book": "SYNTH_MEDICAL_DEVICES",
+      "period": "2026-11",
+      "currency": "CNY",
+      "rows": [
+        {
+          "group_id": "object-001",
+          "amount": "1000.00",
+          "status": "budgeted",
+          "membership_sha256": "6aebb04cb9a8be1218b011b28d37838a401d63b0a0aedb5d567cc45d5b22f3a8",
+          "source_id": "synthetic-approved-budget-v1:device-batch-a-g01"
+        },
+        {
+          "group_id": "object-002",
+          "amount": "950.00",
+          "status": "budgeted",
+          "membership_sha256": "0969d567b3627045658fa94d704111443119e58d889de9d3f17e5771a1b45fe4",
+          "source_id": "synthetic-approved-budget-v1:device-batch-b-g01"
+        },
+        {
+          "group_id": "object-003",
+          "amount": "120.00",
+          "status": "budgeted",
+          "membership_sha256": "873840b0387338a79d4b4e9c2d66376f0a90d0cedc9a497ca644e0f8c8013967",
+          "source_id": "synthetic-approved-budget-v1:period-registration-g01"
+        },
+        {
+          "group_id": "object-004",
+          "amount": "60.00",
+          "status": "budgeted",
+          "membership_sha256": "691ef9f350ce5ce4bd663de92e4e76d53df4e3480ebea0d4cd0b05575e52ce40",
+          "source_id": "synthetic-approved-budget-v1:period-logistics-g01"
+        },
+        {
+          "group_id": "object-005",
+          "amount": "80.00",
+          "status": "budgeted",
+          "membership_sha256": "29fa51442a0d0449ab1cf78043f757f34ae45482eec3200a6101f35df44e4f5b",
+          "source_id": "synthetic-approved-budget-v1:service-warranty-g01"
+        },
+        {
+          "group_id": "object-006",
+          "amount": "40.00",
+          "status": "budgeted",
+          "membership_sha256": "7bda3d651156099dfaac5efba6a57a099ad1f39562a4aa9e795359ee9142b04e",
+          "source_id": "synthetic-approved-budget-v1:service-normal-g01"
+        },
+        {
+          "group_id": "object-007",
+          "amount": "6000.00",
+          "status": "budgeted",
+          "membership_sha256": "70fd569761bc86d179b8bf5e8aee0de68ad4d0a0ecd5654c85267c0ba9fd6b66",
+          "source_id": "synthetic-approved-budget-v1:device-batch-a-g02"
+        },
+        {
+          "group_id": "object-008",
+          "amount": "5700.00",
+          "status": "budgeted",
+          "membership_sha256": "205d5235c78ce3c35228d4aef4f07f75a8ea80202806280802d6440742b24f08",
+          "source_id": "synthetic-approved-budget-v1:device-batch-b-g02"
+        },
+        {
+          "group_id": "object-009",
+          "amount": "720.00",
+          "status": "budgeted",
+          "membership_sha256": "f3b83c679384ce27060a1a86720e278b70d90ade8b00b2be48e627bf3b7b187e",
+          "source_id": "synthetic-approved-budget-v1:period-registration-g02"
+        },
+        {
+          "group_id": "object-010",
+          "amount": "360.00",
+          "status": "budgeted",
+          "membership_sha256": "7a6be19e4a7ddba2026acf1fa269e1e3cdc220fa57f3554ec198aef2dabb7a66",
+          "source_id": "synthetic-approved-budget-v1:period-logistics-g02"
+        },
+        {
+          "group_id": "object-011",
+          "amount": "480.00",
+          "status": "budgeted",
+          "membership_sha256": "c9931cb5836612ed938de2b5d69b4573df1a54264fd5570fdfd380a6f186ce3a",
+          "source_id": "synthetic-approved-budget-v1:service-warranty-g02"
+        },
+        {
+          "group_id": "object-012",
+          "amount": "240.00",
+          "status": "budgeted",
+          "membership_sha256": "93d05bc5266002d93c3fad4e7f1c41464fd27cadfd18bdfffc98e1361a7f7960",
+          "source_id": "synthetic-approved-budget-v1:service-normal-g02"
+        },
+        {
+          "group_id": "object-013",
+          "amount": "6000.00",
+          "status": "budgeted",
+          "membership_sha256": "4115f0200265168d31e8c6f559a9bf0db1a7db946cc738668b1af67ea868edbe",
+          "source_id": "synthetic-approved-budget-v1:device-batch-a-g03"
+        },
+        {
+          "group_id": "object-014",
+          "amount": "5700.00",
+          "status": "budgeted",
+          "membership_sha256": "fb175486840a2f5cfe9105e387ee9bdb8fe1810538eafa31d87d9f6189ca2004",
+          "source_id": "synthetic-approved-budget-v1:device-batch-b-g03"
+        },
+        {
+          "group_id": "object-015",
+          "amount": "720.00",
+          "status": "budgeted",
+          "membership_sha256": "81958b04c8254139c88a220973289ed886f1cab3bd5e3c8e1d3ddc49a3f1f7a2",
+          "source_id": "synthetic-approved-budget-v1:period-registration-g03"
+        },
+        {
+          "group_id": "object-016",
+          "amount": "360.00",
+          "status": "budgeted",
+          "membership_sha256": "2bace2817e1fe71d34af4616a532cd1fb443b561f25435ddd5bc8daa4de248a5",
+          "source_id": "synthetic-approved-budget-v1:period-logistics-g03"
+        },
+        {
+          "group_id": "object-017",
+          "amount": "480.00",
+          "status": "budgeted",
+          "membership_sha256": "bb948b3e6bd4584416355f4a47473f34c2dbc400b86b05e939e289cce83ef4c0",
+          "source_id": "synthetic-approved-budget-v1:service-warranty-g03"
+        },
+        {
+          "group_id": "object-018",
+          "amount": "240.00",
+          "status": "budgeted",
+          "membership_sha256": "4d977a27aa610c7fd612634c20c415edcb4d17577767b2b204fbe07f6fa5076f",
+          "source_id": "synthetic-approved-budget-v1:service-normal-g03"
+        },
+        {
+          "group_id": "object-019",
+          "amount": "5000.00",
+          "status": "budgeted",
+          "membership_sha256": "9af5d8fc0fd4c62c0475217836a894c2a3abb8fbf547a601fd981328af8a0fc9",
+          "source_id": "synthetic-approved-budget-v1:device-batch-a-g04"
+        },
+        {
+          "group_id": "object-020",
+          "amount": "4750.00",
+          "status": "budgeted",
+          "membership_sha256": "687e83239db320647022e8b185fb828a9844736bf5fbe971a16de74b461b01b7",
+          "source_id": "synthetic-approved-budget-v1:device-batch-b-g04"
+        },
+        {
+          "group_id": "object-021",
+          "amount": "600.00",
+          "status": "budgeted",
+          "membership_sha256": "c49f2ef30a72c1626819dccbef06848ce784b441fc65710a8c4629484a20c715",
+          "source_id": "synthetic-approved-budget-v1:period-registration-g04"
+        },
+        {
+          "group_id": "object-022",
+          "amount": "300.00",
+          "status": "budgeted",
+          "membership_sha256": "c6d9d66ba7f3322bcad4a869e14269c16648ba6c9742e95625dc1de4bc31b2aa",
+          "source_id": "synthetic-approved-budget-v1:period-logistics-g04"
+        },
+        {
+          "group_id": "object-023",
+          "amount": "400.00",
+          "status": "budgeted",
+          "membership_sha256": "5cb3a702af86b9bcdd9abfb714cf80f2927206298df5fcda10c47a529a8eff14",
+          "source_id": "synthetic-approved-budget-v1:service-warranty-g04"
+        },
+        {
+          "group_id": "object-024",
+          "amount": "200.00",
+          "status": "budgeted",
+          "membership_sha256": "585e3347cf4f5e9410ce7d2c31a44686e33c40522eb3cdf0ef5d8b98fabc8b0a",
+          "source_id": "synthetic-approved-budget-v1:service-normal-g04"
+        },
+        {
+          "group_id": "object-025",
+          "amount": "16000.00",
+          "status": "budgeted",
+          "membership_sha256": "ec2b7ee4626f35597e9b91ac89f38dae954918f82bf62f2c9b79bd8edfa60983",
+          "source_id": "synthetic-approved-budget-v1:device-batch-a-g05"
+        },
+        {
+          "group_id": "object-026",
+          "amount": "15200.00",
+          "status": "budgeted",
+          "membership_sha256": "ac4d19d110da71bb82704b25698211caaacb4bda3e6187709984ab00ee8e0c8d",
+          "source_id": "synthetic-approved-budget-v1:device-batch-b-g05"
+        },
+        {
+          "group_id": "object-027",
+          "amount": "1920.00",
+          "status": "budgeted",
+          "membership_sha256": "a08be4b4a87a0c5e30fc119caebd38cc1910bb8274fbfc06e5291f9682b3d045",
+          "source_id": "synthetic-approved-budget-v1:period-registration-g05"
+        },
+        {
+          "group_id": "object-028",
+          "amount": "960.00",
+          "status": "budgeted",
+          "membership_sha256": "11dcc672b202147cc0cbe0099dd17fab586faac368a31ef9a32504505c0cb20f",
+          "source_id": "synthetic-approved-budget-v1:period-logistics-g05"
+        },
+        {
+          "group_id": "object-029",
+          "amount": "1280.00",
+          "status": "budgeted",
+          "membership_sha256": "453cd3cb693f9dbdb47c5a3fb14f21a9fd7f9351f7b4c800616b821b0ac84dbc",
+          "source_id": "synthetic-approved-budget-v1:service-warranty-g05"
+        },
+        {
+          "group_id": "object-030",
+          "amount": "640.00",
+          "status": "budgeted",
+          "membership_sha256": "2375492453bf8dc24152eb85a64590a0fe38524d82c0beebc71f78ce49ea77d3",
+          "source_id": "synthetic-approved-budget-v1:service-normal-g05"
+        },
+        {
+          "group_id": "object-031",
+          "amount": "12000.00",
+          "status": "budgeted",
+          "membership_sha256": "a4286a955ed7b7f471a2014adb084058e810ff14c267521e0959696ce8c8f8f3",
+          "source_id": "synthetic-approved-budget-v1:device-batch-a-g06"
+        },
+        {
+          "group_id": "object-032",
+          "amount": "11400.00",
+          "status": "budgeted",
+          "membership_sha256": "265d23ee4c445483ffb65cf93cde0a0dffd3d470614e3d1dd3b05c7957bb1fd1",
+          "source_id": "synthetic-approved-budget-v1:device-batch-b-g06"
+        },
+        {
+          "group_id": "object-033",
+          "amount": "1440.00",
+          "status": "budgeted",
+          "membership_sha256": "d416df284c2d8748cccbd31d9da473db18b91cf81cd21c1aac01252c374682ca",
+          "source_id": "synthetic-approved-budget-v1:period-registration-g06"
+        },
+        {
+          "group_id": "object-034",
+          "amount": "720.00",
+          "status": "budgeted",
+          "membership_sha256": "df67014b4a356ffe4c2522a49afa11e7cff3734679bf7305b5ec50ad585c162d",
+          "source_id": "synthetic-approved-budget-v1:period-logistics-g06"
+        },
+        {
+          "group_id": "object-035",
+          "amount": "960.00",
+          "status": "budgeted",
+          "membership_sha256": "0e06dedeb415f0427da64937118fdb5af3ca5712cd8c8c8d06ac78ff88931998",
+          "source_id": "synthetic-approved-budget-v1:service-warranty-g06"
+        },
+        {
+          "group_id": "object-036",
+          "amount": "480.00",
+          "status": "budgeted",
+          "membership_sha256": "0f54f28af1a91853863505460a80e0b3936662e6b5d384915abfd04697d3fb76",
+          "source_id": "synthetic-approved-budget-v1:service-normal-g06"
+        }
+      ]
+    },
+    "source_hashes": {
+      "finance": "c913c25faf0156ee58e6b5331e7d6843c242fd7a33739757623812263a14c001",
+      "shared": "a96e94c1ea714ca1f8969b446bfbe3b714fd30d81b2c2c030f58c6b6e98495e2",
+      "events": "3e38c8f0db071e30f7b34e8cb319f5aabf921772d171285bd1ea619097002ea7",
+      "dispositions": "5fcff1ea69dfa0025db0469e0e166fccc4a58c0e37242bb9ec34c67a430df06d",
+      "raw_materials": "5fb75032bd1706cda069c0e531effa5b70d143df4149dbf51234666229302288"
+    }
+  },
+  "business_views": {
+    "version": 1,
+    "policy_source": "synthetic approved homogeneous equivalent-unit financial policy v1; 2026-11",
+    "classifications": {
+      "device-batch-a-g01": "production",
+      "device-batch-b-g01": "production",
+      "period-registration-g01": "period",
+      "period-logistics-g01": "period",
+      "service-warranty-g01": "service",
+      "service-normal-g01": "service",
+      "device-batch-a-g02": "production",
+      "device-batch-b-g02": "production",
+      "period-registration-g02": "period",
+      "period-logistics-g02": "period",
+      "service-warranty-g02": "service",
+      "service-normal-g02": "service",
+      "device-batch-a-g03": "production",
+      "device-batch-b-g03": "production",
+      "period-registration-g03": "period",
+      "period-logistics-g03": "period",
+      "service-warranty-g03": "service",
+      "service-normal-g03": "service",
+      "device-batch-a-g04": "production",
+      "device-batch-b-g04": "production",
+      "period-registration-g04": "period",
+      "period-logistics-g04": "period",
+      "service-warranty-g04": "service",
+      "service-normal-g04": "service",
+      "device-batch-a-g05": "production",
+      "device-batch-b-g05": "production",
+      "period-registration-g05": "period",
+      "period-logistics-g05": "period",
+      "service-warranty-g05": "service",
+      "service-normal-g05": "service",
+      "device-batch-a-g06": "production",
+      "device-batch-b-g06": "production",
+      "period-registration-g06": "period",
+      "period-logistics-g06": "period",
+      "service-warranty-g06": "service",
+      "service-normal-g06": "service"
+    },
+    "required_costs": {
+      "device-batch-a-g01": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "rework"
+      ],
+      "device-batch-b-g01": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "packaging"
+      ],
+      "period-registration-g01": [
+        "registration_testing"
+      ],
+      "period-logistics-g01": [
+        "warehouse_logistics"
+      ],
+      "service-warranty-g01": [
+        "actual_warranty"
+      ],
+      "service-normal-g01": [
+        "after_sales"
+      ],
+      "device-batch-a-g02": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "rework"
+      ],
+      "device-batch-b-g02": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "packaging"
+      ],
+      "period-registration-g02": [
+        "registration_testing"
+      ],
+      "period-logistics-g02": [
+        "warehouse_logistics"
+      ],
+      "service-warranty-g02": [
+        "actual_warranty"
+      ],
+      "service-normal-g02": [
+        "after_sales"
+      ],
+      "device-batch-a-g03": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "rework"
+      ],
+      "device-batch-b-g03": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "packaging"
+      ],
+      "period-registration-g03": [
+        "registration_testing"
+      ],
+      "period-logistics-g03": [
+        "warehouse_logistics"
+      ],
+      "service-warranty-g03": [
+        "actual_warranty"
+      ],
+      "service-normal-g03": [
+        "after_sales"
+      ],
+      "device-batch-a-g04": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "rework"
+      ],
+      "device-batch-b-g04": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "packaging"
+      ],
+      "period-registration-g04": [
+        "registration_testing"
+      ],
+      "period-logistics-g04": [
+        "warehouse_logistics"
+      ],
+      "service-warranty-g04": [
+        "actual_warranty"
+      ],
+      "service-normal-g04": [
+        "after_sales"
+      ],
+      "device-batch-a-g05": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "rework"
+      ],
+      "device-batch-b-g05": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "packaging"
+      ],
+      "period-registration-g05": [
+        "registration_testing"
+      ],
+      "period-logistics-g05": [
+        "warehouse_logistics"
+      ],
+      "service-warranty-g05": [
+        "actual_warranty"
+      ],
+      "service-normal-g05": [
+        "after_sales"
+      ],
+      "device-batch-a-g06": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "rework"
+      ],
+      "device-batch-b-g06": [
+        "parts",
+        "assembly_labor",
+        "outsourcing",
+        "quality",
+        "depreciation",
+        "utilities",
+        "packaging"
+      ],
+      "period-registration-g06": [
+        "registration_testing"
+      ],
+      "period-logistics-g06": [
+        "warehouse_logistics"
+      ],
+      "service-warranty-g06": [
+        "actual_warranty"
+      ],
+      "service-normal-g06": [
+        "after_sales"
+      ]
+    },
+    "lifecycle": {
+      "file": "events",
+      "columns": {
+        "id": "id",
+        "object_id": "object_id",
+        "op": "op",
+        "quantity": "quantity",
+        "unit": "unit",
+        "ref": "ref"
+      },
+      "units": {
+        "device-batch-a-g01": "approved_unit",
+        "device-batch-b-g01": "approved_unit",
+        "device-batch-a-g02": "approved_unit",
+        "device-batch-b-g02": "approved_unit",
+        "device-batch-a-g03": "approved_unit",
+        "device-batch-b-g03": "approved_unit",
+        "device-batch-a-g04": "approved_unit",
+        "device-batch-b-g04": "approved_unit",
+        "device-batch-a-g05": "approved_unit",
+        "device-batch-b-g05": "approved_unit",
+        "device-batch-a-g06": "approved_unit",
+        "device-batch-b-g06": "approved_unit"
+      }
+    },
+    "notices": [
+      {
+        "code": "declared_scope_only",
+        "message": "合成验收范围内的已确认发生成本；不代表整个行业会计或企业全部交易已完整采集。"
+      },
+      {
+        "code": "recall_basis_missing",
+        "message": "未提供经批准的召回或保修准备估计规则，不自动计提准备金；实际保修支出单列。"
+      },
+      {
+        "code": "serial_evidence_only",
+        "message": "仅保留抽象批次/文本凭证，序列号逐台追溯未实现。"
+      },
+      {
+        "code": "disposition_scope",
+        "message": "dispositions以合成批准单位身份登记返工/报废/退回并验证互斥及原记录引用；不是企业真实序列号或物理身份独立核验。"
+      },
+      {
+        "code": "registration_policy_external",
+        "message": "注册/检测费用按合成批准口径当期确认；真实资本化、监管和税务需另行批准。"
+      }
+    ],
+    "dispositions": {
+      "file": "dispositions",
+      "columns": {
+        "id": "id",
+        "object_id": "object_id",
+        "item_id": "item_id",
+        "action": "action",
+        "ref": "ref"
+      },
+      "identity_basis": "synthetic approved unit identity registry v1",
+      "action_tags": {
+        "rework": "rework"
+      }
+    }
+  }
+}

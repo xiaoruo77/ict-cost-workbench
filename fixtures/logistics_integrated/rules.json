@@ -1,0 +1,396 @@
+{
+  "dataset_id": "csv-a5a90e209a514a6c",
+  "plugin_id": "csv-generic",
+  "plugin_version": "logistics-integrated-1",
+  "industry": "物流（运营量、结算和资产联调）",
+  "period": "2026-11",
+  "currency": "CNY",
+  "raw_composite": {
+    "version": 4,
+    "scope": {
+      "book": "SYNTH-FINANCIAL",
+      "period": "2026-11",
+      "currency": "CNY"
+    },
+    "inputs": {
+      "finance": {
+        "file": "finance",
+        "raw_recognition": {
+          "version": 2,
+          "name": "Financial control cost ledger",
+          "context": {
+            "book": "SYNTH-FINANCIAL",
+            "period": "2026-11",
+            "currency": "CNY"
+          },
+          "rules": [
+            {
+              "id": "fuel",
+              "op": "recognize",
+              "source_tag": "fuel",
+              "source_kind": "expense",
+              "posting_pool": "period"
+            },
+            {
+              "id": "depreciation",
+              "op": "recognize",
+              "source_tag": "depreciation",
+              "source_kind": "expense",
+              "posting_pool": "period"
+            },
+            {
+              "id": "amortization",
+              "op": "recognize",
+              "source_tag": "amortization",
+              "source_kind": "expense",
+              "posting_pool": "period"
+            },
+            {
+              "id": "service_release",
+              "op": "recognize",
+              "source_tag": "service_release",
+              "source_kind": "expense",
+              "posting_pool": "period"
+            },
+            {
+              "id": "labor",
+              "op": "recognize",
+              "source_tag": "labor",
+              "source_kind": "expense",
+              "posting_pool": "period"
+            },
+            {
+              "id": "carrier_subcontract",
+              "op": "recognize",
+              "source_tag": "carrier_subcontract",
+              "source_kind": "expense",
+              "posting_pool": "period"
+            }
+          ],
+          "outputs": [
+            "fuel",
+            "depreciation",
+            "amortization",
+            "service_release",
+            "labor",
+            "carrier_subcontract"
+          ],
+          "excluded_tags": {},
+          "ledger_basis": "recognized_expenses_incurred",
+          "posting_map": {
+            "fuel": {
+              "object_id": "service-1",
+              "object_kind": "service",
+              "record_type": "entry",
+              "cost_element": "fuel",
+              "behavior": "unknown",
+              "cost_type": "direct"
+            },
+            "depreciation": {
+              "object_id": "service-1",
+              "object_kind": "service",
+              "record_type": "entry",
+              "cost_element": "depreciation",
+              "behavior": "unknown",
+              "cost_type": "direct"
+            },
+            "amortization": {
+              "object_id": "service-1",
+              "object_kind": "service",
+              "record_type": "entry",
+              "cost_element": "amortization",
+              "behavior": "unknown",
+              "cost_type": "direct"
+            },
+            "service_release": {
+              "object_id": "service-1",
+              "object_kind": "service",
+              "record_type": "entry",
+              "cost_element": "service_release",
+              "behavior": "unknown",
+              "cost_type": "direct"
+            },
+            "labor": {
+              "object_id": "service-1",
+              "object_kind": "service",
+              "record_type": "entry",
+              "cost_element": "labor",
+              "behavior": "unknown",
+              "cost_type": "direct"
+            },
+            "carrier_subcontract": {
+              "object_id": "service-1",
+              "object_kind": "service",
+              "record_type": "entry",
+              "cost_element": "carrier_subcontract",
+              "behavior": "unknown",
+              "cost_type": "direct"
+            }
+          }
+        }
+      }
+    },
+    "source_hashes": {
+      "assets": "d95685aa0bd4f907086957268d83f0a41461a8f3a57388c083c25153fab56a1a",
+      "asset_openings": "71be101174a69a183ea15907d724f18f83d8b9b8626077a4eb559f857415b7c3",
+      "custody": "1a58ff3d1faa6b8cefe9ac40d54e781d22c651bee948a0a3e494c0d076e7d5e3",
+      "finance": "fa11668dbd2e075da31846648fcd396eb5c4f640bc881edcf28c884b371e941a",
+      "gps": "4bd841d6a3b15faf5abb474133ff9706ee0f62c5687b1fd60f6698351c4497c3",
+      "settlements": "7f736bda9772ce7b1c66bdd09384016bd335b88296f4eaad6434dbcd9c115d0e",
+      "tms": "71fe1c5ae3ff2100070c1633636dbb07206a7d7ca35b0818fbee0b3a28733f8d"
+    },
+    "operational_inputs": {
+      "version": 1,
+      "rule_version": "integrated-ops-1",
+      "policy_source": "synthetic approved source mapping; no live vendor connection",
+      "period_timezone": "UTC",
+      "unit_registry": {
+        "kg": {
+          "dimensions": {
+            "mass": 1
+          },
+          "factor": "1"
+        },
+        "km": {
+          "dimensions": {
+            "length": 1
+          },
+          "factor": "1000"
+        },
+        "tonne_km": {
+          "dimensions": {
+            "mass": 1,
+            "length": 1
+          },
+          "factor": "1000000"
+        }
+      },
+      "sources": {
+        "tms": {
+          "file": "tms",
+          "fields": {
+            "id": "event_id",
+            "object_id": "service_id",
+            "book": "book",
+            "period": "period",
+            "currency": "currency",
+            "action": "action",
+            "original_id": "original_event_id",
+            "status": "status"
+          }
+        },
+        "gps": {
+          "file": "gps",
+          "role": "lookup",
+          "fields": {
+            "id": "gps_id",
+            "book": "book",
+            "period": "period",
+            "currency": "currency"
+          }
+        }
+      },
+      "metrics": [
+        {
+          "id": "service-distance-mass",
+          "source": "tms",
+          "unit": "tonne_km",
+          "joins": [
+            {
+              "source": "gps",
+              "left_field": "leg_id",
+              "right_field": "leg_id"
+            }
+          ],
+          "factors": [
+            {
+              "field": "weight",
+              "unit_field": "weight_unit",
+              "unit": "kg"
+            },
+            {
+              "source": "gps",
+              "op": "difference",
+              "start_field": "odometer_start",
+              "end_field": "odometer_end",
+              "unit_field": "distance_unit",
+              "unit": "km"
+            }
+          ]
+        }
+      ],
+      "object_bindings": [
+        {
+          "object_id": "service-1",
+          "metric_id": "service-distance-mass",
+          "quantity_unit": "tonne_km"
+        }
+      ],
+      "driver_bindings": []
+    }
+  },
+  "business_views": {
+    "version": 1,
+    "policy_source": "synthetic approved policy FIN-V1; not a real company approval",
+    "classifications": {
+      "service-1": "service"
+    },
+    "financial_ledgers": {
+      "version": 1,
+      "policy_source": "synthetic approved policy FIN-V1; not a real company approval",
+      "history_start": "2026-10",
+      "settlement": {
+        "file": "settlements",
+        "columns": {
+          "id": "id",
+          "account_id": "account_id",
+          "kind": "kind",
+          "op": "op",
+          "amount": "amount",
+          "ref": "ref",
+          "status": "status",
+          "evidence": "evidence"
+        },
+        "accounts": {
+          "AR": {
+            "kind": "receivable",
+            "opening_ref": "APP-AR",
+            "counterparty": "Synthetic customer",
+            "revenue_treatment": "recognized_service",
+            "revenue_policy_source": "synthetic approved policy FIN-V1; not a real company approval"
+          },
+          "AP": {
+            "kind": "payable",
+            "opening_ref": "APP-AP",
+            "counterparty": "Synthetic carrier"
+          },
+          "COD": {
+            "kind": "agency",
+            "opening_ref": "APP-COD",
+            "counterparty": "Synthetic merchant"
+          }
+        },
+        "cost_bindings": [
+          {
+            "account_ids": [
+              "AP"
+            ],
+            "cost_element": "carrier_subcontract",
+            "object_ids": [
+              "service-1"
+            ]
+          }
+        ]
+      },
+      "assets": {
+        "file": "assets",
+        "columns": {
+          "id": "id",
+          "asset_id": "asset_id",
+          "op": "op",
+          "quantity": "quantity",
+          "unit": "unit",
+          "amount": "amount",
+          "ref": "ref",
+          "status": "status",
+          "evidence": "evidence"
+        },
+        "opening": {
+          "file": "asset_openings",
+          "columns": {
+            "id": "id",
+            "asset_id": "asset_id",
+            "quantity": "quantity",
+            "unit": "unit",
+            "amount": "amount",
+            "status": "status",
+            "evidence": "evidence"
+          }
+        },
+        "accounts": {
+          "FUEL": {
+            "kind": "inventory",
+            "unit": "L",
+            "valuation": "moving_average",
+            "policy_source": "synthetic approved policy FIN-V1; not a real company approval"
+          },
+          "FLEET": {
+            "kind": "fixed",
+            "unit": "asset",
+            "valuation": "declared",
+            "policy_source": "synthetic approved policy FIN-V1; not a real company approval"
+          },
+          "PRE": {
+            "kind": "prepaid",
+            "unit": "month",
+            "valuation": "declared",
+            "policy_source": "synthetic approved policy FIN-V1; not a real company approval"
+          },
+          "SERVICE": {
+            "kind": "service_in_progress",
+            "unit": "job",
+            "valuation": "declared",
+            "policy_source": "synthetic approved policy FIN-V1; not a real company approval"
+          }
+        },
+        "cost_bindings": [
+          {
+            "asset_ids": [
+              "FUEL"
+            ],
+            "cost_element": "fuel",
+            "object_ids": [
+              "service-1"
+            ]
+          },
+          {
+            "asset_ids": [
+              "FLEET"
+            ],
+            "cost_element": "depreciation",
+            "object_ids": [
+              "service-1"
+            ]
+          },
+          {
+            "asset_ids": [
+              "PRE"
+            ],
+            "cost_element": "amortization",
+            "object_ids": [
+              "service-1"
+            ]
+          },
+          {
+            "asset_ids": [
+              "SERVICE"
+            ],
+            "cost_element": "service_release",
+            "object_ids": [
+              "service-1"
+            ]
+          }
+        ]
+      },
+      "custody": {
+        "file": "custody",
+        "columns": {
+          "id": "id",
+          "goods_id": "goods_id",
+          "op": "op",
+          "quantity": "quantity",
+          "unit": "unit",
+          "ref": "ref",
+          "status": "status",
+          "evidence": "evidence"
+        },
+        "goods": {
+          "CUSTOMER-GOODS": {
+            "unit": "pallet",
+            "opening_ref": "APP-CUST"
+          }
+        }
+      }
+    }
+  }
+}

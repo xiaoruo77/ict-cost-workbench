@@ -1,0 +1,3 @@
+event_id,book,period,currency,leg_id,odometer_start,odometer_end,distance_unit
+GPS-001,SYNTH_LOGISTICS,2026-11,CNY,LEG-1,1000,2000,km
+GPS-002,SYNTH_LOGISTICS,2026-11,CNY,LEG-2,5000,6000,km

@@ -1,0 +1,10 @@
+id,source_id,book,warehouse,item,uom,currency,at,sequence,kind,quantity,evidence,receipt_value,original_issue_id,restock_status,transfer_id
+STOCK-1-1,DOC-STOCK-1-1,SYNTH_RESTAURANT,store-1-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-01T10:00:00Z,1,receipt,20,synthetic purchase/count/closed-transfer voucher STOCK-1-1,40.00,,,
+STOCK-1-2,DOC-STOCK-1-2,SYNTH_RESTAURANT,store-2-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-02T10:00:00Z,1,receipt,10,synthetic purchase/count/closed-transfer voucher STOCK-1-2,20.00,,,
+STOCK-1-3,DOC-STOCK-1-3,SYNTH_RESTAURANT,store-1-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-03T10:00:00Z,1,transfer_out,5,synthetic purchase/count/closed-transfer voucher STOCK-1-3,,,,TRANSFER-1
+STOCK-1-4,DOC-STOCK-1-4,SYNTH_RESTAURANT,store-2-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-04T10:00:00Z,1,transfer_in,5,synthetic purchase/count/closed-transfer voucher STOCK-1-4,,,,TRANSFER-1
+STOCK-1-5,DOC-STOCK-1-5,SYNTH_RESTAURANT,store-1-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-05T10:00:00Z,1,sale_issue,10,synthetic purchase/count/closed-transfer voucher STOCK-1-5,,,,
+STOCK-1-6,DOC-STOCK-1-6,SYNTH_RESTAURANT,store-1-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-06T10:00:00Z,1,sale_return,2,synthetic purchase/count/closed-transfer voucher STOCK-1-6,,STOCK-1-5,restockable,
+STOCK-1-7,DOC-STOCK-1-7,SYNTH_RESTAURANT,store-1-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-07T10:00:00Z,1,shrink,1,synthetic purchase/count/closed-transfer voucher STOCK-1-7,,,,
+STOCK-1-8,DOC-STOCK-1-8,SYNTH_RESTAURANT,store-2-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-08T10:00:00Z,1,sale_issue,8,synthetic purchase/count/closed-transfer voucher STOCK-1-8,,,,
+STOCK-1-9,DOC-STOCK-1-9,SYNTH_RESTAURANT,store-2-resale,ABSTRACT_PACKAGED_GOODS,pack,CNY,2026-11-09T10:00:00Z,1,shrink,1,synthetic purchase/count/closed-transfer voucher STOCK-1-9,,,,

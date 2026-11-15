@@ -1,0 +1,7 @@
+object_id,object_kind,name,currency,month,qty,price,client,team,contract,record_type,cost_element,amount,pool_id,source_system,document_id,line_id,split_id
+C,service,C,CNY,2026-10,8,150,customer-00,team-00,agreement-00-00,object,,,,,,,
+D,service,D,CNY,2026-10,5,160,customer-03,team-00,agreement-00-01,entry,travel,70,,expenses,travel_D,1,1
+D,service,D,CNY,2026-10,5,160,customer-03,team-00,agreement-00-01,entry,vendor_credit,-10,,credit_notes,vendor_credit_D,1,1
+D,service,D,CNY,2026-10,5,160,customer-03,team-00,agreement-00-01,object,,,,,,,
+team-00,cost_center,team-00,CNY,2026-10,,,,,,pool,salary,480,team-00_salary,payroll,team-00_salary,1,
+team-00,cost_center,team-00,CNY,2026-10,,,,,,pool,seats,90,team-00_seats,subscriptions,team-00_seats,1,

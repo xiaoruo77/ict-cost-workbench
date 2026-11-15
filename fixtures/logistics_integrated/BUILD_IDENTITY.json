@@ -1,0 +1,28 @@
+{
+  "base_five_csv_sha256": {
+    "assets.csv": "d95685aa0bd4f907086957268d83f0a41461a8f3a57388c083c25153fab56a1a",
+    "asset_openings.csv": "71be101174a69a183ea15907d724f18f83d8b9b8626077a4eb559f857415b7c3",
+    "custody.csv": "1a58ff3d1faa6b8cefe9ac40d54e781d22c651bee948a0a3e494c0d076e7d5e3",
+    "finance.csv": "fa11668dbd2e075da31846648fcd396eb5c4f640bc881edcf28c884b371e941a",
+    "settlements.csv": "7f736bda9772ce7b1c66bdd09384016bd335b88296f4eaad6434dbcd9c115d0e"
+  },
+  "rules_sha256": "5c7e336b2476f542c972d9e65cd59550585c02ca1a74eebe66c6de81f7a9b09c",
+  "all_source_sha256": {
+    "assets": "d95685aa0bd4f907086957268d83f0a41461a8f3a57388c083c25153fab56a1a",
+    "asset_openings": "71be101174a69a183ea15907d724f18f83d8b9b8626077a4eb559f857415b7c3",
+    "custody": "1a58ff3d1faa6b8cefe9ac40d54e781d22c651bee948a0a3e494c0d076e7d5e3",
+    "finance": "fa11668dbd2e075da31846648fcd396eb5c4f640bc881edcf28c884b371e941a",
+    "gps": "4bd841d6a3b15faf5abb474133ff9706ee0f62c5687b1fd60f6698351c4497c3",
+    "settlements": "7f736bda9772ce7b1c66bdd09384016bd335b88296f4eaad6434dbcd9c115d0e",
+    "tms": "71fe1c5ae3ff2100070c1633636dbb07206a7d7ca35b0818fbee0b3a28733f8d"
+  },
+  "source_rows": {
+    "settlements": 21,
+    "assets": 9,
+    "asset_openings": 4,
+    "custody": 6,
+    "finance": 6,
+    "tms": 1,
+    "gps": 1
+  }
+}

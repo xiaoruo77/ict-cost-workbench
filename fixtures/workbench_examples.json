@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "examples": [
+    {
+      "id": "pharma",
+      "name": "制药",
+      "description": "核对批次成本、质量与放行费用、期间研发及在制库存。",
+      "scope": "批次与品种、期间费用",
+      "folder": "industry_triad/pharma"
+    },
+    {
+      "id": "restaurant",
+      "name": "餐饮",
+      "description": "核对多门店堂食外卖、损耗、共享费用与结算。",
+      "scope": "门店、渠道、菜品",
+      "folder": "industry_triad/restaurant"
+    },
+    {
+      "id": "medical_devices",
+      "name": "医疗器械",
+      "description": "核对双批次成本、返工退回、售后及处置来源。",
+      "scope": "型号批次、售后服务",
+      "folder": "industry_triad/medical_devices"
+    },
+    {
+      "id": "logistics",
+      "name": "物流",
+      "description": "核对运输服务量、应收应付、代收款和资产跨期勾稽。",
+      "scope": "普通公路仓配服务、结算与资产",
+      "folder": "logistics_integrated"
+    }
+  ]
+}

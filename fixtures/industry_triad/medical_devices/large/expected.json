@@ -1,0 +1,712 @@
+{
+  "oracle": "independent integer cents + Fraction largest remainder; no costing-engine import",
+  "seed": 20261114073,
+  "variant": "large",
+  "industry": "medical_devices",
+  "scope": {
+    "book": "SYNTH_MEDICAL_DEVICES",
+    "period": "2026-11",
+    "currency": "CNY"
+  },
+  "source_rows": {
+    "finance": 2886,
+    "shared": 41,
+    "events": 60,
+    "settlements": 0,
+    "stock": 0,
+    "dispositions": 702,
+    "raw_materials": 504
+  },
+  "total_cost": "105800.00",
+  "cost_groups": {
+    "parts": "50600.00",
+    "assembly_labor": "11960.00",
+    "outsourcing": "8280.00",
+    "quality": "7360.00",
+    "rework": "2760.00",
+    "depreciation": "5520.00",
+    "utilities": "3680.00",
+    "packaging": "1840.00",
+    "registration_testing": "5520.00",
+    "warehouse_logistics": "2760.00",
+    "actual_warranty": "3680.00",
+    "after_sales": "1840.00"
+  },
+  "objects": {
+    "device-batch-a-g01": {
+      "total_cost": "1100.00",
+      "cost_structure": {
+        "parts": "600.00",
+        "assembly_labor": "160.00",
+        "outsourcing": "100.00",
+        "quality": "80.00",
+        "rework": "60.00",
+        "depreciation": "60.00",
+        "utilities": "40.00"
+      },
+      "classification": "production",
+      "budget": "1000.00",
+      "variance": "100.00"
+    },
+    "device-batch-b-g01": {
+      "total_cost": "900.00",
+      "cost_structure": {
+        "parts": "500.00",
+        "assembly_labor": "100.00",
+        "outsourcing": "80.00",
+        "quality": "80.00",
+        "packaging": "40.00",
+        "depreciation": "60.00",
+        "utilities": "40.00"
+      },
+      "classification": "production",
+      "budget": "950.00",
+      "variance": "-50.00"
+    },
+    "period-registration-g01": {
+      "total_cost": "120.00",
+      "cost_structure": {
+        "registration_testing": "120.00"
+      },
+      "classification": "period",
+      "budget": "120.00",
+      "variance": "0.00"
+    },
+    "period-logistics-g01": {
+      "total_cost": "60.00",
+      "cost_structure": {
+        "warehouse_logistics": "60.00"
+      },
+      "classification": "period",
+      "budget": "60.00",
+      "variance": "0.00"
+    },
+    "service-warranty-g01": {
+      "total_cost": "80.00",
+      "cost_structure": {
+        "actual_warranty": "80.00"
+      },
+      "classification": "service",
+      "budget": "80.00",
+      "variance": "0.00"
+    },
+    "service-normal-g01": {
+      "total_cost": "40.00",
+      "cost_structure": {
+        "after_sales": "40.00"
+      },
+      "classification": "service",
+      "budget": "40.00",
+      "variance": "0.00"
+    },
+    "device-batch-a-g02": {
+      "total_cost": "6600.00",
+      "cost_structure": {
+        "parts": "3600.00",
+        "assembly_labor": "960.00",
+        "outsourcing": "600.00",
+        "quality": "480.00",
+        "rework": "360.00",
+        "depreciation": "360.00",
+        "utilities": "240.00"
+      },
+      "classification": "production",
+      "budget": "6000.00",
+      "variance": "600.00"
+    },
+    "device-batch-b-g02": {
+      "total_cost": "5400.00",
+      "cost_structure": {
+        "parts": "3000.00",
+        "assembly_labor": "600.00",
+        "outsourcing": "480.00",
+        "quality": "480.00",
+        "packaging": "240.00",
+        "depreciation": "360.00",
+        "utilities": "240.00"
+      },
+      "classification": "production",
+      "budget": "5700.00",
+      "variance": "-300.00"
+    },
+    "period-registration-g02": {
+      "total_cost": "720.00",
+      "cost_structure": {
+        "registration_testing": "720.00"
+      },
+      "classification": "period",
+      "budget": "720.00",
+      "variance": "0.00"
+    },
+    "period-logistics-g02": {
+      "total_cost": "360.00",
+      "cost_structure": {
+        "warehouse_logistics": "360.00"
+      },
+      "classification": "period",
+      "budget": "360.00",
+      "variance": "0.00"
+    },
+    "service-warranty-g02": {
+      "total_cost": "480.00",
+      "cost_structure": {
+        "actual_warranty": "480.00"
+      },
+      "classification": "service",
+      "budget": "480.00",
+      "variance": "0.00"
+    },
+    "service-normal-g02": {
+      "total_cost": "240.00",
+      "cost_structure": {
+        "after_sales": "240.00"
+      },
+      "classification": "service",
+      "budget": "240.00",
+      "variance": "0.00"
+    },
+    "device-batch-a-g03": {
+      "total_cost": "6600.00",
+      "cost_structure": {
+        "parts": "3600.00",
+        "assembly_labor": "960.00",
+        "outsourcing": "600.00",
+        "quality": "480.00",
+        "rework": "360.00",
+        "depreciation": "360.00",
+        "utilities": "240.00"
+      },
+      "classification": "production",
+      "budget": "6000.00",
+      "variance": "600.00"
+    },
+    "device-batch-b-g03": {
+      "total_cost": "5400.00",
+      "cost_structure": {
+        "parts": "3000.00",
+        "assembly_labor": "600.00",
+        "outsourcing": "480.00",
+        "quality": "480.00",
+        "packaging": "240.00",
+        "depreciation": "360.00",
+        "utilities": "240.00"
+      },
+      "classification": "production",
+      "budget": "5700.00",
+      "variance": "-300.00"
+    },
+    "period-registration-g03": {
+      "total_cost": "720.00",
+      "cost_structure": {
+        "registration_testing": "720.00"
+      },
+      "classification": "period",
+      "budget": "720.00",
+      "variance": "0.00"
+    },
+    "period-logistics-g03": {
+      "total_cost": "360.00",
+      "cost_structure": {
+        "warehouse_logistics": "360.00"
+      },
+      "classification": "period",
+      "budget": "360.00",
+      "variance": "0.00"
+    },
+    "service-warranty-g03": {
+      "total_cost": "480.00",
+      "cost_structure": {
+        "actual_warranty": "480.00"
+      },
+      "classification": "service",
+      "budget": "480.00",
+      "variance": "0.00"
+    },
+    "service-normal-g03": {
+      "total_cost": "240.00",
+      "cost_structure": {
+        "after_sales": "240.00"
+      },
+      "classification": "service",
+      "budget": "240.00",
+      "variance": "0.00"
+    },
+    "device-batch-a-g04": {
+      "total_cost": "5500.00",
+      "cost_structure": {
+        "parts": "3000.00",
+        "assembly_labor": "800.00",
+        "outsourcing": "500.00",
+        "quality": "400.00",
+        "rework": "300.00",
+        "depreciation": "300.00",
+        "utilities": "200.00"
+      },
+      "classification": "production",
+      "budget": "5000.00",
+      "variance": "500.00"
+    },
+    "device-batch-b-g04": {
+      "total_cost": "4500.00",
+      "cost_structure": {
+        "parts": "2500.00",
+        "assembly_labor": "500.00",
+        "outsourcing": "400.00",
+        "quality": "400.00",
+        "packaging": "200.00",
+        "depreciation": "300.00",
+        "utilities": "200.00"
+      },
+      "classification": "production",
+      "budget": "4750.00",
+      "variance": "-250.00"
+    },
+    "period-registration-g04": {
+      "total_cost": "600.00",
+      "cost_structure": {
+        "registration_testing": "600.00"
+      },
+      "classification": "period",
+      "budget": "600.00",
+      "variance": "0.00"
+    },
+    "period-logistics-g04": {
+      "total_cost": "300.00",
+      "cost_structure": {
+        "warehouse_logistics": "300.00"
+      },
+      "classification": "period",
+      "budget": "300.00",
+      "variance": "0.00"
+    },
+    "service-warranty-g04": {
+      "total_cost": "400.00",
+      "cost_structure": {
+        "actual_warranty": "400.00"
+      },
+      "classification": "service",
+      "budget": "400.00",
+      "variance": "0.00"
+    },
+    "service-normal-g04": {
+      "total_cost": "200.00",
+      "cost_structure": {
+        "after_sales": "200.00"
+      },
+      "classification": "service",
+      "budget": "200.00",
+      "variance": "0.00"
+    },
+    "device-batch-a-g05": {
+      "total_cost": "17600.00",
+      "cost_structure": {
+        "parts": "9600.00",
+        "assembly_labor": "2560.00",
+        "outsourcing": "1600.00",
+        "quality": "1280.00",
+        "rework": "960.00",
+        "depreciation": "960.00",
+        "utilities": "640.00"
+      },
+      "classification": "production",
+      "budget": "16000.00",
+      "variance": "1600.00"
+    },
+    "device-batch-b-g05": {
+      "total_cost": "14400.00",
+      "cost_structure": {
+        "parts": "8000.00",
+        "assembly_labor": "1600.00",
+        "outsourcing": "1280.00",
+        "quality": "1280.00",
+        "packaging": "640.00",
+        "depreciation": "960.00",
+        "utilities": "640.00"
+      },
+      "classification": "production",
+      "budget": "15200.00",
+      "variance": "-800.00"
+    },
+    "period-registration-g05": {
+      "total_cost": "1920.00",
+      "cost_structure": {
+        "registration_testing": "1920.00"
+      },
+      "classification": "period",
+      "budget": "1920.00",
+      "variance": "0.00"
+    },
+    "period-logistics-g05": {
+      "total_cost": "960.00",
+      "cost_structure": {
+        "warehouse_logistics": "960.00"
+      },
+      "classification": "period",
+      "budget": "960.00",
+      "variance": "0.00"
+    },
+    "service-warranty-g05": {
+      "total_cost": "1280.00",
+      "cost_structure": {
+        "actual_warranty": "1280.00"
+      },
+      "classification": "service",
+      "budget": "1280.00",
+      "variance": "0.00"
+    },
+    "service-normal-g05": {
+      "total_cost": "640.00",
+      "cost_structure": {
+        "after_sales": "640.00"
+      },
+      "classification": "service",
+      "budget": "640.00",
+      "variance": "0.00"
+    },
+    "device-batch-a-g06": {
+      "total_cost": "13200.00",
+      "cost_structure": {
+        "parts": "7200.00",
+        "assembly_labor": "1920.00",
+        "outsourcing": "1200.00",
+        "quality": "960.00",
+        "rework": "720.00",
+        "depreciation": "720.00",
+        "utilities": "480.00"
+      },
+      "classification": "production",
+      "budget": "12000.00",
+      "variance": "1200.00"
+    },
+    "device-batch-b-g06": {
+      "total_cost": "10800.00",
+      "cost_structure": {
+        "parts": "6000.00",
+        "assembly_labor": "1200.00",
+        "outsourcing": "960.00",
+        "quality": "960.00",
+        "packaging": "480.00",
+        "depreciation": "720.00",
+        "utilities": "480.00"
+      },
+      "classification": "production",
+      "budget": "11400.00",
+      "variance": "-600.00"
+    },
+    "period-registration-g06": {
+      "total_cost": "1440.00",
+      "cost_structure": {
+        "registration_testing": "1440.00"
+      },
+      "classification": "period",
+      "budget": "1440.00",
+      "variance": "0.00"
+    },
+    "period-logistics-g06": {
+      "total_cost": "720.00",
+      "cost_structure": {
+        "warehouse_logistics": "720.00"
+      },
+      "classification": "period",
+      "budget": "720.00",
+      "variance": "0.00"
+    },
+    "service-warranty-g06": {
+      "total_cost": "960.00",
+      "cost_structure": {
+        "actual_warranty": "960.00"
+      },
+      "classification": "service",
+      "budget": "960.00",
+      "variance": "0.00"
+    },
+    "service-normal-g06": {
+      "total_cost": "480.00",
+      "cost_structure": {
+        "after_sales": "480.00"
+      },
+      "classification": "service",
+      "budget": "480.00",
+      "variance": "0.00"
+    }
+  },
+  "lifecycle": {
+    "device-batch-a-g01": {
+      "started_quantity": "110",
+      "completed_quantity": "90",
+      "sales_quantity": "60",
+      "returned_quantity": "5",
+      "wip_quantity": "10",
+      "finished_quantity": "35",
+      "scrap_quantity": "10",
+      "wip": "100.00",
+      "finished_inventory": "350.00",
+      "cost_of_sales": "550.00",
+      "scrap_loss": "100.00",
+      "qualified_unit_cost": "10"
+    },
+    "device-batch-b-g01": {
+      "started_quantity": "90",
+      "completed_quantity": "80",
+      "sales_quantity": "40",
+      "returned_quantity": "2",
+      "wip_quantity": "5",
+      "finished_quantity": "42",
+      "scrap_quantity": "5",
+      "wip": "50.00",
+      "finished_inventory": "420.00",
+      "cost_of_sales": "380.00",
+      "scrap_loss": "50.00",
+      "qualified_unit_cost": "10"
+    },
+    "device-batch-a-g02": {
+      "started_quantity": "330",
+      "completed_quantity": "270",
+      "sales_quantity": "180",
+      "returned_quantity": "15",
+      "wip_quantity": "30",
+      "finished_quantity": "105",
+      "scrap_quantity": "30",
+      "wip": "600.00",
+      "finished_inventory": "2100.00",
+      "cost_of_sales": "3300.00",
+      "scrap_loss": "600.00",
+      "qualified_unit_cost": "20"
+    },
+    "device-batch-b-g02": {
+      "started_quantity": "270",
+      "completed_quantity": "240",
+      "sales_quantity": "120",
+      "returned_quantity": "6",
+      "wip_quantity": "15",
+      "finished_quantity": "126",
+      "scrap_quantity": "15",
+      "wip": "300.00",
+      "finished_inventory": "2520.00",
+      "cost_of_sales": "2280.00",
+      "scrap_loss": "300.00",
+      "qualified_unit_cost": "20"
+    },
+    "device-batch-a-g03": {
+      "started_quantity": "220",
+      "completed_quantity": "180",
+      "sales_quantity": "120",
+      "returned_quantity": "10",
+      "wip_quantity": "20",
+      "finished_quantity": "70",
+      "scrap_quantity": "20",
+      "wip": "600.00",
+      "finished_inventory": "2100.00",
+      "cost_of_sales": "3300.00",
+      "scrap_loss": "600.00",
+      "qualified_unit_cost": "30"
+    },
+    "device-batch-b-g03": {
+      "started_quantity": "180",
+      "completed_quantity": "160",
+      "sales_quantity": "80",
+      "returned_quantity": "4",
+      "wip_quantity": "10",
+      "finished_quantity": "84",
+      "scrap_quantity": "10",
+      "wip": "300.00",
+      "finished_inventory": "2520.00",
+      "cost_of_sales": "2280.00",
+      "scrap_loss": "300.00",
+      "qualified_unit_cost": "30"
+    },
+    "device-batch-a-g04": {
+      "started_quantity": "550",
+      "completed_quantity": "450",
+      "sales_quantity": "300",
+      "returned_quantity": "25",
+      "wip_quantity": "50",
+      "finished_quantity": "175",
+      "scrap_quantity": "50",
+      "wip": "500.00",
+      "finished_inventory": "1750.00",
+      "cost_of_sales": "2750.00",
+      "scrap_loss": "500.00",
+      "qualified_unit_cost": "10"
+    },
+    "device-batch-b-g04": {
+      "started_quantity": "450",
+      "completed_quantity": "400",
+      "sales_quantity": "200",
+      "returned_quantity": "10",
+      "wip_quantity": "25",
+      "finished_quantity": "210",
+      "scrap_quantity": "25",
+      "wip": "250.00",
+      "finished_inventory": "2100.00",
+      "cost_of_sales": "1900.00",
+      "scrap_loss": "250.00",
+      "qualified_unit_cost": "10"
+    },
+    "device-batch-a-g05": {
+      "started_quantity": "440",
+      "completed_quantity": "360",
+      "sales_quantity": "240",
+      "returned_quantity": "20",
+      "wip_quantity": "40",
+      "finished_quantity": "140",
+      "scrap_quantity": "40",
+      "wip": "1600.00",
+      "finished_inventory": "5600.00",
+      "cost_of_sales": "8800.00",
+      "scrap_loss": "1600.00",
+      "qualified_unit_cost": "40"
+    },
+    "device-batch-b-g05": {
+      "started_quantity": "360",
+      "completed_quantity": "320",
+      "sales_quantity": "160",
+      "returned_quantity": "8",
+      "wip_quantity": "20",
+      "finished_quantity": "168",
+      "scrap_quantity": "20",
+      "wip": "800.00",
+      "finished_inventory": "6720.00",
+      "cost_of_sales": "6080.00",
+      "scrap_loss": "800.00",
+      "qualified_unit_cost": "40"
+    },
+    "device-batch-a-g06": {
+      "started_quantity": "660",
+      "completed_quantity": "540",
+      "sales_quantity": "360",
+      "returned_quantity": "30",
+      "wip_quantity": "60",
+      "finished_quantity": "210",
+      "scrap_quantity": "60",
+      "wip": "1200.00",
+      "finished_inventory": "4200.00",
+      "cost_of_sales": "6600.00",
+      "scrap_loss": "1200.00",
+      "qualified_unit_cost": "20"
+    },
+    "device-batch-b-g06": {
+      "started_quantity": "540",
+      "completed_quantity": "480",
+      "sales_quantity": "240",
+      "returned_quantity": "12",
+      "wip_quantity": "30",
+      "finished_quantity": "252",
+      "scrap_quantity": "30",
+      "wip": "600.00",
+      "finished_inventory": "5040.00",
+      "cost_of_sales": "4560.00",
+      "scrap_loss": "600.00",
+      "qualified_unit_cost": "20"
+    }
+  },
+  "asset_total": "42320.00",
+  "pnl_cost": "63480.00",
+  "period_expense": "8280.00",
+  "service_cost": "5520.00",
+  "budget_total": "103500.00",
+  "budget_variance": "2300.00",
+  "excluded_cash": "5678.70",
+  "can_claim_entire_industry": false,
+  "dispositions": {
+    "total_count": 702,
+    "counts": {
+      "rework": 240,
+      "scrap": 315,
+      "return": 147
+    },
+    "identity_basis": "synthetic approved unit identity registry v1",
+    "evidence_scope": "source_declared_disposition_identity;not_serial_trace"
+  },
+  "raw_materials": {
+    "streams": {
+      "device-batch-a-g01": {
+        "net_quantity": "600",
+        "closing_quantity": "37",
+        "available_value": "637.00",
+        "net_production_consumption": "600.00",
+        "closing_value": "37.00"
+      },
+      "device-batch-b-g01": {
+        "net_quantity": "500",
+        "closing_quantity": "27",
+        "available_value": "527.00",
+        "net_production_consumption": "500.00",
+        "closing_value": "27.00"
+      },
+      "device-batch-a-g02": {
+        "net_quantity": "1800",
+        "closing_quantity": "111",
+        "available_value": "3822.00",
+        "net_production_consumption": "3600.00",
+        "closing_value": "222.00"
+      },
+      "device-batch-b-g02": {
+        "net_quantity": "1500",
+        "closing_quantity": "81",
+        "available_value": "3162.00",
+        "net_production_consumption": "3000.00",
+        "closing_value": "162.00"
+      },
+      "device-batch-a-g03": {
+        "net_quantity": "1200",
+        "closing_quantity": "74",
+        "available_value": "3822.00",
+        "net_production_consumption": "3600.00",
+        "closing_value": "222.00"
+      },
+      "device-batch-b-g03": {
+        "net_quantity": "1000",
+        "closing_quantity": "54",
+        "available_value": "3162.00",
+        "net_production_consumption": "3000.00",
+        "closing_value": "162.00"
+      },
+      "device-batch-a-g04": {
+        "net_quantity": "3000",
+        "closing_quantity": "185",
+        "available_value": "3185.00",
+        "net_production_consumption": "3000.00",
+        "closing_value": "185.00"
+      },
+      "device-batch-b-g04": {
+        "net_quantity": "2500",
+        "closing_quantity": "135",
+        "available_value": "2635.00",
+        "net_production_consumption": "2500.00",
+        "closing_value": "135.00"
+      },
+      "device-batch-a-g05": {
+        "net_quantity": "2400",
+        "closing_quantity": "148",
+        "available_value": "10192.00",
+        "net_production_consumption": "9600.00",
+        "closing_value": "592.00"
+      },
+      "device-batch-b-g05": {
+        "net_quantity": "2000",
+        "closing_quantity": "108",
+        "available_value": "8432.00",
+        "net_production_consumption": "8000.00",
+        "closing_value": "432.00"
+      },
+      "device-batch-a-g06": {
+        "net_quantity": "3600",
+        "closing_quantity": "222",
+        "available_value": "7644.00",
+        "net_production_consumption": "7200.00",
+        "closing_value": "444.00"
+      },
+      "device-batch-b-g06": {
+        "net_quantity": "3000",
+        "closing_quantity": "162",
+        "available_value": "6324.00",
+        "net_production_consumption": "6000.00",
+        "closing_value": "324.00"
+      }
+    },
+    "available_value": "53544.00",
+    "net_production_consumption": "50600.00",
+    "closing_value": "2944.00"
+  }
+}

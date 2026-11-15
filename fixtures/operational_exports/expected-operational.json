@@ -1,0 +1,26 @@
+{
+  "oracle": "independent event arithmetic: (14t-2t)*1000km=12000;8t*1000km=8000;10pallets*30Novdays=300;100deliveries;20returns;hours4:3:2:2:1",
+  "quantities": {
+    "route-self": "12000",
+    "route-outsourced": "8000",
+    "warehouse-A": "300",
+    "delivery-city": "100",
+    "reverse-return": "20"
+  },
+  "driver_weights": {
+    "route-self": "4",
+    "route-outsourced": "3",
+    "warehouse-A": "2",
+    "delivery-city": "2",
+    "reverse-return": "1"
+  },
+  "source_rows": {
+    "tms": 3,
+    "gps": 2,
+    "wms": 1,
+    "orders": 100,
+    "returns": 20,
+    "activity": 5
+  },
+  "return_events": 20
+}

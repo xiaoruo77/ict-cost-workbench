@@ -1,0 +1,7 @@
+id,book,period,currency,kind,status,amount,economic_key,evidence,tag,target_object_id,origin_period
+COST-fuel,SYNTH-FINANCIAL,2026-11,CNY,expense,data,312.00,COST-fuel,synthetic approved policy FIN-V1; not a real company approval,fuel,service-1,
+COST-depreciation,SYNTH-FINANCIAL,2026-11,CNY,expense,data,200.00,COST-depreciation,synthetic approved policy FIN-V1; not a real company approval,depreciation,service-1,
+COST-amortization,SYNTH-FINANCIAL,2026-11,CNY,expense,data,100.00,COST-amortization,synthetic approved policy FIN-V1; not a real company approval,amortization,service-1,
+COST-service_release,SYNTH-FINANCIAL,2026-11,CNY,expense,data,300.00,COST-service_release,synthetic approved policy FIN-V1; not a real company approval,service_release,service-1,
+COST-labor,SYNTH-FINANCIAL,2026-11,CNY,expense,data,500.00,COST-labor,synthetic approved policy FIN-V1; not a real company approval,labor,service-1,
+COST-carrier_subcontract,SYNTH-FINANCIAL,2026-11,CNY,expense,data,350.00,COST-carrier_subcontract,synthetic approved policy FIN-V1; not a real company approval,carrier_subcontract,service-1,

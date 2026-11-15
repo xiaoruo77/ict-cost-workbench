@@ -1,0 +1,5 @@
+id,book,period,currency,kind,status,amount,economic_key,evidence,tag,target_object_id,origin_period
+SHARED-utilities-001,SYNTH_RESTAURANT,2026-11,CNY,expense,data,36.00,SHARED-utilities-001,synthetic approved allocation/schedule SHARED-utilities-001,utilities,,
+SHARED-depreciation-001,SYNTH_RESTAURANT,2026-11,CNY,asset_basis,data,216.00,SHARED-depreciation-001,synthetic approved allocation/schedule SHARED-depreciation-001,depreciation,,2026-01
+SHARED-shared_kitchen_labor-001,SYNTH_RESTAURANT,2026-11,CNY,expense,data,36.00,SHARED-shared_kitchen_labor-001,synthetic approved allocation/schedule SHARED-shared_kitchen_labor-001,shared_kitchen_labor,,
+SHARED-head_office-001,SYNTH_RESTAURANT,2026-11,CNY,expense,data,45.00,SHARED-head_office-001,synthetic approved allocation/schedule SHARED-head_office-001,head_office,,

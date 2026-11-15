@@ -1,0 +1,2 @@
+event_id,service_id,book,period,currency,action,original_event_id,status,leg_id,weight,weight_unit
+TMS-1,service-1,SYNTH-FINANCIAL,2026-11,CNY,measure,,data,LEG-1,12000,kg

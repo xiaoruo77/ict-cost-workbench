@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+data/
+raw/
+wiki/
+reports/
+evidence/
+.runtime/
+references/templates/
+references/industry_taxonomies/*.docx
+*.sqlite*
+*.db

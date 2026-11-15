@@ -1,0 +1,6 @@
+event_id,service_id,book,period,currency,action,original_event_id,status,work_start,work_end
+ACT-001,route-self,SYNTH_LOGISTICS,2026-11,CNY,measure,,data,2026-11-03T08:00:00Z,2026-11-03T12:00:00Z
+ACT-002,route-outsourced,SYNTH_LOGISTICS,2026-11,CNY,measure,,data,2026-11-03T08:00:00Z,2026-11-03T11:00:00Z
+ACT-003,warehouse-A,SYNTH_LOGISTICS,2026-11,CNY,measure,,data,2026-11-03T08:00:00Z,2026-11-03T10:00:00Z
+ACT-004,delivery-city,SYNTH_LOGISTICS,2026-11,CNY,measure,,data,2026-11-03T08:00:00Z,2026-11-03T10:00:00Z
+ACT-005,reverse-return,SYNTH_LOGISTICS,2026-11,CNY,measure,,data,2026-11-03T08:00:00Z,2026-11-03T09:00:00Z

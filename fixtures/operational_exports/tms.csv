@@ -1,0 +1,4 @@
+event_id,service_id,book,period,currency,action,original_event_id,status,leg_id,weight,weight_unit
+TMS-001,route-self,SYNTH_LOGISTICS,2026-11,CNY,measure,,data,LEG-1,14000,kg
+TMS-002,route-outsourced,SYNTH_LOGISTICS,2026-11,CNY,measure,,data,LEG-2,8000,kg
+TMS-003,route-self,SYNTH_LOGISTICS,2026-11,CNY,reverse,TMS-001,data,LEG-1,2000,kg

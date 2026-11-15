@@ -1,0 +1,616 @@
+{
+  "oracle": "independent integer cents + Fraction largest remainder; no costing-engine import",
+  "seed": 20261114073,
+  "variant": "large",
+  "industry": "pharma",
+  "scope": {
+    "book": "SYNTH_PHARMA",
+    "period": "2026-11",
+    "currency": "CNY"
+  },
+  "source_rows": {
+    "finance": 2886,
+    "shared": 42,
+    "events": 48,
+    "settlements": 0,
+    "stock": 0,
+    "raw_materials": 504
+  },
+  "total_cost": "110400.00",
+  "cost_groups": {
+    "materials": "48300.00",
+    "labor": "15180.00",
+    "outsourcing": "8280.00",
+    "quality": "5520.00",
+    "release": "3680.00",
+    "packaging": "1840.00",
+    "utilities": "8280.00",
+    "depreciation": "4140.00",
+    "licence_amortization": "1380.00",
+    "research_expense": "11040.00",
+    "warehouse_logistics": "2760.00"
+  },
+  "objects": {
+    "batch-a-g01": {
+      "total_cost": "1200.00",
+      "cost_structure": {
+        "materials": "600.00",
+        "labor": "180.00",
+        "outsourcing": "100.00",
+        "quality": "60.00",
+        "release": "40.00",
+        "packaging": "20.00",
+        "utilities": "120.00",
+        "depreciation": "60.00",
+        "licence_amortization": "20.00"
+      },
+      "classification": "production",
+      "budget": "1150.00",
+      "variance": "50.00"
+    },
+    "batch-b-g01": {
+      "total_cost": "900.00",
+      "cost_structure": {
+        "materials": "450.00",
+        "labor": "150.00",
+        "outsourcing": "80.00",
+        "quality": "60.00",
+        "release": "40.00",
+        "packaging": "20.00",
+        "utilities": "60.00",
+        "depreciation": "30.00",
+        "licence_amortization": "10.00"
+      },
+      "classification": "production",
+      "budget": "1000.00",
+      "variance": "-100.00"
+    },
+    "period-rd-g01": {
+      "total_cost": "240.00",
+      "cost_structure": {
+        "research_expense": "240.00"
+      },
+      "classification": "period",
+      "budget": "250.00",
+      "variance": "-10.00"
+    },
+    "period-logistics-g01": {
+      "total_cost": "60.00",
+      "cost_structure": {
+        "warehouse_logistics": "60.00"
+      },
+      "classification": "period",
+      "budget": "50.00",
+      "variance": "10.00"
+    },
+    "batch-a-g02": {
+      "total_cost": "7200.00",
+      "cost_structure": {
+        "materials": "3600.00",
+        "labor": "1080.00",
+        "outsourcing": "600.00",
+        "quality": "360.00",
+        "release": "240.00",
+        "packaging": "120.00",
+        "utilities": "720.00",
+        "depreciation": "360.00",
+        "licence_amortization": "120.00"
+      },
+      "classification": "production",
+      "budget": "6900.00",
+      "variance": "300.00"
+    },
+    "batch-b-g02": {
+      "total_cost": "5400.00",
+      "cost_structure": {
+        "materials": "2700.00",
+        "labor": "900.00",
+        "outsourcing": "480.00",
+        "quality": "360.00",
+        "release": "240.00",
+        "packaging": "120.00",
+        "utilities": "360.00",
+        "depreciation": "180.00",
+        "licence_amortization": "60.00"
+      },
+      "classification": "production",
+      "budget": "6000.00",
+      "variance": "-600.00"
+    },
+    "period-rd-g02": {
+      "total_cost": "1440.00",
+      "cost_structure": {
+        "research_expense": "1440.00"
+      },
+      "classification": "period",
+      "budget": "1500.00",
+      "variance": "-60.00"
+    },
+    "period-logistics-g02": {
+      "total_cost": "360.00",
+      "cost_structure": {
+        "warehouse_logistics": "360.00"
+      },
+      "classification": "period",
+      "budget": "300.00",
+      "variance": "60.00"
+    },
+    "batch-a-g03": {
+      "total_cost": "7200.00",
+      "cost_structure": {
+        "materials": "3600.00",
+        "labor": "1080.00",
+        "outsourcing": "600.00",
+        "quality": "360.00",
+        "release": "240.00",
+        "packaging": "120.00",
+        "utilities": "720.00",
+        "depreciation": "360.00",
+        "licence_amortization": "120.00"
+      },
+      "classification": "production",
+      "budget": "6900.00",
+      "variance": "300.00"
+    },
+    "batch-b-g03": {
+      "total_cost": "5400.00",
+      "cost_structure": {
+        "materials": "2700.00",
+        "labor": "900.00",
+        "outsourcing": "480.00",
+        "quality": "360.00",
+        "release": "240.00",
+        "packaging": "120.00",
+        "utilities": "360.00",
+        "depreciation": "180.00",
+        "licence_amortization": "60.00"
+      },
+      "classification": "production",
+      "budget": "6000.00",
+      "variance": "-600.00"
+    },
+    "period-rd-g03": {
+      "total_cost": "1440.00",
+      "cost_structure": {
+        "research_expense": "1440.00"
+      },
+      "classification": "period",
+      "budget": "1500.00",
+      "variance": "-60.00"
+    },
+    "period-logistics-g03": {
+      "total_cost": "360.00",
+      "cost_structure": {
+        "warehouse_logistics": "360.00"
+      },
+      "classification": "period",
+      "budget": "300.00",
+      "variance": "60.00"
+    },
+    "batch-a-g04": {
+      "total_cost": "6000.00",
+      "cost_structure": {
+        "materials": "3000.00",
+        "labor": "900.00",
+        "outsourcing": "500.00",
+        "quality": "300.00",
+        "release": "200.00",
+        "packaging": "100.00",
+        "utilities": "600.00",
+        "depreciation": "300.00",
+        "licence_amortization": "100.00"
+      },
+      "classification": "production",
+      "budget": "5750.00",
+      "variance": "250.00"
+    },
+    "batch-b-g04": {
+      "total_cost": "4500.00",
+      "cost_structure": {
+        "materials": "2250.00",
+        "labor": "750.00",
+        "outsourcing": "400.00",
+        "quality": "300.00",
+        "release": "200.00",
+        "packaging": "100.00",
+        "utilities": "300.00",
+        "depreciation": "150.00",
+        "licence_amortization": "50.00"
+      },
+      "classification": "production",
+      "budget": "5000.00",
+      "variance": "-500.00"
+    },
+    "period-rd-g04": {
+      "total_cost": "1200.00",
+      "cost_structure": {
+        "research_expense": "1200.00"
+      },
+      "classification": "period",
+      "budget": "1250.00",
+      "variance": "-50.00"
+    },
+    "period-logistics-g04": {
+      "total_cost": "300.00",
+      "cost_structure": {
+        "warehouse_logistics": "300.00"
+      },
+      "classification": "period",
+      "budget": "250.00",
+      "variance": "50.00"
+    },
+    "batch-a-g05": {
+      "total_cost": "19200.00",
+      "cost_structure": {
+        "materials": "9600.00",
+        "labor": "2880.00",
+        "outsourcing": "1600.00",
+        "quality": "960.00",
+        "release": "640.00",
+        "packaging": "320.00",
+        "utilities": "1920.00",
+        "depreciation": "960.00",
+        "licence_amortization": "320.00"
+      },
+      "classification": "production",
+      "budget": "18400.00",
+      "variance": "800.00"
+    },
+    "batch-b-g05": {
+      "total_cost": "14400.00",
+      "cost_structure": {
+        "materials": "7200.00",
+        "labor": "2400.00",
+        "outsourcing": "1280.00",
+        "quality": "960.00",
+        "release": "640.00",
+        "packaging": "320.00",
+        "utilities": "960.00",
+        "depreciation": "480.00",
+        "licence_amortization": "160.00"
+      },
+      "classification": "production",
+      "budget": "16000.00",
+      "variance": "-1600.00"
+    },
+    "period-rd-g05": {
+      "total_cost": "3840.00",
+      "cost_structure": {
+        "research_expense": "3840.00"
+      },
+      "classification": "period",
+      "budget": "4000.00",
+      "variance": "-160.00"
+    },
+    "period-logistics-g05": {
+      "total_cost": "960.00",
+      "cost_structure": {
+        "warehouse_logistics": "960.00"
+      },
+      "classification": "period",
+      "budget": "800.00",
+      "variance": "160.00"
+    },
+    "batch-a-g06": {
+      "total_cost": "14400.00",
+      "cost_structure": {
+        "materials": "7200.00",
+        "labor": "2160.00",
+        "outsourcing": "1200.00",
+        "quality": "720.00",
+        "release": "480.00",
+        "packaging": "240.00",
+        "utilities": "1440.00",
+        "depreciation": "720.00",
+        "licence_amortization": "240.00"
+      },
+      "classification": "production",
+      "budget": "13800.00",
+      "variance": "600.00"
+    },
+    "batch-b-g06": {
+      "total_cost": "10800.00",
+      "cost_structure": {
+        "materials": "5400.00",
+        "labor": "1800.00",
+        "outsourcing": "960.00",
+        "quality": "720.00",
+        "release": "480.00",
+        "packaging": "240.00",
+        "utilities": "720.00",
+        "depreciation": "360.00",
+        "licence_amortization": "120.00"
+      },
+      "classification": "production",
+      "budget": "12000.00",
+      "variance": "-1200.00"
+    },
+    "period-rd-g06": {
+      "total_cost": "2880.00",
+      "cost_structure": {
+        "research_expense": "2880.00"
+      },
+      "classification": "period",
+      "budget": "3000.00",
+      "variance": "-120.00"
+    },
+    "period-logistics-g06": {
+      "total_cost": "720.00",
+      "cost_structure": {
+        "warehouse_logistics": "720.00"
+      },
+      "classification": "period",
+      "budget": "600.00",
+      "variance": "120.00"
+    }
+  },
+  "lifecycle": {
+    "batch-a-g01": {
+      "started_quantity": "120",
+      "completed_quantity": "100",
+      "sales_quantity": "60",
+      "returned_quantity": "5",
+      "wip_quantity": "10",
+      "finished_quantity": "45",
+      "scrap_quantity": "10",
+      "wip": "100.00",
+      "finished_inventory": "450.00",
+      "cost_of_sales": "550.00",
+      "scrap_loss": "100.00",
+      "qualified_unit_cost": "10"
+    },
+    "batch-b-g01": {
+      "started_quantity": "90",
+      "completed_quantity": "80",
+      "sales_quantity": "50",
+      "returned_quantity": "0",
+      "wip_quantity": "10",
+      "finished_quantity": "30",
+      "scrap_quantity": "0",
+      "wip": "100.00",
+      "finished_inventory": "300.00",
+      "cost_of_sales": "500.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "10"
+    },
+    "batch-a-g02": {
+      "started_quantity": "360",
+      "completed_quantity": "300",
+      "sales_quantity": "180",
+      "returned_quantity": "15",
+      "wip_quantity": "30",
+      "finished_quantity": "135",
+      "scrap_quantity": "30",
+      "wip": "600.00",
+      "finished_inventory": "2700.00",
+      "cost_of_sales": "3300.00",
+      "scrap_loss": "600.00",
+      "qualified_unit_cost": "20"
+    },
+    "batch-b-g02": {
+      "started_quantity": "270",
+      "completed_quantity": "240",
+      "sales_quantity": "150",
+      "returned_quantity": "0",
+      "wip_quantity": "30",
+      "finished_quantity": "90",
+      "scrap_quantity": "0",
+      "wip": "600.00",
+      "finished_inventory": "1800.00",
+      "cost_of_sales": "3000.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "20"
+    },
+    "batch-a-g03": {
+      "started_quantity": "240",
+      "completed_quantity": "200",
+      "sales_quantity": "120",
+      "returned_quantity": "10",
+      "wip_quantity": "20",
+      "finished_quantity": "90",
+      "scrap_quantity": "20",
+      "wip": "600.00",
+      "finished_inventory": "2700.00",
+      "cost_of_sales": "3300.00",
+      "scrap_loss": "600.00",
+      "qualified_unit_cost": "30"
+    },
+    "batch-b-g03": {
+      "started_quantity": "180",
+      "completed_quantity": "160",
+      "sales_quantity": "100",
+      "returned_quantity": "0",
+      "wip_quantity": "20",
+      "finished_quantity": "60",
+      "scrap_quantity": "0",
+      "wip": "600.00",
+      "finished_inventory": "1800.00",
+      "cost_of_sales": "3000.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "30"
+    },
+    "batch-a-g04": {
+      "started_quantity": "600",
+      "completed_quantity": "500",
+      "sales_quantity": "300",
+      "returned_quantity": "25",
+      "wip_quantity": "50",
+      "finished_quantity": "225",
+      "scrap_quantity": "50",
+      "wip": "500.00",
+      "finished_inventory": "2250.00",
+      "cost_of_sales": "2750.00",
+      "scrap_loss": "500.00",
+      "qualified_unit_cost": "10"
+    },
+    "batch-b-g04": {
+      "started_quantity": "450",
+      "completed_quantity": "400",
+      "sales_quantity": "250",
+      "returned_quantity": "0",
+      "wip_quantity": "50",
+      "finished_quantity": "150",
+      "scrap_quantity": "0",
+      "wip": "500.00",
+      "finished_inventory": "1500.00",
+      "cost_of_sales": "2500.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "10"
+    },
+    "batch-a-g05": {
+      "started_quantity": "480",
+      "completed_quantity": "400",
+      "sales_quantity": "240",
+      "returned_quantity": "20",
+      "wip_quantity": "40",
+      "finished_quantity": "180",
+      "scrap_quantity": "40",
+      "wip": "1600.00",
+      "finished_inventory": "7200.00",
+      "cost_of_sales": "8800.00",
+      "scrap_loss": "1600.00",
+      "qualified_unit_cost": "40"
+    },
+    "batch-b-g05": {
+      "started_quantity": "360",
+      "completed_quantity": "320",
+      "sales_quantity": "200",
+      "returned_quantity": "0",
+      "wip_quantity": "40",
+      "finished_quantity": "120",
+      "scrap_quantity": "0",
+      "wip": "1600.00",
+      "finished_inventory": "4800.00",
+      "cost_of_sales": "8000.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "40"
+    },
+    "batch-a-g06": {
+      "started_quantity": "720",
+      "completed_quantity": "600",
+      "sales_quantity": "360",
+      "returned_quantity": "30",
+      "wip_quantity": "60",
+      "finished_quantity": "270",
+      "scrap_quantity": "60",
+      "wip": "1200.00",
+      "finished_inventory": "5400.00",
+      "cost_of_sales": "6600.00",
+      "scrap_loss": "1200.00",
+      "qualified_unit_cost": "20"
+    },
+    "batch-b-g06": {
+      "started_quantity": "540",
+      "completed_quantity": "480",
+      "sales_quantity": "300",
+      "returned_quantity": "0",
+      "wip_quantity": "60",
+      "finished_quantity": "180",
+      "scrap_quantity": "0",
+      "wip": "1200.00",
+      "finished_inventory": "3600.00",
+      "cost_of_sales": "6000.00",
+      "scrap_loss": "0.00",
+      "qualified_unit_cost": "20"
+    }
+  },
+  "asset_total": "43700.00",
+  "pnl_cost": "66700.00",
+  "period_expense": "13800.00",
+  "service_cost": "0.00",
+  "budget_total": "112700.00",
+  "budget_variance": "-2300.00",
+  "excluded_cash": "5678.70",
+  "can_claim_entire_industry": false,
+  "raw_materials": {
+    "streams": {
+      "batch-a-g01": {
+        "net_quantity": "600",
+        "closing_quantity": "37",
+        "available_value": "637.00",
+        "net_production_consumption": "600.00",
+        "closing_value": "37.00"
+      },
+      "batch-b-g01": {
+        "net_quantity": "450",
+        "closing_quantity": "27",
+        "available_value": "477.00",
+        "net_production_consumption": "450.00",
+        "closing_value": "27.00"
+      },
+      "batch-a-g02": {
+        "net_quantity": "1800",
+        "closing_quantity": "111",
+        "available_value": "3822.00",
+        "net_production_consumption": "3600.00",
+        "closing_value": "222.00"
+      },
+      "batch-b-g02": {
+        "net_quantity": "1350",
+        "closing_quantity": "81",
+        "available_value": "2862.00",
+        "net_production_consumption": "2700.00",
+        "closing_value": "162.00"
+      },
+      "batch-a-g03": {
+        "net_quantity": "1200",
+        "closing_quantity": "74",
+        "available_value": "3822.00",
+        "net_production_consumption": "3600.00",
+        "closing_value": "222.00"
+      },
+      "batch-b-g03": {
+        "net_quantity": "900",
+        "closing_quantity": "54",
+        "available_value": "2862.00",
+        "net_production_consumption": "2700.00",
+        "closing_value": "162.00"
+      },
+      "batch-a-g04": {
+        "net_quantity": "3000",
+        "closing_quantity": "185",
+        "available_value": "3185.00",
+        "net_production_consumption": "3000.00",
+        "closing_value": "185.00"
+      },
+      "batch-b-g04": {
+        "net_quantity": "2250",
+        "closing_quantity": "135",
+        "available_value": "2385.00",
+        "net_production_consumption": "2250.00",
+        "closing_value": "135.00"
+      },
+      "batch-a-g05": {
+        "net_quantity": "2400",
+        "closing_quantity": "148",
+        "available_value": "10192.00",
+        "net_production_consumption": "9600.00",
+        "closing_value": "592.00"
+      },
+      "batch-b-g05": {
+        "net_quantity": "1800",
+        "closing_quantity": "108",
+        "available_value": "7632.00",
+        "net_production_consumption": "7200.00",
+        "closing_value": "432.00"
+      },
+      "batch-a-g06": {
+        "net_quantity": "3600",
+        "closing_quantity": "222",
+        "available_value": "7644.00",
+        "net_production_consumption": "7200.00",
+        "closing_value": "444.00"
+      },
+      "batch-b-g06": {
+        "net_quantity": "2700",
+        "closing_quantity": "162",
+        "available_value": "5724.00",
+        "net_production_consumption": "5400.00",
+        "closing_value": "324.00"
+      }
+    },
+    "available_value": "51244.00",
+    "net_production_consumption": "48300.00",
+    "closing_value": "2944.00"
+  }
+}

@@ -1,0 +1,10 @@
+book,currency,id,asset_id,op,quantity,unit,amount,ref,status,evidence,period
+SYNTH-FINANCIAL,CNY,FUEL-OCT-USE,FUEL,consume,20,L,,OPEN-FUEL,computed,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,FLEET-OCT-DEP,FLEET,depreciate,0,asset,200.00,OPEN-FLEET,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,PRE-OCT-AMORT,PRE,amortize,1,month,100.00,OPEN-PRE,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,SERVICE-OCT-CAP,SERVICE,capitalize,1,job,300.00,OPEN-SERVICE,data,synthetic approved policy FIN-V1; not a real company approval,2026-10
+SYNTH-FINANCIAL,CNY,FUEL-NOV-BUY,FUEL,acquire,20,L,240.00,,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,FUEL-NOV-USE,FUEL,consume,30,L,,FUEL-NOV-BUY,computed,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,FLEET-NOV-DEP,FLEET,depreciate,0,asset,200.00,OPEN-FLEET,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,PRE-NOV-AMORT,PRE,amortize,1,month,100.00,OPEN-PRE,data,synthetic approved policy FIN-V1; not a real company approval,2026-11
+SYNTH-FINANCIAL,CNY,SERVICE-NOV-RELEASE,SERVICE,release,1,job,300.00,SERVICE-OCT-CAP,data,synthetic approved policy FIN-V1; not a real company approval,2026-11

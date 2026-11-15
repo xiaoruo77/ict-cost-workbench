@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "period_timezone": "UTC",
+  "rule_version": "operational-source-contract-1.0.0",
+  "policy_source": "approved synthetic dimension and event policy; not enterprise approval",
+  "source_hashes": {
+    "tms": "da02c7a93e51b13d9c010a127ce0f9e1d9a0e09cfcc5faa60eaa2915fe37b16f",
+    "gps": "0bc0d93cd96bb2c0bac03a16329311f5f93659ceca516b9117c8a4cb09fb27df",
+    "wms": "694cf25a446f06063ed1b109600063378b6f0956f416c4a429bf5b9c9af4f25e",
+    "orders": "9608bd81cfaf79777a9dbe4586a2448e0001311b5cad8adc732a27767b99cb98",
+    "returns": "7af3ef93ca8517c8178b51237b5e7ebeaec39678dd7d43dad7b4bf2a779cb853",
+    "activity": "5211563a784ca49fcbdf8345f20f07844d93d620101ba2ebc4e2211bfc28815a"
+  },
+  "unit_registry": {
+    "tonne": {
+      "dimensions": {
+        "mass": 1
+      },
+      "factor": "1000"
+    },
+    "kg": {
+      "dimensions": {
+        "mass": 1
+      },
+      "factor": "1"
+    },
+    "km": {
+      "dimensions": {
+        "length": 1
+      },
+      "factor": "1000"
+    },
+    "m": {
+      "dimensions": {
+        "length": 1
+      },
+      "factor": "1"
+    },
+    "tonne_km": {
+      "dimensions": {
+        "mass": 1,
+        "length": 1
+      },
+      "factor": "1000000"
+    },
+    "second": {
+      "dimensions": {
+        "time": 1
+      },
+      "factor": "1"
+    },
+    "hour": {
+      "dimensions": {
+        "time": 1
+      },
+      "factor": "3600"
+    },
+    "day": {
+      "dimensions": {
+        "time": 1
+      },
+      "factor": "86400"
+    },
+    "pallet": {
+      "dimensions": {
+        "pallet": 1
+      },
+      "factor": "1"
+    },
+    "pallet_day": {
+      "dimensions": {
+        "pallet": 1,
+        "time": 1
+      },
+      "factor": "86400"
+    },
+    "order": {
+      "dimensions": {
+        "count": 1
+      },
+      "factor": "1",
+      "quantity_kind": "order"
+    },
+    "completed_order": {
+      "dimensions": {
+        "count": 1
+      },
+      "factor": "1",
+      "quantity_kind": "completed_order"
+    },
+    "processed_return": {
+      "dimensions": {
+        "count": 1
+      },
+      "factor": "1",
+      "quantity_kind": "processed_return"
+    }
+  },
+  "sources": {
+    "tms": {
+      "file": "tms",
+      "fields": {
+        "id": "event_id",
+        "object_id": "service_id",
+        "book": "book",
+        "period": "period",
+        "currency": "currency",
+        "action": "action",
+        "original_id": "original_event_id",
+        "status": "status"
+      }
+    },
+    "wms": {
+      "file": "wms",
+      "fields": {
+        "id": "event_id",
+        "object_id": "service_id",
+        "book": "book",
+        "period": "period",
+        "currency": "currency",
+        "action": "action",
+        "original_id": "original_event_id",
+        "status": "status"
+      }
+    },
+    "orders": {
+      "file": "orders",
+      "fields": {
+        "id": "event_id",
+        "object_id": "service_id",
+        "book": "book",
+        "period": "period",
+        "currency": "currency",
+        "action": "action",
+        "original_id": "original_event_id",
+        "status": "status"
+      }
+    },
+    "returns": {
+      "file": "returns",
+      "fields": {
+        "id": "event_id",
+        "object_id": "service_id",
+        "book": "book",
+        "period": "period",
+        "currency": "currency",
+        "action": "action",
+        "original_id": "original_event_id",
+        "status": "status"
+      }
+    },
+    "activity": {
+      "file": "activity",
+      "fields": {
+        "id": "event_id",
+        "object_id": "service_id",
+        "book": "book",
+        "period": "period",
+        "currency": "currency",
+        "action": "action",
+        "original_id": "original_event_id",
+        "status": "status"
+      }
+    },
+    "gps": {
+      "file": "gps",
+      "role": "lookup",
+      "fields": {
+        "id": "event_id",
+        "book": "book",
+        "period": "period",
+        "currency": "currency"
+      }
+    }
+  },
+  "metrics": [
+    {
+      "id": "road-volume",
+      "source": "tms",
+      "unit": "tonne_km",
+      "joins": [
+        {
+          "source": "gps",
+          "left_field": "leg_id",
+          "right_field": "leg_id"
+        }
+      ],
+      "factors": [
+        {
+          "field": "weight",
+          "unit_field": "weight_unit",
+          "unit": "tonne"
+        },
+        {
+          "source": "gps",
+          "op": "difference",
+          "start_field": "odometer_start",
+          "end_field": "odometer_end",
+          "unit_field": "distance_unit",
+          "unit": "km"
+        }
+      ]
+    },
+    {
+      "id": "storage-volume",
+      "source": "wms",
+      "unit": "pallet_day",
+      "factors": [
+        {
+          "field": "pallets",
+          "unit_field": "pallet_unit",
+          "unit": "pallet"
+        },
+        {
+          "op": "duration",
+          "start_field": "storage_start",
+          "end_field": "storage_end",
+          "unit": "day",
+          "clip_to_period": true
+        }
+      ]
+    },
+    {
+      "id": "completed-deliveries",
+      "source": "orders",
+      "unit": "completed_order",
+      "factors": [
+        {
+          "field": "quantity",
+          "unit_field": "unit",
+          "unit": "order"
+        }
+      ]
+    },
+    {
+      "id": "processed-returns",
+      "source": "returns",
+      "unit": "processed_return",
+      "factors": [
+        {
+          "field": "quantity",
+          "unit_field": "unit",
+          "unit": "order"
+        }
+      ]
+    },
+    {
+      "id": "shared-work-hours",
+      "source": "activity",
+      "unit": "hour",
+      "factors": [
+        {
+          "op": "duration",
+          "start_field": "work_start",
+          "end_field": "work_end",
+          "unit": "hour"
+        }
+      ]
+    }
+  ],
+  "object_bindings": [
+    {
+      "object_id": "route-self",
+      "metric_id": "road-volume",
+      "quantity_unit": "tonne_km",
+      "kind": "service"
+    },
+    {
+      "object_id": "route-outsourced",
+      "metric_id": "road-volume",
+      "quantity_unit": "tonne_km",
+      "kind": "service"
+    },
+    {
+      "object_id": "warehouse-A",
+      "metric_id": "storage-volume",
+      "quantity_unit": "pallet_day",
+      "kind": "service"
+    },
+    {
+      "object_id": "delivery-city",
+      "metric_id": "completed-deliveries",
+      "quantity_unit": "completed_order",
+      "kind": "service"
+    },
+    {
+      "object_id": "reverse-return",
+      "metric_id": "processed-returns",
+      "quantity_unit": "processed_return",
+      "kind": "service"
+    }
+  ],
+  "driver_bindings": [
+    {
+      "rule_id": "regional-to-completed-services",
+      "metric_id": "shared-work-hours",
+      "quantity_unit": "hour",
+      "target_ids": [
+        "route-self",
+        "route-outsourced",
+        "warehouse-A",
+        "delivery-city",
+        "reverse-return"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "return-to-delivery",
+      "source": "returns",
+      "original_source": "orders",
+      "reference_field": "original_order_id",
+      "original_id_field": "order_id",
+      "quantity_field": "quantity",
+      "unit_field": "unit",
+      "original_quantity_field": "quantity",
+      "original_unit_field": "unit",
+      "unit": "order",
+      "same_fields": {
+        "sku": "sku"
+      }
+    }
+  ]
+}

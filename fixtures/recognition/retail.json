@@ -1,0 +1,89 @@
+{
+  "operation": "moving_weighted_average",
+  "policy": "line_half_up_minor_units_with_cumulative_original_issue_returns",
+  "context": {
+    "book": "RETAIL_DEMO",
+    "warehouse": "WH_A",
+    "item": "SKU_1",
+    "uom": "EA",
+    "currency": "CNY",
+    "period": "2026-11",
+    "cutoff_at": "2026-11-30T23:59:59Z"
+  },
+  "opening": {
+    "book": "RETAIL_DEMO",
+    "warehouse": "WH_A",
+    "item": "SKU_1",
+    "uom": "EA",
+    "currency": "CNY",
+    "as_of": "2026-10-31T23:59:59Z",
+    "quantity": "20",
+    "value": "240.00",
+    "status": "data",
+    "evidence": "Synthetic opening: 20 EA at CNY 12",
+    "issues": [],
+    "seen_event_ids": [],
+    "seen_source_ids": []
+  },
+  "transactions": [
+    {
+      "book": "RETAIL_DEMO",
+      "warehouse": "WH_A",
+      "item": "SKU_1",
+      "uom": "EA",
+      "currency": "CNY",
+      "id": "RECEIPT_1",
+      "source_id": "DOC_RECEIPT_1:LINE_1",
+      "at": "2026-11-01T12:00:00Z",
+      "sequence": 1,
+      "kind": "receipt",
+      "quantity": "30",
+      "evidence": "Synthetic acceptance source",
+      "receipt_value": "420.00"
+    },
+    {
+      "book": "RETAIL_DEMO",
+      "warehouse": "WH_A",
+      "item": "SKU_1",
+      "uom": "EA",
+      "currency": "CNY",
+      "id": "SALE_1",
+      "source_id": "DOC_SALE_1:LINE_1",
+      "at": "2026-11-02T12:00:00Z",
+      "sequence": 1,
+      "kind": "sale_issue",
+      "quantity": "30",
+      "evidence": "Synthetic acceptance source"
+    },
+    {
+      "book": "RETAIL_DEMO",
+      "warehouse": "WH_A",
+      "item": "SKU_1",
+      "uom": "EA",
+      "currency": "CNY",
+      "id": "RETURN_1",
+      "source_id": "DOC_RETURN_1:LINE_1",
+      "at": "2026-11-03T12:00:00Z",
+      "sequence": 1,
+      "kind": "sale_return",
+      "quantity": "2",
+      "evidence": "Synthetic acceptance source",
+      "original_issue_id": "SALE_1",
+      "restock_status": "restockable"
+    },
+    {
+      "book": "RETAIL_DEMO",
+      "warehouse": "WH_A",
+      "item": "SKU_1",
+      "uom": "EA",
+      "currency": "CNY",
+      "id": "SHRINK_1",
+      "source_id": "DOC_SHRINK_1:LINE_1",
+      "at": "2026-11-04T12:00:00Z",
+      "sequence": 1,
+      "kind": "shrink",
+      "quantity": "1",
+      "evidence": "Synthetic acceptance source"
+    }
+  ]
+}

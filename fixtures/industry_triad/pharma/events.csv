@@ -1,0 +1,9 @@
+id,book,period,currency,object_id,op,quantity,unit,ref
+EV-batch-a-start,SYNTH_PHARMA,2026-11,CNY,batch-a,start,120,approved_unit,
+EV-batch-a-complete,SYNTH_PHARMA,2026-11,CNY,batch-a,complete,100,approved_unit,
+EV-batch-a-sale,SYNTH_PHARMA,2026-11,CNY,batch-a,sale,60,approved_unit,
+EV-batch-a-return,SYNTH_PHARMA,2026-11,CNY,batch-a,return,5,approved_unit,EV-batch-a-sale
+EV-batch-a-scrap,SYNTH_PHARMA,2026-11,CNY,batch-a,scrap,10,approved_unit,
+EV-batch-b-start,SYNTH_PHARMA,2026-11,CNY,batch-b,start,90,approved_unit,
+EV-batch-b-complete,SYNTH_PHARMA,2026-11,CNY,batch-b,complete,80,approved_unit,
+EV-batch-b-sale,SYNTH_PHARMA,2026-11,CNY,batch-b,sale,50,approved_unit,

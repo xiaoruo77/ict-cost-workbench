@@ -1,0 +1,172 @@
+{
+  "oracle": "independent integer cents + Fraction largest remainder; no costing-engine import",
+  "seed": 20261114073,
+  "variant": "small",
+  "industry": "medical_devices",
+  "scope": {
+    "book": "SYNTH_MEDICAL_DEVICES",
+    "period": "2026-11",
+    "currency": "CNY"
+  },
+  "source_rows": {
+    "finance": 13,
+    "shared": 2,
+    "events": 10,
+    "settlements": 0,
+    "stock": 0,
+    "dispositions": 23,
+    "raw_materials": 6
+  },
+  "total_cost": "2300.00",
+  "cost_groups": {
+    "parts": "1100.00",
+    "assembly_labor": "260.00",
+    "outsourcing": "180.00",
+    "quality": "160.00",
+    "rework": "60.00",
+    "depreciation": "120.00",
+    "utilities": "80.00",
+    "packaging": "40.00",
+    "registration_testing": "120.00",
+    "warehouse_logistics": "60.00",
+    "actual_warranty": "80.00",
+    "after_sales": "40.00"
+  },
+  "objects": {
+    "device-batch-a": {
+      "total_cost": "1100.00",
+      "cost_structure": {
+        "parts": "600.00",
+        "assembly_labor": "160.00",
+        "outsourcing": "100.00",
+        "quality": "80.00",
+        "rework": "60.00",
+        "depreciation": "60.00",
+        "utilities": "40.00"
+      },
+      "classification": "production",
+      "budget": "1000.00",
+      "variance": "100.00"
+    },
+    "device-batch-b": {
+      "total_cost": "900.00",
+      "cost_structure": {
+        "parts": "500.00",
+        "assembly_labor": "100.00",
+        "outsourcing": "80.00",
+        "quality": "80.00",
+        "packaging": "40.00",
+        "depreciation": "60.00",
+        "utilities": "40.00"
+      },
+      "classification": "production",
+      "budget": "950.00",
+      "variance": "-50.00"
+    },
+    "period-registration": {
+      "total_cost": "120.00",
+      "cost_structure": {
+        "registration_testing": "120.00"
+      },
+      "classification": "period",
+      "budget": "120.00",
+      "variance": "0.00"
+    },
+    "period-logistics": {
+      "total_cost": "60.00",
+      "cost_structure": {
+        "warehouse_logistics": "60.00"
+      },
+      "classification": "period",
+      "budget": "60.00",
+      "variance": "0.00"
+    },
+    "service-warranty": {
+      "total_cost": "80.00",
+      "cost_structure": {
+        "actual_warranty": "80.00"
+      },
+      "classification": "service",
+      "budget": "80.00",
+      "variance": "0.00"
+    },
+    "service-normal": {
+      "total_cost": "40.00",
+      "cost_structure": {
+        "after_sales": "40.00"
+      },
+      "classification": "service",
+      "budget": "40.00",
+      "variance": "0.00"
+    }
+  },
+  "lifecycle": {
+    "device-batch-a": {
+      "started_quantity": "110",
+      "completed_quantity": "90",
+      "sales_quantity": "60",
+      "returned_quantity": "5",
+      "wip_quantity": "10",
+      "finished_quantity": "35",
+      "scrap_quantity": "10",
+      "wip": "100.00",
+      "finished_inventory": "350.00",
+      "cost_of_sales": "550.00",
+      "scrap_loss": "100.00",
+      "qualified_unit_cost": "10"
+    },
+    "device-batch-b": {
+      "started_quantity": "90",
+      "completed_quantity": "80",
+      "sales_quantity": "40",
+      "returned_quantity": "2",
+      "wip_quantity": "5",
+      "finished_quantity": "42",
+      "scrap_quantity": "5",
+      "wip": "50.00",
+      "finished_inventory": "420.00",
+      "cost_of_sales": "380.00",
+      "scrap_loss": "50.00",
+      "qualified_unit_cost": "10"
+    }
+  },
+  "asset_total": "920.00",
+  "pnl_cost": "1380.00",
+  "period_expense": "180.00",
+  "service_cost": "120.00",
+  "budget_total": "2250.00",
+  "budget_variance": "50.00",
+  "excluded_cash": "123.45",
+  "can_claim_entire_industry": false,
+  "dispositions": {
+    "total_count": 23,
+    "counts": {
+      "rework": 1,
+      "scrap": 15,
+      "return": 7
+    },
+    "identity_basis": "synthetic approved unit identity registry v1",
+    "evidence_scope": "source_declared_disposition_identity;not_serial_trace"
+  },
+  "raw_materials": {
+    "streams": {
+      "device-batch-a": {
+        "net_quantity": "600",
+        "closing_quantity": "37",
+        "available_value": "637.00",
+        "net_production_consumption": "600.00",
+        "closing_value": "37.00"
+      },
+      "device-batch-b": {
+        "net_quantity": "500",
+        "closing_quantity": "27",
+        "available_value": "527.00",
+        "net_production_consumption": "500.00",
+        "closing_value": "27.00"
+      }
+    },
+    "available_value": "1164.00",
+    "net_production_consumption": "1100.00",
+    "closing_value": "64.00"
+  }
+}

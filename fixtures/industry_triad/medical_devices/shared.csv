@@ -1,0 +1,3 @@
+id,book,period,currency,kind,status,amount,economic_key,evidence,tag,target_object_id,origin_period
+SHARED-depreciation-001,SYNTH_MEDICAL_DEVICES,2026-11,CNY,asset_basis,data,1440.00,SHARED-depreciation-001,synthetic approved allocation/schedule SHARED-depreciation-001,depreciation,,2026-01
+SHARED-utilities-001,SYNTH_MEDICAL_DEVICES,2026-11,CNY,expense,data,80.00,SHARED-utilities-001,synthetic approved allocation/schedule SHARED-utilities-001,utilities,,

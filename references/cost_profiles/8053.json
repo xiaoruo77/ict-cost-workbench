@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "industry_code": "8053",
+  "fields": [
+    {
+      "id": "service_hours",
+      "label": "服务工时",
+      "type": "decimal",
+      "required": true
+    },
+    {
+      "id": "occupied_area",
+      "label": "占用面积",
+      "type": "decimal",
+      "required": true
+    }
+  ],
+  "modules": {
+    "staff": {
+      "label": "服务人员",
+      "behavior": "variable",
+      "cost_type": "direct"
+    },
+    "facility": {
+      "label": "场地共享成本",
+      "behavior": "fixed",
+      "cost_type": "indirect"
+    }
+  },
+  "allocation": {
+    "driver": "service_hours",
+    "module": "facility"
+  },
+  "pools": {
+    "space": {
+      "driver": "occupied_area",
+      "module": "facility"
+    },
+    "support": {
+      "driver": "service_hours",
+      "module": "facility"
+    }
+  },
+  "metrics": {
+    "hours_total": {
+      "field": "service_hours",
+      "op": "sum"
+    },
+    "area_average": {
+      "field": "occupied_area",
+      "op": "mean"
+    }
+  }
+}
